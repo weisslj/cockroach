@@ -21,9 +21,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 // compareDiagrams verifies that two JSON strings decode to equal diagramData

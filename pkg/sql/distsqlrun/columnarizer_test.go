@@ -19,9 +19,9 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 func BenchmarkColumnarize(b *testing.B) {

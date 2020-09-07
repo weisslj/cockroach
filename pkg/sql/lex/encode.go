@@ -30,9 +30,9 @@ import (
 	"fmt"
 	"unicode/utf8"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/util/stringencoding"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/util/stringencoding"
 )
 
 var mustQuoteMap = map[byte]bool{

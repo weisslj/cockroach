@@ -17,11 +17,11 @@ package storage
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagebase"
-	"github.com/cockroachdb/cockroach/pkg/storage/txnwait"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/storage/storagebase"
+	"github.com/weisslj/cockroach/pkg/storage/txnwait"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // StoreTestingKnobs is a part of the context used to control parts of

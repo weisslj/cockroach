@@ -17,11 +17,11 @@ package ordering
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/testutils/testexpr"
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/opt/testutils/testexpr"
+	"github.com/weisslj/cockroach/pkg/util"
 )
 
 func TestProject(t *testing.T) {

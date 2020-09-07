@@ -18,8 +18,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
 )
 
 func BenchmarkSequenceIncrement(b *testing.B) {

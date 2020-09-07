@@ -26,9 +26,9 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils/sqlutils"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/testutils/sqlutils"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
 )
@@ -362,7 +362,7 @@ func BenchmarkSQL(b *testing.B) {
 			runBenchmarkUpsert,
 		} {
 			fnName := runtime.FuncForPC(reflect.ValueOf(runFn).Pointer()).Name()
-			fnName = strings.TrimPrefix(fnName, "github.com/cockroachdb/cockroach/pkg/bench.runBenchmark")
+			fnName = strings.TrimPrefix(fnName, "github.com/weisslj/cockroach/pkg/bench.runBenchmark")
 			b.Run(fnName, func(b *testing.B) {
 				for _, count := range []int{1, 10, 100, 1000} {
 					b.Run(fmt.Sprintf("count=%d", count), func(b *testing.B) {

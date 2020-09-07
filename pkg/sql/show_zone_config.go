@@ -19,13 +19,13 @@ import (
 	"context"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
 	yaml "gopkg.in/yaml.v2"
 )
 

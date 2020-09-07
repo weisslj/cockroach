@@ -21,10 +21,10 @@ import (
 	"context"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
 )
 
 // NameResolutionVisitor is a tree.Visitor implementation used to

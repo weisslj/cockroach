@@ -19,10 +19,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestMakeTableDescColumns(t *testing.T) {

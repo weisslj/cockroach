@@ -17,7 +17,7 @@ package sql
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestDecodeCopy(t *testing.T) {

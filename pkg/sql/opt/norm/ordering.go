@@ -15,8 +15,8 @@
 package norm
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
 )
 
 // CanSimplifyLimitOffsetOrdering returns true if the ordering required by the

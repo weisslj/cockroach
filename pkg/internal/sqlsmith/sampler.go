@@ -17,7 +17,7 @@ package sqlsmith
 import (
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 // NewWeightedSampler creates a WeightedSampler that produces indexes

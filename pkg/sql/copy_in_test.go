@@ -24,12 +24,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/sql/tests"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/timeofday"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/tests"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/timeofday"
 	"github.com/lib/pq"
 )
 

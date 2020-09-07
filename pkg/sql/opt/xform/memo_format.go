@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/treeprinter"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/treeprinter"
 )
 
 // FmtFlags controls how the memo output is formatted.

@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package storageccl
 
@@ -12,15 +12,15 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/ccl/storageccl/engineccl"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/batcheval"
-	"github.com/cockroachdb/cockroach/pkg/storage/batcheval/result"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/storage/spanset"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/ccl/storageccl/engineccl"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/batcheval"
+	"github.com/weisslj/cockroach/pkg/storage/batcheval/result"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/storage/spanset"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 	"github.com/pkg/errors"
 )
 

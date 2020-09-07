@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // ShowRoleGrants returns role membership details for the specified roles and grantees.

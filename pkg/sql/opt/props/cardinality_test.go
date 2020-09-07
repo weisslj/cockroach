@@ -18,7 +18,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props"
 )
 
 func TestCardinality(t *testing.T) {

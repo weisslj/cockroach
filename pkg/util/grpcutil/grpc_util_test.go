@@ -21,9 +21,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/grpcutil"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/grpcutil"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	healthpb "google.golang.org/grpc/health/grpc_health_v1"
@@ -53,7 +53,7 @@ func (hs healthServer) Check(
 func TestRequestDidNotStart(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 
-	t.Skip("https://github.com/cockroachdb/cockroach/issues/19708")
+	t.Skip("https://github.com/weisslj/cockroach/issues/19708")
 
 	lis, err := net.Listen("tcp", "127.0.0.1:0")
 	if err != nil {

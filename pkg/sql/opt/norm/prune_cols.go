@@ -15,12 +15,12 @@
 package norm
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/cat"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/cat"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 // NeededGroupingCols returns the columns needed by a grouping operator's

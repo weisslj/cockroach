@@ -2,7 +2,7 @@
 - Status: Draft
 - Start Date: 2018-04-11
 - Authors: David Taylor
-- RFC PR: [25208](https://github.com/cockroachdb/cockroach/pull/25208)
+- RFC PR: [25208](https://github.com/weisslj/cockroach/pull/25208)
 - Cockroach Issues: #19141
 
 [TOC levels=1-3 markdown]: #
@@ -22,7 +22,7 @@ As noted above, this document is still in draft status and requires further
 review and expansion before acceptance. It is merged as-is to provide a starting
 point when that work is revisited. Some of the areas needing further attention
 are explicitly highlighted inline below. The [original
-PR](https://github.com/cockroachdb/cockroach/pull/25208) has additional context.
+PR](https://github.com/weisslj/cockroach/pull/25208) has additional context.
 
 # Summary
 

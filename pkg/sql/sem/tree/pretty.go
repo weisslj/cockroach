@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/util/pretty"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/util/pretty"
 )
 
 // This file contains methods that convert statements to pretty Docs (a tree

@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/exec/coldata"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
 )
 
 func TestCoalescer(t *testing.T) {

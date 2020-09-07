@@ -17,13 +17,13 @@ package memo
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/cat"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/cat"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // Memo is a data structure for efficiently storing a forest of query plans.

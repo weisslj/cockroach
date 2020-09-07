@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package changefeedccl
 
@@ -18,17 +18,17 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/cockroachdb/cockroach-go/crdb"
-	"github.com/cockroachdb/cockroach/pkg/ccl/changefeedccl/cdctest"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/sqlutils"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/workload"
-	"github.com/cockroachdb/cockroach/pkg/workload/ledger"
+	"github.com/weisslj/cockroach-go/crdb"
+	"github.com/weisslj/cockroach/pkg/ccl/changefeedccl/cdctest"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/sqlutils"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload/ledger"
 	"github.com/linkedin/goavro"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"

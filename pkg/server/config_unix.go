@@ -20,8 +20,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"github.com/pkg/errors"
 )
 

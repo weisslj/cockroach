@@ -17,11 +17,11 @@ package engine
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/util/bufalloc"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/util/bufalloc"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // MVCCLogicalOpType is an enum with values corresponding to each of the

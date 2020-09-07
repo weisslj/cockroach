@@ -23,7 +23,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/optgen/lang"
+	"github.com/weisslj/cockroach/pkg/sql/opt/optgen/lang"
 )
 
 type genFunc func(compiled *lang.CompiledExpr, w io.Writer)

@@ -20,7 +20,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/ts/tspb"
+	"github.com/weisslj/cockroach/pkg/ts/tspb"
 )
 
 // ModelDB is a purely in-memory model of CockroachDB's time series database,

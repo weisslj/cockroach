@@ -27,10 +27,10 @@ import (
 	"fmt"
 
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types/conv"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/exec/coldata"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types/conv"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // {{/*

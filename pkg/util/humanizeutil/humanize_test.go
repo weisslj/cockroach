@@ -18,8 +18,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 // TestHumanizeBytes verifies both IBytes and ParseBytes.

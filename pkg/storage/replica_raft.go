@@ -21,26 +21,26 @@ import (
 	"sort"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/storage/batcheval/result"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/storage/rditer"
-	"github.com/cockroachdb/cockroach/pkg/storage/spanset"
-	"github.com/cockroachdb/cockroach/pkg/storage/stateloader"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagebase"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagepb"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/storage/batcheval/result"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/storage/rditer"
+	"github.com/weisslj/cockroach/pkg/storage/spanset"
+	"github.com/weisslj/cockroach/pkg/storage/stateloader"
+	"github.com/weisslj/cockroach/pkg/storage/storagebase"
+	"github.com/weisslj/cockroach/pkg/storage/storagepb"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/kr/pretty"
 	"github.com/pkg/errors"
 	"go.etcd.io/etcd/raft"
@@ -335,7 +335,7 @@ func (r *Replica) proposeLocked(
 		// Silently ignore dropped proposals (they were always silently ignored
 		// prior to the introduction of ErrProposalDropped).
 		// TODO(bdarnell): Handle ErrProposalDropped better.
-		// https://github.com/cockroachdb/cockroach/issues/21849
+		// https://github.com/weisslj/cockroach/issues/21849
 	} else if err != nil {
 		return 0, roachpb.NewError(err)
 	}
@@ -472,7 +472,7 @@ func (r *Replica) stepRaftGroup(req *RaftMessageRequest) error {
 			// Swallow the error since we don't have an effective way of signaling
 			// this to the sender.
 			// TODO(bdarnell): Handle ErrProposalDropped better.
-			// https://github.com/cockroachdb/cockroach/issues/21849
+			// https://github.com/weisslj/cockroach/issues/21849
 			err = nil
 		}
 		return false /* unquiesceAndWakeLeader */, err
@@ -1080,7 +1080,7 @@ func (r *Replica) refreshProposalsLocked(refreshAtDelta int, reason refreshRaftR
 		log.Eventf(p.ctx, "re-submitting command %x to Raft: %s", p.idKey, reason)
 		if err := r.submitProposalLocked(p); err == raft.ErrProposalDropped {
 			// TODO(bdarnell): Handle ErrProposalDropped better.
-			// https://github.com/cockroachdb/cockroach/issues/21849
+			// https://github.com/weisslj/cockroach/issues/21849
 		} else if err != nil {
 			r.cleanupFailedProposalLocked(p)
 			p.finishApplication(proposalResult{
@@ -1889,7 +1889,7 @@ func (r *Replica) processRaftCommand(
 			// on each replica (votes may have already been cast on the
 			// uninitialized replica). Transform the write batch to add the
 			// updated HardState.
-			// See https://github.com/cockroachdb/cockroach/issues/20629
+			// See https://github.com/weisslj/cockroach/issues/20629
 			//
 			// This is not the most efficient, but it only happens on splits,
 			// which are relatively infrequent and don't write much data.

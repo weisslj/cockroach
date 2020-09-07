@@ -7,7 +7,7 @@ import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
 
@@ -139,7 +139,7 @@ var xxx_messageInfo_Copysets proto.InternalMessageInfo
 // Copyset contains the set of stores belonging to the same copyset.
 type Copyset struct {
 	// Map of StoreIDs.
-	Ids                  map[github_com_cockroachdb_cockroach_pkg_roachpb.StoreID]bool `protobuf:"bytes,1,rep,name=ids,proto3,castkey=github.com/cockroachdb/cockroach/pkg/roachpb.StoreID" json:"ids,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	Ids                  map[github_com_cockroachdb_cockroach_pkg_roachpb.StoreID]bool `protobuf:"bytes,1,rep,name=ids,proto3,castkey=github.com/weisslj/cockroach/pkg/roachpb.StoreID" json:"ids,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 	XXX_NoUnkeyedLiteral struct{}                                                      `json:"-"`
 	XXX_sizecache        int32                                                         `json:"-"`
 }

@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util"
 )
 
 // Explain represents an EXPLAIN statement.

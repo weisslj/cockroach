@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 )
 
 // This test runs SQLsmith in search of new panics.

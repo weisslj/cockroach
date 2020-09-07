@@ -15,7 +15,7 @@
 package settings
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
 	"github.com/pkg/errors"
 )
 

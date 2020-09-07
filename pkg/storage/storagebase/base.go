@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagepb"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/storage/storagepb"
 )
 
 // MergeQueueEnabled is a setting that controls whether the merge queue is

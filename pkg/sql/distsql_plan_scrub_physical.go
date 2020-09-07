@@ -15,12 +15,12 @@
 package sql
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlplan"
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlrun"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlpb"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlplan"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlrun"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // createScrubPhysicalCheck generates a plan for running a physical

@@ -19,16 +19,16 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/cat"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/sql/stats"
-	"github.com/cockroachdb/cockroach/pkg/util/treeprinter"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/sql/opt/cat"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/stats"
+	"github.com/weisslj/cockroach/pkg/util/treeprinter"
 )
 
 const (

@@ -15,9 +15,9 @@
 package rditer
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
 )
 
 // ComputeStatsForRange computes the stats for a given range by

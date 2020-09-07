@@ -17,8 +17,8 @@ package privilege_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestPrivilegeDecode(t *testing.T) {

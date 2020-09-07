@@ -18,12 +18,12 @@ import (
 	"context"
 	"unsafe"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgwirebase"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/mon"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgwirebase"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/mon"
 )
 
 // PreparedStatement is a SQL statement that has been parsed and the types

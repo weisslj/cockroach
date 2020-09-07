@@ -20,7 +20,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/netutil"
+	"github.com/weisslj/cockroach/pkg/util/netutil"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
@@ -99,7 +99,7 @@ func RequestDidNotStart(err error) bool {
 	// TODO(bdarnell): In gRPC 1.7, we have no good way to distinguish
 	// ambiguous from unambiguous failures, so we must assume all gRPC
 	// errors are ambiguous.
-	// https://github.com/cockroachdb/cockroach/issues/19708#issuecomment-343891640
+	// https://github.com/weisslj/cockroach/issues/19708#issuecomment-343891640
 	if false && s.Code() == codes.Unavailable && s.Message() == "grpc: the connection is unavailable" {
 		return true
 	}

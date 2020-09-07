@@ -1,6 +1,6 @@
 {"Action":"output","Output":"Running make with -j8\n"}
 {"Action":"output","Output":"GOPATH set to /Users/benesch/go\n"}
-{"Action":"output","Output":"go test -exec 'stress -maxruns 1 -maxfails 1 -stderr' -tags ' make x86_64_apple_darwin17.5.0' -ldflags '-X github.com/cockroachdb/cockroach/pkg/build.typ=development -extldflags \"-L/usr/local/opt/readline/lib\" -X \"github.com/cockroachdb/cockroach/pkg/build.tag=v2.1.0-alpha.20180702-414-ge057fe8ae-dirty\" -X \"github.com/cockroachdb/cockroach/pkg/build.rev=e057fe8aef399bb59557daf18751199112c7c523\" -X \"github.com/cockroachdb/cockroach/pkg/build.cgoTargetTriple=x86_64-apple-darwin17.5.0\"  ' -run \"TestReplicateQueueRebalance\"  -timeout 8m ./pkg/storage -v\n"}
+{"Action":"output","Output":"go test -exec 'stress -maxruns 1 -maxfails 1 -stderr' -tags ' make x86_64_apple_darwin17.5.0' -ldflags '-X github.com/weisslj/cockroach/pkg/build.typ=development -extldflags \"-L/usr/local/opt/readline/lib\" -X \"github.com/weisslj/cockroach/pkg/build.tag=v2.1.0-alpha.20180702-414-ge057fe8ae-dirty\" -X \"github.com/weisslj/cockroach/pkg/build.rev=e057fe8aef399bb59557daf18751199112c7c523\" -X \"github.com/weisslj/cockroach/pkg/build.cgoTargetTriple=x86_64-apple-darwin17.5.0\"  ' -run \"TestReplicateQueueRebalance\"  -timeout 8m ./pkg/storage -v\n"}
 {"Action":"output","Output":"0 runs so far, 0 failures, over 5s\n"}
 {"Action":"output","Output":"0 runs so far, 0 failures, over 10s\n"}
 {"Action":"output","Output":"0 runs so far, 0 failures, over 15s\n"}
@@ -26,10 +26,10 @@
 {"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\tgoroutine 39 [running]:\n"}
 {"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\truntime/debug.Stack(0xa7a358200, 0xc423335f80, 0x64b11e0)\n"}
 {"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\t\t/usr/local/Cellar/go/1.10.2/libexec/src/runtime/debug/stack.go:24 +0xa7\n"}
-{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\tgithub.com/cockroachdb/cockroach/pkg/testutils.SucceedsSoon(0x64fdac0, 0xc42034f3b0, 0xc422489f80)\n"}
-{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\t\t/Users/benesch/go/src/github.com/cockroachdb/cockroach/pkg/testutils/soon.go:38 +0x7d\n"}
-{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\tgithub.com/cockroachdb/cockroach/pkg/storage_test.TestReplicateQueueRebalance(0xc42034f3b0)\n"}
-{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\t\t/Users/benesch/go/src/github.com/cockroachdb/cockroach/pkg/storage/replicate_queue_test.go:88 +0x433\n"}
+{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\tgithub.com/weisslj/cockroach/pkg/testutils.SucceedsSoon(0x64fdac0, 0xc42034f3b0, 0xc422489f80)\n"}
+{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\t\t/Users/benesch/go/src/github.com/weisslj/cockroach/pkg/testutils/soon.go:38 +0x7d\n"}
+{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\tgithub.com/weisslj/cockroach/pkg/storage_test.TestReplicateQueueRebalance(0xc42034f3b0)\n"}
+{"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\t\t/Users/benesch/go/src/github.com/weisslj/cockroach/pkg/storage/replicate_queue_test.go:88 +0x433\n"}
 {"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\ttesting.tRunner(0xc42034f3b0, 0x60f3da8)\n"}
 {"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\t\t/usr/local/Cellar/go/1.10.2/libexec/src/testing/testing.go:777 +0xd0\n"}
 {"Action":"output","Test":"TestReplicateQueueRebalance","Output":"\t\tcreated by testing.(*T).Run\n"}
@@ -42,5 +42,5 @@
 {"Action":"output","Output":"\n"}
 {"Action":"output","Output":"1 runs completed, 1 failures, over 47s\n"}
 {"Action":"output","Output":"SUCCESS\n"}
-{"Action":"output","Output":"ok  \tgithub.com/cockroachdb/cockroach/pkg/storage\t46.860s\n"}
+{"Action":"output","Output":"ok  \tgithub.com/weisslj/cockroach/pkg/storage\t46.860s\n"}
 {"Action":"fail"}

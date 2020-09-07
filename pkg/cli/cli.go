@@ -24,18 +24,18 @@ import (
 	"text/tabwriter"
 
 	_ "github.com/benesch/cgosymbolizer" // calls runtime.SetCgoTraceback on import
-	"github.com/cockroachdb/cockroach/pkg/build"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/log/logflags"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/build"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log/logflags"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 	// intentionally not all the workloads in pkg/ccl/workloadccl/allccl
-	_ "github.com/cockroachdb/cockroach/pkg/workload/bank"       // registers workloads
-	_ "github.com/cockroachdb/cockroach/pkg/workload/bulkingest" // registers workloads
-	workloadcli "github.com/cockroachdb/cockroach/pkg/workload/cli"
-	_ "github.com/cockroachdb/cockroach/pkg/workload/examples" // registers workloads
-	_ "github.com/cockroachdb/cockroach/pkg/workload/kv"       // registers workloads
-	_ "github.com/cockroachdb/cockroach/pkg/workload/tpcc"     // registers workloads
-	_ "github.com/cockroachdb/cockroach/pkg/workload/ycsb"     // registers workloads
+	_ "github.com/weisslj/cockroach/pkg/workload/bank"       // registers workloads
+	_ "github.com/weisslj/cockroach/pkg/workload/bulkingest" // registers workloads
+	workloadcli "github.com/weisslj/cockroach/pkg/workload/cli"
+	_ "github.com/weisslj/cockroach/pkg/workload/examples" // registers workloads
+	_ "github.com/weisslj/cockroach/pkg/workload/kv"       // registers workloads
+	_ "github.com/weisslj/cockroach/pkg/workload/tpcc"     // registers workloads
+	_ "github.com/weisslj/cockroach/pkg/workload/ycsb"     // registers workloads
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

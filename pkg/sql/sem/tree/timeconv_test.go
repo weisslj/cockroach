@@ -19,12 +19,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	_ "github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	_ "github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // Test that EvalContext.GetClusterTimestamp() gets its timestamp from the

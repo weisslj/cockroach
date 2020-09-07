@@ -25,7 +25,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 )
 
 var psycopgResultRegex = regexp.MustCompile(`(?P<name>.*) \((?P<class>.*)\) \.\.\. (?P<result>.*)`)

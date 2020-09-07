@@ -100,7 +100,7 @@ ignored = [
   name = "github.com/kisielk/errcheck"
   version = "=v1.1.0"
 
-# Pin to 2017.2.2 because of https://github.com/cockroachdb/cockroach/issues/33669.
+# Pin to 2017.2.2 because of https://github.com/weisslj/cockroach/issues/33669.
 [[constraint]]
   name = "honnef.co/go/tools"
   version = "=2017.2.2"

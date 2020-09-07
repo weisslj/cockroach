@@ -17,9 +17,9 @@ package sqlbase
 import (
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
 )
 
 // MakeNameMetadataKey returns the key for the name. Pass name == "" in order

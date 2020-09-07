@@ -15,8 +15,8 @@
 package config
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 type zoneConfigMap map[uint32]ZoneConfig

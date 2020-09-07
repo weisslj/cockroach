@@ -15,10 +15,10 @@
 package optbuilder
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // buildDelete builds a memo group for a DeleteOp expression, which deletes all

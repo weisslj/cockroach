@@ -25,7 +25,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cockroachdb/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/util/version"
 	"github.com/google/go-github/github"
 	"github.com/pkg/errors"
 	"golang.org/x/oauth2"
@@ -41,7 +41,7 @@ const (
 	githubUser           = "cockroachdb"
 	githubRepo           = "cockroach"
 	// CockroachPkgPrefix is the crdb package prefix.
-	CockroachPkgPrefix = "github.com/cockroachdb/cockroach/pkg/"
+	CockroachPkgPrefix = "github.com/weisslj/cockroach/pkg/"
 )
 
 var (
@@ -260,7 +260,7 @@ func (p *poster) post(
 	title, packageName, testName, message, authorEmail string,
 	extraLabels []string,
 ) error {
-	const bodyTemplate = `SHA: https://github.com/cockroachdb/cockroach/commits/%[1]s
+	const bodyTemplate = `SHA: https://github.com/weisslj/cockroach/commits/%[1]s
 
 Parameters:%[2]s
 
@@ -272,7 +272,7 @@ To repro, try:
 # using stress instead of stressrace and passing the '-p' stressflag which
 # controls concurrency.
 ./scripts/gceworker.sh start && ./scripts/gceworker.sh mosh
-cd ~/go/src/github.com/cockroachdb/cockroach && \
+cd ~/go/src/github.com/weisslj/cockroach && \
 stdbuf -oL -eL \
 make stressrace TESTS=%[5]s PKG=%[4]s TESTTIMEOUT=5m STRESSFLAGS='-maxtime 20m -timeout 10m' 2>&1 | tee /tmp/stress.log
 ` + "```" + `

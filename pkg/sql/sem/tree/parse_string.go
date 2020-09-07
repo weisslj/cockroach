@@ -17,9 +17,9 @@ package tree
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 // ParseStringAs reads s as type t. If t is Bytes or String, s is returned

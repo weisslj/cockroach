@@ -22,10 +22,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/stop"
 )
 
 const errOffsetGreaterThanMaxOffset = "clock synchronization error: this node is more than .+ away from at least half of the known nodes"

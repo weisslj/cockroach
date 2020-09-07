@@ -883,7 +883,7 @@ if not hidepercontributor:
 
 # Link the PRs and SHAs
 for pr in sorted(seenprs):
-    print("[%s]: https://github.com/cockroachdb/cockroach/pull/%s" % (pr, pr[1:]))
+    print("[%s]: https://github.com/weisslj/cockroach/pull/%s" % (pr, pr[1:]))
 for sha in sorted(seenshas):
-    print("[%s]: https://github.com/cockroachdb/cockroach/commit/%s" % (sha, sha))
+    print("[%s]: https://github.com/weisslj/cockroach/commit/%s" % (sha, sha))
 print()

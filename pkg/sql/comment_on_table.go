@@ -17,9 +17,9 @@ package sql
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 type commentOnTableNode struct {

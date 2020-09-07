@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 )
 
 // This test runs hibernate-core's full test suite against an single cockroach
@@ -363,5 +363,5 @@ func maybeAddGithubLink(issue string) string {
 	if err != nil {
 		return issue
 	}
-	return fmt.Sprintf("https://github.com/cockroachdb/cockroach/issues/%d", issueNum)
+	return fmt.Sprintf("https://github.com/weisslj/cockroach/issues/%d", issueNum)
 }

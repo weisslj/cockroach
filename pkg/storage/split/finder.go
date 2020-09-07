@@ -19,7 +19,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 // Load-based splitting.

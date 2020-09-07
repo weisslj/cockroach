@@ -22,8 +22,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/cli/cliflags"
-	"github.com/cockroachdb/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/cli/cliflags"
+	"github.com/weisslj/cockroach/pkg/security"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )

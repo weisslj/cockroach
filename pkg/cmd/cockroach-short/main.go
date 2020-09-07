@@ -22,8 +22,8 @@
 package main
 
 import (
-	_ "github.com/cockroachdb/cockroach/pkg/ccl" // ccl init hooks
-	"github.com/cockroachdb/cockroach/pkg/cli"
+	_ "github.com/weisslj/cockroach/pkg/ccl" // ccl init hooks
+	"github.com/weisslj/cockroach/pkg/cli"
 )
 
 func main() {

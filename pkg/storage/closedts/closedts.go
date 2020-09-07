@@ -45,9 +45,9 @@ package closedts
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // TrackerI is part of the machinery enabling follower reads, that is, consistent
@@ -57,7 +57,7 @@ import (
 // updates along with a map delta of minimum Lease Applied Indexes a replica
 // wishing to serve a follower read must reach in order to do so correctly.
 //
-// See https://github.com/cockroachdb/cockroach/pull/26362 for more information.
+// See https://github.com/weisslj/cockroach/pull/26362 for more information.
 //
 // The methods exposed on Tracker are safe for concurrent use.
 type TrackerI interface {

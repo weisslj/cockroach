@@ -17,10 +17,10 @@ package base_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestClientSSLSettings(t *testing.T) {

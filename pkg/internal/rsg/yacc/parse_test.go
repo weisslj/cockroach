@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	// Needed for the -verbosity flag on circleci tests.
-	_ "github.com/cockroachdb/cockroach/pkg/util/log"
+	_ "github.com/weisslj/cockroach/pkg/util/log"
 )
 
 const sqlYPath = "../../../sql/parser/sql.y"

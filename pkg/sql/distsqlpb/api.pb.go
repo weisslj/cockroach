@@ -12,7 +12,7 @@ package distsqlpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import time "time"
 

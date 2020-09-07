@@ -21,8 +21,8 @@ import (
 	"strconv"
 	"unsafe"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 type jsonEncoded struct {

@@ -25,8 +25,8 @@ package exec
 
 import (
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/exec/coldata"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
 	"github.com/pkg/errors"
 )
 

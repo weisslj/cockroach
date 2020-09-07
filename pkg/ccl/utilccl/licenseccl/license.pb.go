@@ -7,7 +7,7 @@ import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import io "io"
 
@@ -49,7 +49,7 @@ func (License_Type) EnumDescriptor() ([]byte, []int) {
 }
 
 type License struct {
-	ClusterID            []github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,rep,name=cluster_id,json=clusterId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"cluster_id"`
+	ClusterID            []github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,rep,name=cluster_id,json=clusterId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"cluster_id"`
 	ValidUntilUnixSec    int64                                                 `protobuf:"varint,2,opt,name=valid_until_unix_sec,json=validUntilUnixSec,proto3" json:"valid_until_unix_sec,omitempty"`
 	Type                 License_Type                                          `protobuf:"varint,3,opt,name=type,proto3,enum=cockroach.ccl.utilccl.licenseccl.License_Type" json:"type,omitempty"`
 	OrganizationName     string                                                `protobuf:"bytes,4,opt,name=organization_name,json=organizationName,proto3" json:"organization_name,omitempty"`

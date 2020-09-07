@@ -25,7 +25,7 @@ import (
 	"os/exec"
 	"text/template"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/vm"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/vm"
 	"github.com/pkg/errors"
 )
 

@@ -17,10 +17,10 @@ package physical_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/util"
 )
 
 func TestOrderingChoice_FromOrdering(t *testing.T) {

@@ -18,7 +18,7 @@ package tracing
 // }
 import "C"
 
-import "github.com/cockroachdb/cockroach/pkg/util/envutil"
+import "github.com/weisslj/cockroach/pkg/util/envutil"
 
 var annotationEnabled = envutil.EnvOrDefaultBool("COCKROACH_ANNOTATE_TRACES", false)
 

@@ -6,7 +6,7 @@ package roachpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import util "github.com/cockroachdb/cockroach/pkg/util"
+import util "github.com/weisslj/cockroach/pkg/util"
 
 import bytes "bytes"
 

@@ -23,8 +23,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/split"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/storage/split"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 	humanize "github.com/dustin/go-humanize"
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"

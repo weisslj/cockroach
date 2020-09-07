@@ -17,9 +17,9 @@ package base
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 )
 
 // ClusterIDContainer is used to share a single Cluster ID instance between

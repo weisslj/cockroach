@@ -17,10 +17,10 @@ package distsqlrun
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlpb"
+	"github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // projectSetProcessor is the physical processor implementation of

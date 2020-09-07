@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package changefeedccl
 
@@ -13,12 +13,12 @@ import (
 	"math"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/jobs"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/jobs"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 type metricsSink struct {

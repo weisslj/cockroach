@@ -14,7 +14,7 @@
 
 package sql
 
-import "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+import "github.com/weisslj/cockroach/pkg/sql/sqlbase"
 
 var noColumns = make(sqlbase.ResultColumns, 0)
 

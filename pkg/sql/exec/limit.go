@@ -14,7 +14,7 @@
 
 package exec
 
-import "github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
+import "github.com/weisslj/cockroach/pkg/sql/exec/coldata"
 
 // limitOp is an operator that implements limit, returning only the first n
 // tuples from its input.

@@ -19,8 +19,8 @@ package constraint
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 )
 
 func TestSpans(t *testing.T) {

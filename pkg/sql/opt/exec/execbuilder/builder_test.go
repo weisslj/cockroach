@@ -17,8 +17,8 @@ package execbuilder_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/logictest"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/sql/logictest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 // TestExecBuild runs logic tests that are specific to how the optimizer builds

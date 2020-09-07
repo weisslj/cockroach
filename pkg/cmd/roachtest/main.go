@@ -21,7 +21,7 @@ import (
 	"os"
 	"os/user"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/spf13/cobra"
 )
 

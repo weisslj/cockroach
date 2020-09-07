@@ -22,13 +22,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	_ "github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/sqlutils"
-	_ "github.com/cockroachdb/cockroach/pkg/util/log" // for flags
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	_ "github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/sqlutils"
+	_ "github.com/weisslj/cockroach/pkg/util/log" // for flags
 )
 
 // TestParse verifies that we can parse the supplied SQL and regenerate the SQL

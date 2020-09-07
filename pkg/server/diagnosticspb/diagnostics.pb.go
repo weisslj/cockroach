@@ -6,12 +6,12 @@ package diagnosticspb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import build "github.com/cockroachdb/cockroach/pkg/build"
-import config "github.com/cockroachdb/cockroach/pkg/config"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+import build "github.com/weisslj/cockroach/pkg/build"
+import config "github.com/weisslj/cockroach/pkg/config"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
 import encoding_binary "encoding/binary"
@@ -73,7 +73,7 @@ func (m *DiagnosticReport) XXX_DiscardUnknown() {
 var xxx_messageInfo_DiagnosticReport proto.InternalMessageInfo
 
 type NodeInfo struct {
-	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
 	Bytes                int64                                               `protobuf:"varint,2,opt,name=bytes,proto3" json:"bytes,omitempty"`
 	KeyCount             int64                                               `protobuf:"varint,3,opt,name=key_count,json=keyCount,proto3" json:"key_count,omitempty"`
 	RangeCount           int64                                               `protobuf:"varint,4,opt,name=range_count,json=rangeCount,proto3" json:"range_count,omitempty"`
@@ -117,8 +117,8 @@ func (m *NodeInfo) XXX_DiscardUnknown() {
 var xxx_messageInfo_NodeInfo proto.InternalMessageInfo
 
 type StoreInfo struct {
-	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID  `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
-	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,2,opt,name=store_id,json=storeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.StoreID" json:"store_id,omitempty"`
+	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID  `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,2,opt,name=store_id,json=storeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.StoreID" json:"store_id,omitempty"`
 	Bytes                int64                                                `protobuf:"varint,3,opt,name=bytes,proto3" json:"bytes,omitempty"`
 	KeyCount             int64                                                `protobuf:"varint,4,opt,name=key_count,json=keyCount,proto3" json:"key_count,omitempty"`
 	RangeCount           int64                                                `protobuf:"varint,5,opt,name=range_count,json=rangeCount,proto3" json:"range_count,omitempty"`

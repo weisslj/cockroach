@@ -20,13 +20,13 @@ import (
 	"math"
 	"math/bits"
 
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/pkg/errors"
 )
 

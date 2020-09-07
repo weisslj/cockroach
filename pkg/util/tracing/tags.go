@@ -17,7 +17,7 @@ package tracing
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log/logtags"
+	"github.com/weisslj/cockroach/pkg/util/log/logtags"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

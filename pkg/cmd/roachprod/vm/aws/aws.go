@@ -25,9 +25,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/vm"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/vm/flagstub"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/vm"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/vm/flagstub"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
 	"golang.org/x/sync/errgroup"

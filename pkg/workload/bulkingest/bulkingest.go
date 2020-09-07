@@ -56,11 +56,11 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/workload"
-	"github.com/cockroachdb/cockroach/pkg/workload/histogram"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload/histogram"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
 )

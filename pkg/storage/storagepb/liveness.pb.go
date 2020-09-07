@@ -6,9 +6,9 @@ package storagepb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import io "io"
 
@@ -73,7 +73,7 @@ func (NodeLivenessStatus) EnumDescriptor() ([]byte, []int) {
 // NOTE: Care must be taken when changing the encoding of this proto
 // because it is used as part of conditional put operations.
 type Liveness struct {
-	NodeID github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	NodeID github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
 	// Epoch is a monotonically-increasing value for node liveness. It
 	// may be incremented if the liveness record expires (current time
 	// is later than the expiration timestamp).

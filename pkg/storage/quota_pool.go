@@ -31,11 +31,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 type quotaPool struct {

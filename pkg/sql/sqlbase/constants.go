@@ -17,7 +17,7 @@ package sqlbase
 import (
 	"math"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
 )
 
 // DefaultSearchPath is the search path used by virgin sessions.

@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package changefeedccl
 
@@ -21,23 +21,23 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach-go/crdb"
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/ccl/changefeedccl/cdctest"
-	"github.com/cockroachdb/cockroach/pkg/ccl/utilccl"
-	"github.com/cockroachdb/cockroach/pkg/jobs"
-	"github.com/cockroachdb/cockroach/pkg/jobs/jobspb"
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/server"
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlrun"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/sqlutils"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach-go/crdb"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/ccl/changefeedccl/cdctest"
+	"github.com/weisslj/cockroach/pkg/ccl/utilccl"
+	"github.com/weisslj/cockroach/pkg/jobs"
+	"github.com/weisslj/cockroach/pkg/jobs/jobspb"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/server"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlrun"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/testutils/sqlutils"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

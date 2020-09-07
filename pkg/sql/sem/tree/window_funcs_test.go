@@ -22,9 +22,9 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 const minOffset = 0

@@ -17,8 +17,8 @@ package tree
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
 )
 
 // Function names are used in expressions in the FuncExpr node.

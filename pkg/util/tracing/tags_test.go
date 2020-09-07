@@ -17,7 +17,7 @@ package tracing
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log/logtags"
+	"github.com/weisslj/cockroach/pkg/util/log/logtags"
 )
 
 func TestLogTags(t *testing.T) {

@@ -23,25 +23,25 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/sql"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/hba"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgwirebase"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqltelemetry"
-	"github.com/cockroachdb/cockroach/pkg/util/contextutil"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
-	"github.com/cockroachdb/cockroach/pkg/util/mon"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/sql"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/hba"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgwirebase"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sqltelemetry"
+	"github.com/weisslj/cockroach/pkg/util/contextutil"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/mon"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/pkg/errors"
 )
 
@@ -299,7 +299,7 @@ func (s *Server) Metrics() (res []interface{}) {
 // exist.
 // The RFC on drain modes has more information regarding the specifics of
 // what will happen to connections in different states:
-// https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20160425_drain_modes.md
+// https://github.com/weisslj/cockroach/blob/master/docs/RFCS/20160425_drain_modes.md
 func (s *Server) Drain(drainWait time.Duration) error {
 	return s.drainImpl(drainWait, cancelMaxWait)
 }

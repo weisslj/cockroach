@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 // Bucket10 buckets a number by order of magnitude base 10, eg 637 -> 100.

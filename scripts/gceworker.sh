@@ -84,7 +84,7 @@ case "${cmd}" in
     mosh --ssh=$(printf '%q' "${arr}") $host
     ;;
     scp)
-    # Example: $0 scp gceworker-youruser:go/src/github.com/cockroachdb/cockroach/cockroach-data/logs gcelogs --recurse
+    # Example: $0 scp gceworker-youruser:go/src/github.com/weisslj/cockroach/cockroach-data/logs gcelogs --recurse
     retry gcloud compute scp "$@"
     ;;
     ip)
@@ -101,7 +101,7 @@ case "${cmd}" in
     fi
     if (( $# == 0 )); then
       host=.  # Sync the Cockroach repo by default.
-      worker=go/src/github.com/cockroachdb/cockroach
+      worker=go/src/github.com/weisslj/cockroach
     elif (( $# == 2 )); then
       host=$1
       worker=$2

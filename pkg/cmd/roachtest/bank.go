@@ -27,11 +27,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 const (
@@ -346,10 +346,10 @@ func (s *bankState) startSplitMonkey(ctx context.Context, d time.Duration, c *cl
 
 func isExpectedRelocateError(err error) bool {
 	// See:
-	// https://github.com/cockroachdb/cockroach/issues/33732
-	// https://github.com/cockroachdb/cockroach/issues/33708
+	// https://github.com/weisslj/cockroach/issues/33732
+	// https://github.com/weisslj/cockroach/issues/33708
 	// https://github.cm/cockroachdb/cockroach/issues/34012
-	// https://github.com/cockroachdb/cockroach/issues/33683#issuecomment-454889149
+	// https://github.com/weisslj/cockroach/issues/33683#issuecomment-454889149
 	// for more failure modes not caught here. We decided to avoid adding
 	// to this catchall and to fix the root causes instead.
 	// We've also seen "breaker open" errors here.

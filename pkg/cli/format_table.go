@@ -25,10 +25,10 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding/csv"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/encoding/csv"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/olekukonko/tablewriter"
 	"github.com/pkg/errors"
 )

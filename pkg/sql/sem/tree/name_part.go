@@ -14,7 +14,7 @@
 
 package tree
 
-import "github.com/cockroachdb/cockroach/pkg/sql/lex"
+import "github.com/weisslj/cockroach/pkg/sql/lex"
 
 // A Name is an SQL identifier.
 //

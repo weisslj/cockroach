@@ -35,7 +35,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/internal/issues"
+	"github.com/weisslj/cockroach/pkg/cmd/internal/issues"
 	"github.com/pkg/errors"
 )
 
@@ -392,7 +392,7 @@ func getAuthorEmail(ctx context.Context, packageName, testName string) (string, 
 	// commits in cockroachdb/cockroach for commits authored by the address.
 	subtests := strings.Split(testName, "/")
 	testName = subtests[0]
-	packageName = strings.TrimPrefix(packageName, "github.com/cockroachdb/cockroach/")
+	packageName = strings.TrimPrefix(packageName, "github.com/weisslj/cockroach/")
 	cmd := exec.Command(`/bin/bash`, `-c`,
 		fmt.Sprintf(`git grep -n "func %s" $(git rev-parse --show-toplevel)/%s/*_test.go`,
 			testName, packageName))

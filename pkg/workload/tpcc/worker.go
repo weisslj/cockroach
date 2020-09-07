@@ -22,9 +22,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/workload"
-	"github.com/cockroachdb/cockroach/pkg/workload/histogram"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload/histogram"
 	"github.com/pkg/errors"
 	"golang.org/x/exp/rand"
 )

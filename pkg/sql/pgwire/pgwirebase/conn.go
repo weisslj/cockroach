@@ -17,7 +17,7 @@ package pgwirebase
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // Conn exposes some functionality of a pgwire network connection to be

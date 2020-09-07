@@ -14,7 +14,7 @@
 
 package kv
 
-import "github.com/cockroachdb/cockroach/pkg/base"
+import "github.com/weisslj/cockroach/pkg/base"
 
 // ClientTestingKnobs contains testing options that dictate the behavior
 // of the key-value client.

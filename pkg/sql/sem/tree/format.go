@@ -19,10 +19,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/util"
 )
 
 // FmtFlags carries options for the pretty-printer.

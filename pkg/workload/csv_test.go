@@ -24,10 +24,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/workload"
-	"github.com/cockroachdb/cockroach/pkg/workload/bank"
-	"github.com/cockroachdb/cockroach/pkg/workload/tpcc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload/bank"
+	"github.com/weisslj/cockroach/pkg/workload/tpcc"
 	"github.com/stretchr/testify/require"
 )
 

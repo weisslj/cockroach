@@ -18,15 +18,15 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/cat"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/ordering"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/cat"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/opt/ordering"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"golang.org/x/tools/container/intsets"
 )
 
@@ -107,7 +107,7 @@ const (
 	// TODO(justin): make this more sophisticated.
 	// lookupJoinRetrieveRowCost is the cost to retrieve a single row during a
 	// lookup join.
-	// See https://github.com/cockroachdb/cockroach/pull/35561 for the initial
+	// See https://github.com/weisslj/cockroach/pull/35561 for the initial
 	// justification for this constant.
 	lookupJoinRetrieveRowCost = 2 * seqIOCostFactor
 

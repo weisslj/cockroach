@@ -7,7 +7,7 @@ import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import io "io"
 
@@ -24,7 +24,7 @@ const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 
 type RecursiveAndUncloneable struct {
 	R                    *RecursiveAndUncloneable                            `protobuf:"bytes,1,opt,name=r,proto3" json:"r,omitempty"`
-	Uuid                 github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,2,opt,name=uuid,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"uuid"`
+	Uuid                 github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,2,opt,name=uuid,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"uuid"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
 }

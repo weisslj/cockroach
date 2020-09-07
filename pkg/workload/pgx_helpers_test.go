@@ -18,7 +18,7 @@ package workload
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestDistribute(t *testing.T) {

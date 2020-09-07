@@ -23,9 +23,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/security/securitytest"
-	"github.com/cockroachdb/cockroach/pkg/util/fileutil"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/security/securitytest"
+	"github.com/weisslj/cockroach/pkg/util/fileutil"
 )
 
 // PGUrl returns a postgres connection url which connects to this server with the given user, and a

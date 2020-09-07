@@ -17,8 +17,8 @@ package base
 import (
 	"errors"
 
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 )
 
 // CheckEnterpriseEnabled returns a non-nil error if the requested enterprise

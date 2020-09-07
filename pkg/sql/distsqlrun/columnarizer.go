@@ -17,11 +17,11 @@ package distsqlrun
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types/conv"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlpb"
+	"github.com/weisslj/cockroach/pkg/sql/exec"
+	"github.com/weisslj/cockroach/pkg/sql/exec/coldata"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types/conv"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // columnarizer turns a RowSource input into an exec.Operator output, by reading

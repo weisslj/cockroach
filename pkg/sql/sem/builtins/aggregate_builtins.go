@@ -22,13 +22,13 @@ import (
 	"unsafe"
 
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/util/arith"
-	"github.com/cockroachdb/cockroach/pkg/util/duration"
-	"github.com/cockroachdb/cockroach/pkg/util/json"
-	"github.com/cockroachdb/cockroach/pkg/util/mon"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/util/arith"
+	"github.com/weisslj/cockroach/pkg/util/duration"
+	"github.com/weisslj/cockroach/pkg/util/json"
+	"github.com/weisslj/cockroach/pkg/util/mon"
 )
 
 func initAggregateBuiltins() {
@@ -217,7 +217,7 @@ var aggregates = map[string]builtinDefinition{
 	// final_(variance|stddev) computes the global (variance|standard deviation)
 	// from an arbitrary collection of local sums of squared difference from the mean.
 	// Adapted from https://www.johndcook.com/blog/skewness_kurtosis and
-	// https://github.com/cockroachdb/cockroach/pull/17728.
+	// https://github.com/weisslj/cockroach/pull/17728.
 
 	// TODO(knz): The 3-argument final_variance and final_stddev are
 	// only defined for internal use by distributed aggregations. They
@@ -1427,7 +1427,7 @@ func (a *floatSumSqrDiffsAggregate) Add(
 	// mean in a single pass. Adapted from sum of RunningStats in
 	// https://www.johndcook.com/blog/skewness_kurtosis and our
 	// implementation of NumericStats
-	// https://github.com/cockroachdb/cockroach/pull/17728.
+	// https://github.com/weisslj/cockroach/pull/17728.
 	totalCount, ok := arith.AddWithOverflow(a.count, count)
 	if !ok {
 		return pgerror.NewErrorf(pgerror.CodeNumericValueOutOfRangeError,
@@ -1514,7 +1514,7 @@ func (a *decimalSumSqrDiffsAggregate) Add(
 	// mean in a single pass. Adapted from sum of RunningStats in
 	// https://www.johndcook.com/blog/skewness_kurtosis and our
 	// implementation of NumericStats
-	// https://github.com/cockroachdb/cockroach/pull/17728.
+	// https://github.com/weisslj/cockroach/pull/17728.
 
 	// This is logically equivalent to
 	//   sqrDiff + delta * delta * tmpCount * a.count / (tmpCount + a.count)

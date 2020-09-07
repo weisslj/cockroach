@@ -20,16 +20,16 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagebase"
-	"github.com/cockroachdb/cockroach/pkg/storage/txnwait"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage"
+	"github.com/weisslj/cockroach/pkg/storage/storagebase"
+	"github.com/weisslj/cockroach/pkg/storage/txnwait"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 )
 
 // This file contains contains integration tests that don't fit anywhere else.
@@ -51,7 +51,7 @@ import (
 // true) and that its external intent (i.e. the one on the right range) could
 // be resolved (not true). Verify that neither occurs.
 //
-// [1]: https://github.com/cockroachdb/cockroach/issues/34025#issuecomment-460934278
+// [1]: https://github.com/weisslj/cockroach/issues/34025#issuecomment-460934278
 func TestWaiterOnRejectedCommit(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 	ctx := context.Background()

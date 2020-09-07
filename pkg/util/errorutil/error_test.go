@@ -20,7 +20,7 @@ func TestUnexpectedWithIssueErrorf(t *testing.T) {
 	err := UnexpectedWithIssueErrorf(1234, "args: %d %s %f", 1, "two", 3.0)
 	exp := "unexpected error: args: 1 two 3.000000\n" +
 		"We've been trying to track this particular issue down. Please report your " +
-		"reproduction at https://github.com/cockroachdb/cockroach/issues/1234 unless " +
+		"reproduction at https://github.com/weisslj/cockroach/issues/1234 unless " +
 		"that issue seems to have been resolved (in which case you might want to " +
 		"update crdb to a newer version)."
 	if err.Error() != exp {

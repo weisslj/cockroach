@@ -11,7 +11,7 @@ if [ -z "${CODECOV_TOKEN-}" ]; then
   exit 1
 fi
 
-prefix=github.com/cockroachdb/cockroach/pkg
+prefix=github.com/weisslj/cockroach/pkg
 
 coverage_dir=coverage
 coverage_profile=$coverage_dir/coverage.out

@@ -15,9 +15,9 @@
 package tests
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/storage"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagebase"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/storage"
+	"github.com/weisslj/cockroach/pkg/storage/storagebase"
 )
 
 // CreateTestServerParams creates a set of params suitable for SQL tests.

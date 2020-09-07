@@ -19,7 +19,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils/datadriven"
+	"github.com/weisslj/cockroach/pkg/testutils/datadriven"
 )
 
 func TestParse(t *testing.T) {

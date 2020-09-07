@@ -18,10 +18,10 @@ import (
 	"context"
 	"io"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 // ChanDialer is an implementation of closedts.Dialer that connects clients

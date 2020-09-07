@@ -18,7 +18,7 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"golang.org/x/sync/syncmap"
 	"google.golang.org/grpc/stats"
 )

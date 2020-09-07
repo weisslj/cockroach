@@ -15,7 +15,7 @@
 
 package intentresolver
 
-import "github.com/cockroachdb/cockroach/pkg/util/metric"
+import "github.com/weisslj/cockroach/pkg/util/metric"
 
 var (
 	// Intent resolver metrics.

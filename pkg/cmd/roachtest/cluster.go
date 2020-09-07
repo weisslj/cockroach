@@ -40,9 +40,9 @@ import (
 	"time"
 
 	"github.com/armon/circbuf"
-	"github.com/cockroachdb/cockroach/pkg/util/contextutil"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/contextutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
@@ -141,8 +141,8 @@ func findBinary(binary, defValue string) (string, error) {
 			binSuffix = ".docker_amd64"
 		}
 		dirs := []string{
-			filepath.Join(gopath, "/src/github.com/cockroachdb/cockroach/"),
-			filepath.Join(gopath, "/src/github.com/cockroachdb/cockroach/bin"+binSuffix),
+			filepath.Join(gopath, "/src/github.com/weisslj/cockroach/"),
+			filepath.Join(gopath, "/src/github.com/weisslj/cockroach/bin"+binSuffix),
 			filepath.Join(os.ExpandEnv("$PWD"), "bin"+binSuffix),
 		}
 		for _, dir := range dirs {

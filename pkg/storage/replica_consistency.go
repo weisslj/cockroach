@@ -26,23 +26,23 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/storage/batcheval"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/storage/rditer"
-	"github.com/cockroachdb/cockroach/pkg/storage/stateloader"
-	"github.com/cockroachdb/cockroach/pkg/util/bufalloc"
-	"github.com/cockroachdb/cockroach/pkg/util/contextutil"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/storage/batcheval"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/storage/rditer"
+	"github.com/weisslj/cockroach/pkg/storage/stateloader"
+	"github.com/weisslj/cockroach/pkg/util/bufalloc"
+	"github.com/weisslj/cockroach/pkg/util/contextutil"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/pkg/errors"
 )
 
@@ -239,7 +239,7 @@ func (r *Replica) CheckConsistency(
 	// until the process crashes.
 	//
 	// See:
-	// https://github.com/cockroachdb/cockroach/issues/36861
+	// https://github.com/weisslj/cockroach/issues/36861
 	oldLogLimit := atomic.LoadInt64(&log.LogFilesCombinedMaxSize)
 	atomic.CompareAndSwapInt64(&log.LogFilesCombinedMaxSize, oldLogLimit, math.MaxInt64)
 	if _, pErr := r.CheckConsistency(ctx, args); pErr != nil {

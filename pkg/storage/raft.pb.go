@@ -7,10 +7,10 @@ import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
 import raftpb "go.etcd.io/etcd/raft/raftpb"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import storagepb "github.com/cockroachdb/cockroach/pkg/storage/storagepb"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import storagepb "github.com/weisslj/cockroach/pkg/storage/storagepb"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import (
 	context "context"
@@ -160,9 +160,9 @@ func (SnapshotResponse_Status) EnumDescriptor() ([]byte, []int) {
 // in a RaftMessageRequest, and reconstructed by the receiver into individual
 // raftpb.Message protos.
 type RaftHeartbeat struct {
-	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID   `protobuf:"varint,1,opt,name=range_id,json=rangeId,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id"`
-	FromReplicaID        github_com_cockroachdb_cockroach_pkg_roachpb.ReplicaID `protobuf:"varint,2,opt,name=from_replica_id,json=fromReplicaId,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.ReplicaID" json:"from_replica_id"`
-	ToReplicaID          github_com_cockroachdb_cockroach_pkg_roachpb.ReplicaID `protobuf:"varint,3,opt,name=to_replica_id,json=toReplicaId,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.ReplicaID" json:"to_replica_id"`
+	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID   `protobuf:"varint,1,opt,name=range_id,json=rangeId,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id"`
+	FromReplicaID        github_com_cockroachdb_cockroach_pkg_roachpb.ReplicaID `protobuf:"varint,2,opt,name=from_replica_id,json=fromReplicaId,casttype=github.com/weisslj/cockroach/pkg/roachpb.ReplicaID" json:"from_replica_id"`
+	ToReplicaID          github_com_cockroachdb_cockroach_pkg_roachpb.ReplicaID `protobuf:"varint,3,opt,name=to_replica_id,json=toReplicaId,casttype=github.com/weisslj/cockroach/pkg/roachpb.ReplicaID" json:"to_replica_id"`
 	Term                 uint64                                                 `protobuf:"varint,4,opt,name=term" json:"term"`
 	Commit               uint64                                                 `protobuf:"varint,5,opt,name=commit" json:"commit"`
 	Quiesce              bool                                                   `protobuf:"varint,6,opt,name=quiesce" json:"quiesce"`
@@ -205,10 +205,10 @@ var xxx_messageInfo_RaftHeartbeat proto.InternalMessageInfo
 // as a dummy message and discarded. A coalesced heartbeat request's replica
 // descriptor's range ID must be zero.
 type RaftMessageRequest struct {
-	RangeID github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,opt,name=range_id,json=rangeId,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id"`
+	RangeID github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,opt,name=range_id,json=rangeId,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id"`
 	// Optionally, the start key of the sending replica. This is only populated
 	// as a "hint" under certain conditions.
-	RangeStartKey github_com_cockroachdb_cockroach_pkg_roachpb.RKey `protobuf:"bytes,8,opt,name=range_start_key,json=rangeStartKey,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RKey" json:"range_start_key,omitempty"`
+	RangeStartKey github_com_cockroachdb_cockroach_pkg_roachpb.RKey `protobuf:"bytes,8,opt,name=range_start_key,json=rangeStartKey,casttype=github.com/weisslj/cockroach/pkg/roachpb.RKey" json:"range_start_key,omitempty"`
 	FromReplica   roachpb.ReplicaDescriptor                         `protobuf:"bytes,2,opt,name=from_replica,json=fromReplica" json:"from_replica"`
 	ToReplica     roachpb.ReplicaDescriptor                         `protobuf:"bytes,3,opt,name=to_replica,json=toReplica" json:"to_replica"`
 	Message       raftpb.Message                                    `protobuf:"bytes,4,opt,name=message" json:"message"`
@@ -335,7 +335,7 @@ var xxx_messageInfo_RaftMessageResponseUnion proto.InternalMessageInfo
 // RaftMessageResponse is not sent for every RaftMessageRequest, but
 // may be used for certain error conditions.
 type RaftMessageResponse struct {
-	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,opt,name=range_id,json=rangeId,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id"`
+	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,opt,name=range_id,json=rangeId,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id"`
 	FromReplica          roachpb.ReplicaDescriptor                            `protobuf:"bytes,2,opt,name=from_replica,json=fromReplica" json:"from_replica"`
 	ToReplica            roachpb.ReplicaDescriptor                            `protobuf:"bytes,3,opt,name=to_replica,json=toReplica" json:"to_replica"`
 	Union                RaftMessageResponseUnion                             `protobuf:"bytes,4,opt,name=union" json:"union"`

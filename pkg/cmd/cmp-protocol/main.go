@@ -27,11 +27,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/cmp-protocol/pgconnect"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgwirebase"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/cmd/cmp-protocol/pgconnect"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgwirebase"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 	"github.com/pkg/errors"
 )
 
@@ -119,7 +119,7 @@ func compare(w io.Writer, input, pgAddr, crAddr, pgUser, crUser string) error {
 		pgwirebase.FormatText,
 		pgwirebase.FormatBinary,
 	} {
-		// https://github.com/cockroachdb/cockroach/issues/31847
+		// https://github.com/weisslj/cockroach/issues/31847
 		if code == pgwirebase.FormatBinary && strings.HasPrefix(input, "SELECT (") {
 			continue
 		}

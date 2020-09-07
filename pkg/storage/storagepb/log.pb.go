@@ -6,10 +6,10 @@ package storagepb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import time "time"
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
 
@@ -64,10 +64,10 @@ func (RangeLogEventType) EnumDescriptor() ([]byte, []int) {
 
 type RangeLogEvent struct {
 	Timestamp            time.Time                                            `protobuf:"bytes,1,opt,name=timestamp,proto3,stdtime" json:"timestamp"`
-	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
-	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,3,opt,name=store_id,json=storeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.StoreID" json:"store_id,omitempty"`
+	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
+	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,3,opt,name=store_id,json=storeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.StoreID" json:"store_id,omitempty"`
 	EventType            RangeLogEventType                                    `protobuf:"varint,4,opt,name=event_type,json=eventType,proto3,enum=cockroach.storage.RangeLogEventType" json:"event_type,omitempty"`
-	OtherRangeID         github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,5,opt,name=other_range_id,json=otherRangeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"other_range_id,omitempty"`
+	OtherRangeID         github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,5,opt,name=other_range_id,json=otherRangeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"other_range_id,omitempty"`
 	Info                 *RangeLogEvent_Info                                  `protobuf:"bytes,6,opt,name=info,proto3" json:"info,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                             `json:"-"`
 	XXX_sizecache        int32                                                `json:"-"`

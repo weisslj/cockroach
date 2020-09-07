@@ -24,13 +24,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 	// We dot-import fsm to use common names such as fsm.True/False. State machine
 	// implementations using that library are weird beasts intimately inter-twined
 	// with that package; therefor this file should stay as small as possible.
-	. "github.com/cockroachdb/cockroach/pkg/util/fsm"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	. "github.com/weisslj/cockroach/pkg/util/fsm"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // Constants for the String() representation of the session states. Shared with

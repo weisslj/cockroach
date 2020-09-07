@@ -6,9 +6,9 @@ package roachpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import bytes "bytes"
 
@@ -1232,7 +1232,7 @@ type TransactionRetryWithProtoRefreshError struct {
 	// The ID of the transaction being restarted. The client is supposed to check
 	// this against the ID of its transaction and make sure the retryable error
 	// is meant for its level and didn't escape from some inner transaction.
-	TxnID github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,2,opt,name=txn_id,json=txnId,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
+	TxnID github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,2,opt,name=txn_id,json=txnId,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
 	// The Transaction that should be used by next attempts. Depending on the
 	// original cause of this method, this can either be the same Transaction as
 	// before, but with an incremented epoch and timestamp, or a completely new

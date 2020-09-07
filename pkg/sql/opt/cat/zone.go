@@ -18,7 +18,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/util/treeprinter"
+	"github.com/weisslj/cockroach/pkg/util/treeprinter"
 )
 
 // Zone is an interface to zone configuration information used by the optimizer.

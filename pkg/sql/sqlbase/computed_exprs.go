@@ -17,11 +17,11 @@ package sqlbase
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/transform"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/transform"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 // RowIndexedVarContainer is used to evaluate expressions over various rows.
@@ -94,7 +94,7 @@ func CannotWriteToComputedColError(colName string) error {
 //
 // TODO(justin/knz): This can be made less work intensive by only selecting
 // computed columns that depend on one of the updated columns. See issue
-// https://github.com/cockroachdb/cockroach/issues/23523.
+// https://github.com/weisslj/cockroach/issues/23523.
 func ProcessComputedColumns(
 	ctx context.Context,
 	cols []ColumnDescriptor,

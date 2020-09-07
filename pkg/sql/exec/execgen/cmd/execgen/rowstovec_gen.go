@@ -20,9 +20,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types/conv"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types/conv"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // Width is used when a SemanticType has a width that has an associated distinct

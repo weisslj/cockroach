@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/metric"
 )
 
 // Metrics contains gossip metrics used per node and server.

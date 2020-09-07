@@ -18,7 +18,7 @@ import (
 	"fmt"
 
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
 )
 
 // column is an interface that represents a raw array of a Go native type.

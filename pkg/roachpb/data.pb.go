@@ -6,10 +6,10 @@ package roachpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import enginepb "github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import enginepb "github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import bytes "bytes"
 
@@ -288,7 +288,7 @@ var xxx_messageInfo_KeyValue proto.InternalMessageInfo
 // StoreIdent is written to the underlying storage engine at a
 // store-reserved system key (KeyLocalIdent).
 type StoreIdent struct {
-	ClusterID            github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=cluster_id,json=clusterId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"cluster_id"`
+	ClusterID            github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=cluster_id,json=clusterId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"cluster_id"`
 	NodeID               NodeID                                              `protobuf:"varint,2,opt,name=node_id,json=nodeId,proto3,casttype=NodeID" json:"node_id,omitempty"`
 	StoreID              StoreID                                             `protobuf:"varint,3,opt,name=store_id,json=storeId,proto3,casttype=StoreID" json:"store_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`

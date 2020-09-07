@@ -18,9 +18,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/server/status/statuspb"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/server/status/statuspb"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 type threshold struct {

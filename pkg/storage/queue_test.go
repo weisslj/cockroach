@@ -22,19 +22,19 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/gossip"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/rpc"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/gossip"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/rpc"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/gogo/protobuf/proto"
 	"github.com/pkg/errors"
 )
@@ -299,7 +299,7 @@ func TestBaseQueueAddUpdateAndRemove(t *testing.T) {
 // This avoids starvation scenarios, in particular in the Raft snapshot queue.
 //
 // See:
-// https://github.com/cockroachdb/cockroach/issues/31947#issuecomment-434383267
+// https://github.com/weisslj/cockroach/issues/31947#issuecomment-434383267
 func TestBaseQueueSamePriorityFIFO(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 	tc := testContext{}

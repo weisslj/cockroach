@@ -20,7 +20,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestSliceSliceInterfaceSort(t *testing.T) {

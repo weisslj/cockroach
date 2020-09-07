@@ -25,11 +25,11 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
-	"github.com/cockroachdb/cockroach/pkg/ccl/changefeedccl/cdctest"
-	"github.com/cockroachdb/cockroach/pkg/jobs/jobspb"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/ccl/changefeedccl/cdctest"
+	"github.com/weisslj/cockroach/pkg/jobs/jobspb"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/version"
 	"github.com/codahale/hdrhistogram"
 	"github.com/pkg/errors"
 )

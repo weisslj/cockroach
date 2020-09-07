@@ -14,7 +14,7 @@
 
 package examples
 
-import "github.com/cockroachdb/cockroach/pkg/workload"
+import "github.com/weisslj/cockroach/pkg/workload"
 
 const (
 	episodesSchema = `(id INT PRIMARY KEY, season INT, num INT, title TEXT, stardate DECIMAL)`

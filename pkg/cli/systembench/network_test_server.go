@@ -19,7 +19,7 @@ import (
 	"math"
 	"net"
 
-	"github.com/cockroachdb/cockroach/pkg/cli/systembench/systembenchpb"
+	"github.com/weisslj/cockroach/pkg/cli/systembench/systembenchpb"
 	"google.golang.org/grpc"
 )
 

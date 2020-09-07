@@ -17,7 +17,7 @@ package tree
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 )
 
 // IsolationLevel holds the isolation level for a transaction.

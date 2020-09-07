@@ -6,12 +6,12 @@ package storagepb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import enginepb "github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import enginepb "github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import bytes "bytes"
 
@@ -151,7 +151,7 @@ var xxx_messageInfo_ChangeReplicas proto.InternalMessageInfo
 type ComputeChecksum struct {
 	// ChecksumID is a handle by which the checksum can be retrieved in a later
 	// CollectChecksum request.
-	ChecksumID github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=checksum_id,json=checksumId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"checksum_id"`
+	ChecksumID github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=checksum_id,json=checksumId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"checksum_id"`
 	// The version used to pick the checksum method. Only when the version matches
 	// that hardcoded in the binary will a computation be carried out.
 	Version uint32 `protobuf:"varint,5,opt,name=version,proto3" json:"version,omitempty"`
@@ -238,8 +238,8 @@ var xxx_messageInfo_Compaction proto.InternalMessageInfo
 // SuggestedCompaction holds start and end keys in conjunction with
 // the compaction details.
 type SuggestedCompaction struct {
-	StartKey             github_com_cockroachdb_cockroach_pkg_roachpb.Key `protobuf:"bytes,1,opt,name=start_key,json=startKey,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.Key" json:"start_key,omitempty"`
-	EndKey               github_com_cockroachdb_cockroach_pkg_roachpb.Key `protobuf:"bytes,2,opt,name=end_key,json=endKey,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.Key" json:"end_key,omitempty"`
+	StartKey             github_com_cockroachdb_cockroach_pkg_roachpb.Key `protobuf:"bytes,1,opt,name=start_key,json=startKey,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.Key" json:"start_key,omitempty"`
+	EndKey               github_com_cockroachdb_cockroach_pkg_roachpb.Key `protobuf:"bytes,2,opt,name=end_key,json=endKey,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.Key" json:"end_key,omitempty"`
 	Compaction           `protobuf:"bytes,3,opt,name=compaction,proto3,embedded=compaction" json:"compaction"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -489,7 +489,7 @@ type RaftCommand struct {
 	// - the command applies on replica 1
 	// - replica 2 serves anomalous reads which don't see the write
 	// - the command applies on replica 2
-	ProposerLeaseSequence github_com_cockroachdb_cockroach_pkg_roachpb.LeaseSequence `protobuf:"varint,6,opt,name=proposer_lease_sequence,json=proposerLeaseSequence,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.LeaseSequence" json:"proposer_lease_sequence,omitempty"`
+	ProposerLeaseSequence github_com_cockroachdb_cockroach_pkg_roachpb.LeaseSequence `protobuf:"varint,6,opt,name=proposer_lease_sequence,json=proposerLeaseSequence,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.LeaseSequence" json:"proposer_lease_sequence,omitempty"`
 	// deprecated_proposer_lease served the same purpose as proposer_lease_seq.
 	// As of VersionLeaseSequence, it is no longer in use.
 	//

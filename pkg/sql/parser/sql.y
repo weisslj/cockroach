@@ -18,7 +18,7 @@
 
 // Going to add a new statement?
 // Consider taking a look at our codelab guide to learn what is needed to add a statement.
-// https://github.com/cockroachdb/cockroach/blob/master/docs/codelabs/01-sql-statement.md
+// https://github.com/weisslj/cockroach/blob/master/docs/codelabs/01-sql-statement.md
 
 %{
 package parser
@@ -29,10 +29,10 @@ import (
 
     "go/constant"
 
-    "github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-    "github.com/cockroachdb/cockroach/pkg/sql/lex"
-    "github.com/cockroachdb/cockroach/pkg/sql/privilege"
-    "github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+    "github.com/weisslj/cockroach/pkg/sql/coltypes"
+    "github.com/weisslj/cockroach/pkg/sql/lex"
+    "github.com/weisslj/cockroach/pkg/sql/privilege"
+    "github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // MaxUint is the maximum value of an uint.

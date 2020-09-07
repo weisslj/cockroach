@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils"
 )
 
 func partitionerTestName(total, active, parts int) string {

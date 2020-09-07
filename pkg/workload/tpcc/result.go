@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/workload/histogram"
+	"github.com/weisslj/cockroach/pkg/workload/histogram"
 	"github.com/codahale/hdrhistogram"
 	"github.com/pkg/errors"
 )

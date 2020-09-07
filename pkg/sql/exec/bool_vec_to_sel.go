@@ -14,7 +14,7 @@
 
 package exec
 
-import "github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
+import "github.com/weisslj/cockroach/pkg/sql/exec/coldata"
 
 // boolVecToSelOp transforms a boolean column into a selection vector by adding
 // an index to the selection for each true value in the boolean column.

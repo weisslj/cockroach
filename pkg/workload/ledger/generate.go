@@ -22,8 +22,8 @@ import (
 	"math/rand"
 	"strconv"
 
-	"github.com/cockroachdb/cockroach/pkg/util/uint128"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/util/uint128"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 )
 
 const (

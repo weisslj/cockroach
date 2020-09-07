@@ -15,9 +15,9 @@
 package distsqlpb
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 )
 
 // StreamID identifies a stream; it may be local to a flow or it may cross

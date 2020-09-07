@@ -19,17 +19,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
-	opttestutils "github.com/cockroachdb/cockroach/pkg/sql/opt/testutils"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/testutils/opttester"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/testutils/testcat"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/xform"
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/datadriven"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
+	opttestutils "github.com/weisslj/cockroach/pkg/sql/opt/testutils"
+	"github.com/weisslj/cockroach/pkg/sql/opt/testutils/opttester"
+	"github.com/weisslj/cockroach/pkg/sql/opt/testutils/testcat"
+	"github.com/weisslj/cockroach/pkg/sql/opt/xform"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/datadriven"
 )
 
 func TestMemo(t *testing.T) {

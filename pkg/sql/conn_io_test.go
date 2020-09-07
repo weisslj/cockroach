@@ -20,9 +20,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func assertStmt(t *testing.T, cmd Command, exp string) {

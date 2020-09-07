@@ -14,7 +14,7 @@
 
 package distsqlpb
 
-import "github.com/cockroachdb/cockroach/pkg/util/tracing"
+import "github.com/weisslj/cockroach/pkg/util/tracing"
 
 // StreamIDTagKey is the key used for stream id tags in tracing spans.
 const StreamIDTagKey = tracing.TagPrefix + "streamid"

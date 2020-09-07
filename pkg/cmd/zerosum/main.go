@@ -29,14 +29,14 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cockroachdb/cockroach-go/crdb"
-	"github.com/cockroachdb/cockroach/pkg/acceptance/cluster"
-	"github.com/cockroachdb/cockroach/pkg/acceptance/localcluster"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach-go/crdb"
+	"github.com/weisslj/cockroach/pkg/acceptance/cluster"
+	"github.com/weisslj/cockroach/pkg/acceptance/localcluster"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 var workers = flag.Int("w", 2*runtime.NumCPU(), "number of workers")

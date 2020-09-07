@@ -43,7 +43,7 @@ func VerifyNoImports(
 	checked := make(map[string]struct{})
 
 	short := func(in string) string {
-		return strings.Replace(in, "github.com/cockroachdb/cockroach/pkg/", "./pkg/", -1)
+		return strings.Replace(in, "github.com/weisslj/cockroach/pkg/", "./pkg/", -1)
 	}
 
 	var check func(string) error
@@ -57,7 +57,7 @@ func VerifyNoImports(
 				if forbidden == imp {
 					return errors.Errorf("%s imports %s, which is forbidden", short(path), short(imp))
 				}
-				if forbidden == "c-deps" && imp == "C" && strings.HasPrefix(path, "github.com/cockroachdb/cockroach/pkg") {
+				if forbidden == "c-deps" && imp == "C" && strings.HasPrefix(path, "github.com/weisslj/cockroach/pkg") {
 					for _, name := range pkg.CgoFiles {
 						if strings.Contains(name, "zcgo_flags") {
 							return errors.Errorf("%s imports %s (%s), which is forbidden", short(path), short(imp), name)

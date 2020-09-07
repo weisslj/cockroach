@@ -17,7 +17,7 @@ package resolver
 import (
 	"net"
 
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util"
 	"github.com/pkg/errors"
 )
 

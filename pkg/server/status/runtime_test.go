@@ -18,7 +18,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 	"github.com/shirou/gopsutil/net"
 )
 

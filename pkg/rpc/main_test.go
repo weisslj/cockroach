@@ -15,8 +15,8 @@
 package rpc
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/security/securitytest"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/security/securitytest"
 )
 
 func init() {

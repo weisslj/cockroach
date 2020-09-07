@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil/pgdate"
+	"github.com/weisslj/cockroach/pkg/util/timeutil/pgdate"
 	_ "github.com/lib/pq"
 )
 
@@ -436,7 +436,7 @@ var timeTestData = []timeData{
 	{
 		// 04:05:06 PST time zone specified by abbreviation
 		// Unimplemented with message to user as such:
-		// https://github.com/cockroachdb/cockroach/issues/31710
+		// https://github.com/weisslj/cockroach/issues/31710
 		s:   "04:05:06 PST",
 		err: true,
 		// This should be the value if/when we implement this.

@@ -27,37 +27,37 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/gossip"
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/kv"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/server"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/storage"
-	"github.com/cockroachdb/cockroach/pkg/storage/abortspan"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/storage/stateloader"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagebase"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/testcluster"
-	"github.com/cockroachdb/cockroach/pkg/ts"
-	"github.com/cockroachdb/cockroach/pkg/ts/tspb"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/ctxgroup"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/gossip"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/kv"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/server"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/storage"
+	"github.com/weisslj/cockroach/pkg/storage/abortspan"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/storage/stateloader"
+	"github.com/weisslj/cockroach/pkg/storage/storagebase"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/testutils/testcluster"
+	"github.com/weisslj/cockroach/pkg/ts"
+	"github.com/weisslj/cockroach/pkg/ts/tspb"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/ctxgroup"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/gogo/protobuf/proto"
 	"github.com/pkg/errors"
 	"go.etcd.io/etcd/raft/raftpb"
@@ -1384,7 +1384,7 @@ func TestStoreRangeSystemSplits(t *testing.T) {
 //
 // Nodes 1-5 are stopped; only node 0 is running.
 //
-// See https://github.com/cockroachdb/cockroach/issues/1644.
+// See https://github.com/weisslj/cockroach/issues/1644.
 func runSetupSplitSnapshotRace(
 	t *testing.T, testFn func(*multiTestContext, roachpb.Key, roachpb.Key),
 ) {
@@ -2967,7 +2967,7 @@ func TestStoreSplitRangeLookupRace(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 
 	// The scenario is modeled after:
-	// https://github.com/cockroachdb/cockroach/issues/19147#issuecomment-336741791
+	// https://github.com/weisslj/cockroach/issues/19147#issuecomment-336741791
 	// See that comment for a description of why a non-transactional scan
 	// starting at "/meta2/k" may only see non-matching descriptors when racing
 	// with a split.

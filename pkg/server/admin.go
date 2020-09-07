@@ -26,28 +26,28 @@ import (
 	"time"
 
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/jobs/jobspb"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/server/debug"
-	"github.com/cockroachdb/cockroach/pkg/server/serverpb"
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/sql"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/storage"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagepb"
-	"github.com/cockroachdb/cockroach/pkg/util/contextutil"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/mon"
-	"github.com/cockroachdb/cockroach/pkg/util/protoutil"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/jobs/jobspb"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/server/debug"
+	"github.com/weisslj/cockroach/pkg/server/serverpb"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/sql"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/storage"
+	"github.com/weisslj/cockroach/pkg/storage/storagepb"
+	"github.com/weisslj/cockroach/pkg/util/contextutil"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/mon"
+	"github.com/weisslj/cockroach/pkg/util/protoutil"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	gwruntime "github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
@@ -1370,7 +1370,7 @@ func (s *adminServer) Drain(req *serverpb.DrainRequest, stream serverpb.Admin_Dr
 		return ctx.Err()
 	case <-time.After(10 * time.Second):
 		// This is a hack to work around the problem in
-		// https://github.com/cockroachdb/cockroach/issues/37425#issuecomment-494336131
+		// https://github.com/weisslj/cockroach/issues/37425#issuecomment-494336131
 		//
 		// There appear to be deadlock scenarios in which we don't manage to
 		// fully stop the grpc server (which implies closing the listener, i.e.
@@ -1378,7 +1378,7 @@ func (s *adminServer) Drain(req *serverpb.DrainRequest, stream serverpb.Admin_Dr
 		// stopper (the evidence in #37425 is inconclusive which one it is).
 		//
 		// Other problems in this area are known, such as
-		// https://github.com/cockroachdb/cockroach/pull/31692
+		// https://github.com/weisslj/cockroach/pull/31692
 		//
 		// The signal-based shutdown path uses a similar time-based escape hatch.
 		// Until we spend (potentially lots of time to) understand and fix this

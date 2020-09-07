@@ -18,7 +18,7 @@ package tpcc
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"golang.org/x/exp/rand"
 )
 

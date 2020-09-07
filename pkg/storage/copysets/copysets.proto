@@ -55,5 +55,5 @@ message Copysets {
 message Copyset{
   // Map of StoreIDs.
   map<int32, bool> ids = 1 [
-      (gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/roachpb.StoreID"];
+      (gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/roachpb.StoreID"];
 }

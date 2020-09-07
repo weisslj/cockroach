@@ -17,8 +17,8 @@ package sql
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlrun"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlrun"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // optimizePlan transforms the query plan into its final form.  This

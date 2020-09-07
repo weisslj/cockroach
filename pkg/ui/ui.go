@@ -28,9 +28,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/build"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/build"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 	"github.com/pkg/errors"
 )

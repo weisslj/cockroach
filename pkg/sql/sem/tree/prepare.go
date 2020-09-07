@@ -15,8 +15,8 @@
 package tree
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
 )
 
 // Prepare represents a PREPARE statement.

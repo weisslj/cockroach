@@ -6,12 +6,12 @@ package jobspb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import github_com_cockroachdb_cockroach_pkg_sql_sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_sql_sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
 
 import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
 import encoding_binary "encoding/binary"
@@ -98,7 +98,7 @@ func (Type) EnumDescriptor() ([]byte, []int) {
 
 type Lease struct {
 	// The ID of the node that holds the lease.
-	NodeID github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	NodeID github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
 	// The epoch of the lease holder's node liveness entry.
 	Epoch                int64    `protobuf:"varint,2,opt,name=epoch,proto3" json:"epoch,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -208,7 +208,7 @@ var xxx_messageInfo_BackupProgress proto.InternalMessageInfo
 
 type RestoreDetails struct {
 	EndTime              hlc.Timestamp                                                                        `protobuf:"bytes,4,opt,name=end_time,json=endTime,proto3" json:"end_time"`
-	TableRewrites        map[github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID]*RestoreDetails_TableRewrite `protobuf:"bytes,2,rep,name=table_rewrites,json=tableRewrites,proto3,castkey=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"table_rewrites,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	TableRewrites        map[github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID]*RestoreDetails_TableRewrite `protobuf:"bytes,2,rep,name=table_rewrites,json=tableRewrites,proto3,castkey=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"table_rewrites,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	URIs                 []string                                                                             `protobuf:"bytes,3,rep,name=uris,proto3" json:"uris,omitempty"`
 	TableDescs           []*sqlbase.TableDescriptor                                                           `protobuf:"bytes,5,rep,name=table_descs,json=tableDescs,proto3" json:"table_descs,omitempty"`
 	OverrideDB           string                                                                               `protobuf:"bytes,6,opt,name=override_db,json=overrideDb,proto3" json:"override_db,omitempty"`
@@ -246,8 +246,8 @@ func (m *RestoreDetails) XXX_DiscardUnknown() {
 var xxx_messageInfo_RestoreDetails proto.InternalMessageInfo
 
 type RestoreDetails_TableRewrite struct {
-	TableID              github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,1,opt,name=table_id,json=tableId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"table_id,omitempty"`
-	ParentID             github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,2,opt,name=parent_id,json=parentId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"parent_id,omitempty"`
+	TableID              github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,1,opt,name=table_id,json=tableId,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"table_id,omitempty"`
+	ParentID             github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,2,opt,name=parent_id,json=parentId,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"parent_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
 }
@@ -324,7 +324,7 @@ type ImportDetails struct {
 	Oversample int64                                               `protobuf:"varint,9,opt,name=oversample,proto3" json:"oversample,omitempty"`
 	SkipFKs    bool                                                `protobuf:"varint,10,opt,name=skip_fks,json=skipFks,proto3" json:"skip_fks,omitempty"`
 	Walltime   int64                                               `protobuf:"varint,5,opt,name=walltime,proto3" json:"walltime,omitempty"`
-	ParentID   github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,6,opt,name=parent_id,json=parentId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"parent_id,omitempty"`
+	ParentID   github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,6,opt,name=parent_id,json=parentId,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"parent_id,omitempty"`
 	BackupPath string                                              `protobuf:"bytes,7,opt,name=backup_path,json=backupPath,proto3" json:"backup_path,omitempty"`
 	// samples is a sampling of cockroach KV keys generated from the input data.
 	// It is populated with the sampling phase's results. These must be
@@ -484,7 +484,7 @@ var xxx_messageInfo_ResumeSpanList proto.InternalMessageInfo
 
 type DroppedTableDetails struct {
 	Name                 string                                              `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	ID                   github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,2,opt,name=ID,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"ID,omitempty"`
+	ID                   github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,2,opt,name=ID,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"ID,omitempty"`
 	Status               Status                                              `protobuf:"varint,3,opt,name=status,proto3,enum=cockroach.sql.jobs.jobspb.Status" json:"status,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
@@ -529,7 +529,7 @@ type SchemaChangeDetails struct {
 	ResumeSpanList []ResumeSpanList      `protobuf:"bytes,2,rep,name=resume_span_list,json=resumeSpanList,proto3" json:"resume_span_list"`
 	DroppedTables  []DroppedTableDetails `protobuf:"bytes,3,rep,name=dropped_tables,json=droppedTables,proto3" json:"dropped_tables"`
 	// The descriptor ID of the dropped database which created this job.
-	DroppedDatabaseID    github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,4,opt,name=dropped_database_id,json=droppedDatabaseId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"dropped_database_id,omitempty"`
+	DroppedDatabaseID    github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,4,opt,name=dropped_database_id,json=droppedDatabaseId,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"dropped_database_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
 }
@@ -650,7 +650,7 @@ type ChangefeedDetails struct {
 	// renames can be detected. They are also used to construct an error message
 	// if the descriptor id no longer exists when the jobs is unpaused (which can
 	// happen if it was dropped or truncated).
-	Targets              ChangefeedTargets `protobuf:"bytes,6,rep,name=targets,proto3,casttype=ChangefeedTargets,castkey=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"targets" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Targets              ChangefeedTargets `protobuf:"bytes,6,rep,name=targets,proto3,casttype=ChangefeedTargets,castkey=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"targets" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	SinkURI              string            `protobuf:"bytes,3,opt,name=sink_uri,json=sinkUri,proto3" json:"sink_uri,omitempty"`
 	Opts                 map[string]string `protobuf:"bytes,4,rep,name=opts,proto3" json:"opts,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	StatementTime        hlc.Timestamp     `protobuf:"bytes,7,opt,name=statement_time,json=statementTime,proto3" json:"statement_time"`
@@ -805,7 +805,7 @@ func (m *CreateStatsDetails) XXX_DiscardUnknown() {
 var xxx_messageInfo_CreateStatsDetails proto.InternalMessageInfo
 
 type CreateStatsDetails_ColList struct {
-	IDs                  []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ColumnID `protobuf:"varint,1,rep,packed,name=ids,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ColumnID" json:"ids,omitempty"`
+	IDs                  []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ColumnID `protobuf:"varint,1,rep,packed,name=ids,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ColumnID" json:"ids,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                                    `json:"-"`
 	XXX_sizecache        int32                                                       `json:"-"`
 }
@@ -883,7 +883,7 @@ type Payload struct {
 	// precision, and use microsecond integers directly.
 	StartedMicros  int64                                                 `protobuf:"varint,3,opt,name=started_micros,json=startedMicros,proto3" json:"started_micros,omitempty"`
 	FinishedMicros int64                                                 `protobuf:"varint,4,opt,name=finished_micros,json=finishedMicros,proto3" json:"finished_micros,omitempty"`
-	DescriptorIDs  []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,6,rep,packed,name=descriptor_ids,json=descriptorIds,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"descriptor_ids,omitempty"`
+	DescriptorIDs  []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,6,rep,packed,name=descriptor_ids,json=descriptorIds,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"descriptor_ids,omitempty"`
 	Error          string                                                `protobuf:"bytes,8,opt,name=error,proto3" json:"error,omitempty"`
 	// ID 9 is intentionally reserved for lease information.
 	Lease *Lease `protobuf:"bytes,9,opt,name=lease,proto3" json:"lease,omitempty"`

@@ -17,7 +17,7 @@
 {"Action":"output","Output":"gofmt -s -w pkg/sql/lex/reserved_keywords.go\n"}
 {"Action":"output","Output":"mv -f pkg/sql/parser/helpmap_test.go.tmp pkg/sql/parser/helpmap_test.go\n"}
 {"Action":"output","Output":"gofmt -s -w pkg/sql/parser/helpmap_test.go\n"}
-{"Action":"output","Output":"fatal: Not a git repository: /home/agent/work/.go/src/github.com/cockroachdb/cockroach/.git/modules/c-deps/snappy\n"}
+{"Action":"output","Output":"fatal: Not a git repository: /home/agent/work/.go/src/github.com/weisslj/cockroach/.git/modules/c-deps/snappy\n"}
 {"Action":"output","Output":"Unable to find current revision in submodule path 'c-deps/snappy'\n"}
 {"Action":"output","Output":"Makefile:368: recipe for target 'bin/.submodules-initialized' failed\n"}
 {"Action":"output","Output":"make: *** [bin/.submodules-initialized] Error 1\n"}

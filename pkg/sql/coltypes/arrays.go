@@ -17,7 +17,7 @@ package coltypes
 import (
 	"bytes"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
 )
 
 // TArray represents an ARRAY column type.

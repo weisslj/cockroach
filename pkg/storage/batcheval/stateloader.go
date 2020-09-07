@@ -14,7 +14,7 @@
 
 package batcheval
 
-import "github.com/cockroachdb/cockroach/pkg/storage/stateloader"
+import "github.com/weisslj/cockroach/pkg/storage/stateloader"
 
 // MakeStateLoader creates a StateLoader for the EvalContext.
 func MakeStateLoader(rec EvalContext) stateloader.StateLoader {

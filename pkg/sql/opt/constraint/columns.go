@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
 )
 
 // Columns identifies the columns which correspond to the values in a Key (and

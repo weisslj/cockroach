@@ -19,9 +19,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload"
 	// Register the relevant examples
-	_ "github.com/cockroachdb/cockroach/pkg/workload/examples"
+	_ "github.com/weisslj/cockroach/pkg/workload/examples"
 	"github.com/spf13/cobra"
 )
 

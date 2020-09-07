@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 )
 
 func runEventLog(ctx context.Context, t *test, c *cluster) {

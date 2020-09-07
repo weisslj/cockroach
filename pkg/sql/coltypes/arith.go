@@ -18,7 +18,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
 )
 
 // TBool represents a BOOLEAN type.

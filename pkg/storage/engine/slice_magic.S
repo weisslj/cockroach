@@ -34,7 +34,7 @@
 //
 // References:
 // https://wiki.ubuntu.com/SecurityTeam/Roadmap/ExecutableStacks
-// https://github.com/cockroachdb/cockroach/issues/37885
+// https://github.com/weisslj/cockroach/issues/37885
 
 #if defined(__linux__) && defined(__ELF__)
 .section        .note.GNU-stack, "", %progbits

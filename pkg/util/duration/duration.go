@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/arith"
+	"github.com/weisslj/cockroach/pkg/util/arith"
 )
 
 const (

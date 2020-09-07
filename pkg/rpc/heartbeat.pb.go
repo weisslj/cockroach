@@ -6,9 +6,9 @@ package rpc
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import (
 	context "context"
@@ -87,7 +87,7 @@ type PingRequest struct {
 	// The configured maximum clock offset (in nanoseconds) on the server.
 	MaxOffsetNanos int64 `protobuf:"varint,4,opt,name=max_offset_nanos,json=maxOffsetNanos" json:"max_offset_nanos"`
 	// Cluster ID to prevent connections between nodes in different clusters.
-	ClusterID            *github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,5,opt,name=cluster_id,json=clusterId,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"cluster_id,omitempty"`
+	ClusterID            *github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,5,opt,name=cluster_id,json=clusterId,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"cluster_id,omitempty"`
 	ServerVersion        roachpb.Version                                      `protobuf:"bytes,6,opt,name=server_version,json=serverVersion" json:"server_version"`
 	XXX_NoUnkeyedLiteral struct{}                                             `json:"-"`
 	XXX_sizecache        int32                                                `json:"-"`

@@ -22,10 +22,10 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/binfetcher"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/binfetcher"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"
 )
@@ -393,7 +393,7 @@ func runVersionUpgrade(ctx context.Context, t *test, c *cluster) {
 				t.l.Printf("%s: cluster\n", newVersion)
 
 				// hasShowSettingBug is true when we're working around
-				// https://github.com/cockroachdb/cockroach/issues/22796.
+				// https://github.com/weisslj/cockroach/issues/22796.
 				//
 				// The problem there is that `SHOW CLUSTER SETTING version` does not
 				// take into account the gossiped value of that setting but reads it

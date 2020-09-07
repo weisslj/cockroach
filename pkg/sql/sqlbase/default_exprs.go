@@ -15,9 +15,9 @@
 package sqlbase
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/transform"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/sem/transform"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // MakeDefaultExprs returns a slice of the default expressions for the slice

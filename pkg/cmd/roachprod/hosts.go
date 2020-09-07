@@ -25,9 +25,9 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/cloud"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/install"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/cloud"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/install"
 	"github.com/pkg/errors"
 )
 

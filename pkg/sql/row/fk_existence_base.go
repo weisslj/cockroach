@@ -18,9 +18,9 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // fkExistenceCheckBaseHelper is an auxiliary struct that facilitates FK existence
@@ -177,7 +177,7 @@ func makeFkExistenceCheckBaseHelper(
 // computeFkCheckColumnIDs determines the set of column IDs to use for
 // the existence check, depending on the MATCH style.
 //
-// See https://github.com/cockroachdb/cockroach/issues/20305 or
+// See https://github.com/weisslj/cockroach/issues/20305 or
 // https://www.postgresql.org/docs/11/sql-createtable.html for details on the
 // different composite foreign key matching methods.
 func computeFkCheckColumnIDs(

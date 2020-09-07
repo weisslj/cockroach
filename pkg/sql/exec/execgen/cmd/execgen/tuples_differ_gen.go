@@ -21,7 +21,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 func genTuplesDiffer(wr io.Writer) error {

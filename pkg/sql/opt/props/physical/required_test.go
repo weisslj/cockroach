@@ -17,8 +17,8 @@ package physical_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props/physical"
 )
 
 func TestRequiredProps(t *testing.T) {

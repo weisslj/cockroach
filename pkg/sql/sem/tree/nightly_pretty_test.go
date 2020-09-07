@@ -20,8 +20,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	_ "github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	_ "github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // TestPrettyData reads in a single SQL statement from a file, formats it at

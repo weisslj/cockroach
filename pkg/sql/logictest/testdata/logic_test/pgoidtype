@@ -237,7 +237,7 @@ CREATE TABLE a (id INT PRIMARY KEY, foo STRING)
 ## determine the OID of the table 'a' by using a regclass cast, despite the
 ## fact that the root user has visibility into both of the tables. The 'a' that
 ## gets selected should be the 'a' that exists in the current database.
-## See https://github.com/cockroachdb/cockroach/issues/13695
+## See https://github.com/weisslj/cockroach/issues/13695
 
 query OI
 SELECT relname, relnatts FROM pg_class WHERE oid='a'::regclass

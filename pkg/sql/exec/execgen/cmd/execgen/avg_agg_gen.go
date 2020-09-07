@@ -22,8 +22,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 type avgAggTmplInfo struct {

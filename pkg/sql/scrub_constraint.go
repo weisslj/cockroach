@@ -19,12 +19,12 @@ import (
 	"go/constant"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/rowcontainer"
-	"github.com/cockroachdb/cockroach/pkg/sql/scrub"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/rowcontainer"
+	"github.com/weisslj/cockroach/pkg/sql/scrub"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // sqlCheckConstraintCheckOperation is a check which validates a SQL

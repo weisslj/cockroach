@@ -18,8 +18,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 	"github.com/pkg/errors"
 )
 

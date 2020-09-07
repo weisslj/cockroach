@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
 	"github.com/pkg/errors"
 )
 

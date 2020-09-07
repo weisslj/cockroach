@@ -17,7 +17,7 @@ package row
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // MakeFkMetadata populates a map of FkTableMetadata for all the

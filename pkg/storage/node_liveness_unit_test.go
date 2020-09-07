@@ -17,9 +17,9 @@ package storage
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/storagepb"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/storage/storagepb"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestShouldReplaceLiveness(t *testing.T) {

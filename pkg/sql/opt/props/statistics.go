@@ -20,7 +20,7 @@ import (
 	"math"
 	"sort"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
 )
 
 // Statistics is a collection of measurements and statistics that is used by

@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils"
 )
 
 func TestDownload(t *testing.T) {

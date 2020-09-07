@@ -15,8 +15,8 @@
 package opt
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqltelemetry"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/sql/sqltelemetry"
 )
 
 // OpTelemetryCounters stores telemetry counters for operators marked with the

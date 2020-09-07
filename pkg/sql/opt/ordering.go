@@ -18,7 +18,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 )
 
 // OrderingColumn is the ColumnID for a column that is part of an ordering,

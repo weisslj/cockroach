@@ -21,22 +21,22 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util/fsm"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util/fsm"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 	"github.com/pkg/errors"
 )
 
@@ -269,7 +269,7 @@ func (ex *connExecutor) execStmtInOpenState(
 		// desirable to allow metadata queries against vtables to proceed
 		// before starting a SAVEPOINT for better ORM compatibility.
 		// See also:
-		// https://github.com/cockroachdb/cockroach/issues/15012
+		// https://github.com/weisslj/cockroach/issues/15012
 		meta := ex.state.mu.txn.GetTxnCoordMeta(ctx)
 		if meta.CommandCount > 0 {
 			err := fmt.Errorf("SAVEPOINT %s needs to be the first statement in a "+
@@ -841,7 +841,7 @@ func enhanceErrWithCorrelation(err error, isCorrelated bool) {
 		if pqErr.Code == pgerror.CodeUndefinedColumnError ||
 			pqErr.Code == pgerror.CodeUndefinedTableError {
 			_ = pqErr.SetHintf("some correlated subqueries are not supported yet - see %s",
-				"https://github.com/cockroachdb/cockroach/issues/3288")
+				"https://github.com/weisslj/cockroach/issues/3288")
 		}
 	}
 }

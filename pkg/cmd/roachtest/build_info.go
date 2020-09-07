@@ -20,8 +20,8 @@ import (
 	"net/http"
 	"os/exec"
 
-	"github.com/cockroachdb/cockroach/pkg/server/serverpb"
-	"github.com/cockroachdb/cockroach/pkg/util/httputil"
+	"github.com/weisslj/cockroach/pkg/server/serverpb"
+	"github.com/weisslj/cockroach/pkg/util/httputil"
 )
 
 func runBuildInfo(ctx context.Context, t *test, c *cluster) {
@@ -74,7 +74,7 @@ func runBuildAnalyze(ctx context.Context, t *test, c *cluster) {
 	// References:
 	// https://www.airs.com/blog/archives/518
 	// https://wiki.ubuntu.com/SecurityTeam/Roadmap/ExecutableStacks
-	// https://github.com/cockroachdb/cockroach/issues/37885
+	// https://github.com/weisslj/cockroach/issues/37885
 
 	// There are several ways to do this analysis: `readelf -lW`,
 	// `scanelf -qe`, and `execstack -q`. `readelf` is part of binutils,

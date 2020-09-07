@@ -59,7 +59,7 @@ func (*timerChecker) Prefix() string {
 const timerChanName = "C"
 
 func (m *timerChecker) Init(program *lint.Program) {
-	timeutilPkg := program.Prog.Package("github.com/cockroachdb/cockroach/pkg/util/timeutil")
+	timeutilPkg := program.Prog.Package("github.com/weisslj/cockroach/pkg/util/timeutil")
 	if timeutilPkg == nil {
 		log.Fatal("timeutil package not found")
 	}

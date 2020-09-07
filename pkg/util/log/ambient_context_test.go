@@ -18,8 +18,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log/logtags"
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/util/log/logtags"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

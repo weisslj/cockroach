@@ -18,8 +18,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // UnexpectedWithIssueErr indicates an error with an associated Github issue.
@@ -49,7 +49,7 @@ func UnexpectedWithIssueErrorf(issue int, format string, args ...interface{}) er
 func (e UnexpectedWithIssueErr) Error() string {
 	return fmt.Sprintf("unexpected error: %s\nWe've been trying to track this particular issue down. "+
 		"Please report your reproduction at "+
-		"https://github.com/cockroachdb/cockroach/issues/%d "+
+		"https://github.com/weisslj/cockroach/issues/%d "+
 		"unless that issue seems to have been resolved "+
 		"(in which case you might want to update crdb to a newer version).",
 		e.msg, e.issue)

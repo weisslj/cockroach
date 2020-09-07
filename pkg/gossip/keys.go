@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 	"github.com/pkg/errors"
 )
 

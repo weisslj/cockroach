@@ -18,8 +18,8 @@ package main
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils/buildutil"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/testutils/buildutil"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestNoLinkForbidden(t *testing.T) {
@@ -27,6 +27,6 @@ func TestNoLinkForbidden(t *testing.T) {
 
 	// We want workload to be lightweight. Ensure it doesn't depend on c-deps,
 	// which are slow to compile and bloat the binary.
-	buildutil.VerifyNoImports(t, "github.com/cockroachdb/cockroach/pkg/cmd/workload",
+	buildutil.VerifyNoImports(t, "github.com/weisslj/cockroach/pkg/cmd/workload",
 		true /* cgo */, []string{"c-deps"}, nil /* forbiddenPrefixes */)
 }

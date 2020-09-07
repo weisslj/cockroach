@@ -18,8 +18,8 @@ package workload
 import (
 	"math"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // AutoStatsName is copied from stats.AutoStatsName to avoid pulling

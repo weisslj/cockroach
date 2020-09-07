@@ -18,8 +18,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/storagepb"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/storage/storagepb"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestEvalResultIsZero(t *testing.T) {

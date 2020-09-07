@@ -21,7 +21,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/optgen/lang"
+	"github.com/weisslj/cockroach/pkg/sql/opt/optgen/lang"
 )
 
 func title(name string) string {

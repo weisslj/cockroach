@@ -22,7 +22,7 @@ CockroachDB Community License Agreement
     (b) "CockroachDB Core" shall mean the open source version of
         CockroachDB, available free of charge at
 
-            https://github.com/cockroachdb/cockroach
+            https://github.com/weisslj/cockroach
 
     (c) "CockroachDB Enterprise Edition" shall mean the additional features made
         available by Cockroach Labs, the use of which is subject to additional

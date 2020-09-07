@@ -24,8 +24,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/uint128"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/uint128"
 )
 
 var errResultOutOfRange = pgerror.NewError(pgerror.CodeNumericValueOutOfRangeError, "result out of range")

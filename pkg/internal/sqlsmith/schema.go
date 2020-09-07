@@ -18,11 +18,11 @@ import (
 	gosql "database/sql"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
 	// Import builtins so they are reflected in tree.FunDefs.
-	_ "github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	_ "github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 	"github.com/lib/pq/oid"
 )
 

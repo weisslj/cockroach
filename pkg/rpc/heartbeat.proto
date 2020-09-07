@@ -52,7 +52,7 @@ message PingRequest {
   // Cluster ID to prevent connections between nodes in different clusters.
   optional bytes cluster_id = 5 [
     (gogoproto.customname) = "ClusterID",
-    (gogoproto.customtype) = "github.com/cockroachdb/cockroach/pkg/util/uuid.UUID"];
+    (gogoproto.customtype) = "github.com/weisslj/cockroach/pkg/util/uuid.UUID"];
   optional roachpb.Version server_version = 6 [(gogoproto.nullable) = false];
 }
 

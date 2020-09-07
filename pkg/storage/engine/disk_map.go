@@ -19,10 +19,10 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/diskmap"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/diskmap"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"github.com/pkg/errors"
 )
 
@@ -107,7 +107,7 @@ func newRocksDBMap(e Engine, allowDuplicates bool) *RocksDBMap {
 func (r *RocksDBMap) makeKey(k []byte) MVCCKey {
 	// TODO(asubiotto): We can make this more performant by bypassing MVCCKey
 	// creation (have to generalize storage API). See
-	// https://github.com/cockroachdb/cockroach/issues/16718#issuecomment-311493414
+	// https://github.com/weisslj/cockroach/issues/16718#issuecomment-311493414
 	prefixLen := len(r.prefix)
 	r.prefix = append(r.prefix, k...)
 	mvccKey := MVCCKey{Key: r.prefix}

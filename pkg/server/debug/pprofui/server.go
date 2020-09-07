@@ -28,7 +28,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/google/pprof/driver"
 	"github.com/google/pprof/profile"
 	"github.com/pkg/errors"

@@ -49,7 +49,7 @@ i8  CREATE TABLE i8 (
     FAMILY "primary" (i8, rowid)
 )
 
-# https://github.com/cockroachdb/cockroach/issues/32846
+# https://github.com/weisslj/cockroach/issues/32846
 subtest issue_32846
 
 statement ok

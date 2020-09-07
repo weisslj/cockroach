@@ -14,7 +14,7 @@
 
 package exec
 
-import "github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
+import "github.com/weisslj/cockroach/pkg/sql/exec/coldata"
 
 // oneShotOp is an operator that does an arbitrary operation on the first batch
 // that it gets, then deletes itself from the operator tree. This is useful for

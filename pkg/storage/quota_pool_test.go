@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 // TestQuotaPoolBasic tests the minimal expected behavior of the quota pool

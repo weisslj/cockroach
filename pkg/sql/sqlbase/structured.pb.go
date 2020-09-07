@@ -6,9 +6,9 @@ package sqlbase
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import io "io"
 
@@ -1794,7 +1794,7 @@ func (m *TableDescriptor) GetGCMutations() []TableDescriptor_GCDescriptorMutatio
 // it is legal for more than one goroutine to attempt to execute it. This
 // lease reduces write contention on the schema change.
 type TableDescriptor_SchemaChangeLease struct {
-	NodeID github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id"`
+	NodeID github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id"`
 	// Nanoseconds since the Unix epoch.
 	ExpirationTime       int64    `protobuf:"varint,2,opt,name=expiration_time,json=expirationTime" json:"expiration_time"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`

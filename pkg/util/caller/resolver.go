@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 type cachedLookup struct {

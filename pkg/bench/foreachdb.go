@@ -25,9 +25,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/testcluster"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/testutils/testcluster"
 	_ "github.com/go-sql-driver/mysql" // registers the MySQL driver to gosql
 	_ "github.com/lib/pq"              // registers the pg driver to gosql
 )
@@ -97,11 +97,11 @@ func benchmarkPostgres(b *testing.B, f func(b *testing.B, db *gosql.DB)) {
 	// ```
 	// $ grep ^ssl /usr/local/var/postgres/postgresql.conf
 	// ssl = on # (change requires restart)
-	// ssl_cert_file = '$GOPATH/src/github.com/cockroachdb/cockroach/pkg/security/securitytest/test_certs/node.crt' # (change requires restart)
-	// ssl_key_file = '$GOPATH/src/github.com/cockroachdb/cockroach/pkg/security/securitytest/test_certs/node.key' # (change requires restart)
-	// ssl_ca_file = '$GOPATH/src/github.com/cockroachdb/cockroach/pkg/security/securitytest/test_certs/ca.crt' # (change requires restart)
+	// ssl_cert_file = '$GOPATH/src/github.com/weisslj/cockroach/pkg/security/securitytest/test_certs/node.crt' # (change requires restart)
+	// ssl_key_file = '$GOPATH/src/github.com/weisslj/cockroach/pkg/security/securitytest/test_certs/node.key' # (change requires restart)
+	// ssl_ca_file = '$GOPATH/src/github.com/weisslj/cockroach/pkg/security/securitytest/test_certs/ca.crt' # (change requires restart)
 	// ```
-	// Where `$GOPATH/src/github.com/cockroachdb/cockroach`
+	// Where `$GOPATH/src/github.com/weisslj/cockroach`
 	// is replaced with your local Cockroach source directory.
 	// Be sure to restart Postgres for this to take effect.
 
@@ -160,7 +160,7 @@ func ForEachDB(b *testing.B, fn func(*testing.B, *gosql.DB)) {
 		benchmarkMySQL,
 	} {
 		dbName := runtime.FuncForPC(reflect.ValueOf(dbFn).Pointer()).Name()
-		dbName = strings.TrimPrefix(dbName, "github.com/cockroachdb/cockroach/pkg/bench.benchmark")
+		dbName = strings.TrimPrefix(dbName, "github.com/weisslj/cockroach/pkg/bench.benchmark")
 		b.Run(dbName, func(b *testing.B) {
 			dbFn(b, fn)
 		})

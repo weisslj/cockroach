@@ -20,7 +20,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 func genHashJoiner(wr io.Writer) error {

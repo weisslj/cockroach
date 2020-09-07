@@ -24,13 +24,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/ctxgroup"
-	"github.com/cockroachdb/cockroach/pkg/util/timeofday"
-	"github.com/cockroachdb/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/ctxgroup"
+	"github.com/weisslj/cockroach/pkg/util/timeofday"
+	"github.com/weisslj/cockroach/pkg/util/version"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 )
@@ -54,7 +54,7 @@ var verDump = version.MustParse("v2.1.0-alpha.20180416-0")
 // runDumps performs a dump of a table or database.
 //
 // The approach here and its current flaws are summarized
-// in https://github.com/cockroachdb/cockroach/issues/28948.
+// in https://github.com/weisslj/cockroach/issues/28948.
 func runDump(cmd *cobra.Command, args []string) error {
 	conn, err := getPasswordAndMakeSQLClient("cockroach dump")
 	if err != nil {

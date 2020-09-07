@@ -15,7 +15,7 @@
 
 package sqlbase
 
-import "github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+import "github.com/weisslj/cockroach/pkg/sql/sem/tree"
 
 // RunFilter runs a filter expression and returns whether the filter passes.
 func RunFilter(filter tree.TypedExpr, evalCtx *tree.EvalContext) (bool, error) {

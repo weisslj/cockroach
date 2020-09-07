@@ -17,7 +17,7 @@ package log
 import (
 	"flag"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log/logflags"
+	"github.com/weisslj/cockroach/pkg/util/log/logflags"
 )
 
 func init() {

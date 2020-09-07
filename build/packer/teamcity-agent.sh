@@ -73,14 +73,14 @@ rm buildAgent.zip
 #
 # WARNING: This uses undocumented implementation details of TeamCity's Git
 # alternate system.
-git clone --bare https://github.com/cockroachdb/cockroach system/git/cockroach.git
+git clone --bare https://github.com/weisslj/cockroach system/git/cockroach.git
 cat > system/git/map <<EOS
-https://github.com/cockroachdb/cockroach = cockroach.git
+https://github.com/weisslj/cockroach = cockroach.git
 EOS
 
 # For master and the last two release, download the builder and acceptance
 # containers.
-repo="$GOPATH"/src/github.com/cockroachdb/cockroach
+repo="$GOPATH"/src/github.com/weisslj/cockroach
 git clone --shared system/git/cockroach.git "$repo"
 cd "$repo"
 # Work around a bug in the builder's git version (at the time of writing)

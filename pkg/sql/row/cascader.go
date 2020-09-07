@@ -17,15 +17,15 @@ package row
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/rowcontainer"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/rowcontainer"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // cascader is used to handle all referential integrity cascading actions.
@@ -199,7 +199,7 @@ func spanForIndexValues(
 	values []tree.Datum,
 	keyPrefix []byte,
 ) (roachpb.Span, error) {
-	// See https://github.com/cockroachdb/cockroach/issues/20305 or
+	// See https://github.com/weisslj/cockroach/issues/20305 or
 	// https://www.postgresql.org/docs/11/sql-createtable.html for details on the
 	// different composite foreign key matching methods.
 	switch match {

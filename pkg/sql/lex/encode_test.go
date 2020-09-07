@@ -21,9 +21,9 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
 )
 
 func TestEncodeSQLBytes(t *testing.T) {

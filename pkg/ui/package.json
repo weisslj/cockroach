@@ -2,7 +2,7 @@
   "name": "ui",
   "version": "1.0.0",
   "main": "index.tsx",
-  "repository": "github.com/cockroachdb/cockroach",
+  "repository": "github.com/weisslj/cockroach",
   "license": "MIT",
   "dependencies": {
     "analytics-node": "^3.3.0",

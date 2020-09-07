@@ -17,7 +17,7 @@ package sqltelemetry
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
 )
 
 // SerialColumnNormalizationCounter is to be incremented every time

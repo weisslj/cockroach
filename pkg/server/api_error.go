@@ -17,7 +17,7 @@ package server
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

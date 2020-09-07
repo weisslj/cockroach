@@ -18,11 +18,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/server/serverpb"
-	"github.com/cockroachdb/cockroach/pkg/server/status/statuspb"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/server/serverpb"
+	"github.com/weisslj/cockroach/pkg/server/status/statuspb"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 	yaml "gopkg.in/yaml.v2"
 )
 

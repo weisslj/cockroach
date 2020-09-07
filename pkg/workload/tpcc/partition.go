@@ -22,7 +22,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/jackc/pgx"
 	"github.com/pkg/errors"
 	"golang.org/x/exp/rand"

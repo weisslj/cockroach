@@ -19,11 +19,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // maxSyncDuration is the threshold above which an observed engine sync duration
@@ -31,7 +31,7 @@ import (
 var maxSyncDuration = envutil.EnvOrDefaultDuration("COCKROACH_ENGINE_MAX_SYNC_DURATION", 10*time.Second)
 
 // maxSyncDurationFatalOnExceeded defaults to false due to issues such as
-// https://github.com/cockroachdb/cockroach/issues/34860#issuecomment-469262019.
+// https://github.com/weisslj/cockroach/issues/34860#issuecomment-469262019.
 // Similar problems have been known to occur during index backfill and, possibly,
 // IMPORT/RESTORE.
 var maxSyncDurationFatalOnExceeded = envutil.EnvOrDefaultBool("COCKROACH_ENGINE_MAX_SYNC_DURATION_FATAL", false)

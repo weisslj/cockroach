@@ -15,8 +15,8 @@
 package sqlbase
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
 )
 
 // ColumnOrderInfo describes a column (as an index) and a desired order

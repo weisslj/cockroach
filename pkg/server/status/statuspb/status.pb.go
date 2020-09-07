@@ -6,10 +6,10 @@ package statuspb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import build "github.com/cockroachdb/cockroach/pkg/build"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import build "github.com/weisslj/cockroach/pkg/build"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
 import encoding_binary "encoding/binary"
@@ -102,10 +102,10 @@ type NodeStatus struct {
 	//
 	// NOTE: this is deprecated and is only set if the min supported
 	//       cluster version is >= VersionRPCNetworkStats.
-	Latencies map[github_com_cockroachdb_cockroach_pkg_roachpb.NodeID]int64 `protobuf:"bytes,9,rep,name=latencies,proto3,castkey=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"latencies" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	Latencies map[github_com_cockroachdb_cockroach_pkg_roachpb.NodeID]int64 `protobuf:"bytes,9,rep,name=latencies,proto3,castkey=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"latencies" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 	// activity is a map of nodeIDs to network statistics from this node
 	// to other nodes.
-	Activity map[github_com_cockroachdb_cockroach_pkg_roachpb.NodeID]NodeStatus_NetworkActivity `protobuf:"bytes,10,rep,name=activity,proto3,castkey=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"activity" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
+	Activity map[github_com_cockroachdb_cockroach_pkg_roachpb.NodeID]NodeStatus_NetworkActivity `protobuf:"bytes,10,rep,name=activity,proto3,castkey=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"activity" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	// total_system_memory is the total RAM available to the system
 	// (or, if possible, the memory available to the cgroup this process is in)
 	// in bytes.
@@ -186,7 +186,7 @@ var xxx_messageInfo_NodeStatus_NetworkActivity proto.InternalMessageInfo
 // exposed to the operators.
 type HealthAlert struct {
 	// store_id is zero for alerts not specific to a store (i.e. apply at the node level).
-	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,1,opt,name=store_id,json=storeId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/roachpb.StoreID" json:"store_id"`
+	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,1,opt,name=store_id,json=storeId,proto3,customtype=github.com/weisslj/cockroach/pkg/roachpb.StoreID" json:"store_id"`
 	Category             HealthAlert_Category                                 `protobuf:"varint,2,opt,name=category,proto3,enum=cockroach.server.status.statuspb.HealthAlert_Category" json:"category,omitempty"`
 	Description          string                                               `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
 	Value                float64                                              `protobuf:"fixed64,4,opt,name=value,proto3" json:"value,omitempty"`

@@ -24,13 +24,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/cli/cliflags"
-	"github.com/cockroachdb/cockroach/pkg/server/status"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/buildutil"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/log/logflags"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/cli/cliflags"
+	"github.com/weisslj/cockroach/pkg/server/status"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/buildutil"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/log/logflags"
 	"github.com/spf13/cobra"
 )
 
@@ -58,14 +58,14 @@ func TestNoLinkForbidden(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 	// Verify that the cockroach binary doesn't depend on certain packages.
 	buildutil.VerifyNoImports(t,
-		"github.com/cockroachdb/cockroach/pkg/cmd/cockroach", true,
+		"github.com/weisslj/cockroach/pkg/cmd/cockroach", true,
 		[]string{
 			"testing",  // defines flags
 			"go/build", // probably not something we want in the main binary
-			"github.com/cockroachdb/cockroach/pkg/security/securitytest", // contains certificates
+			"github.com/weisslj/cockroach/pkg/security/securitytest", // contains certificates
 		},
 		[]string{
-			"github.com/cockroachdb/cockroach/pkg/testutils", // meant for testing code only
+			"github.com/weisslj/cockroach/pkg/testutils", // meant for testing code only
 		})
 }
 

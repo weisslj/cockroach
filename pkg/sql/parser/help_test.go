@@ -18,7 +18,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 )
 
 func TestHelpMessagesDefined(t *testing.T) {

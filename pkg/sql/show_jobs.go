@@ -18,8 +18,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/jobs/jobspb"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/jobs/jobspb"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // ShowJobs returns all the jobs.

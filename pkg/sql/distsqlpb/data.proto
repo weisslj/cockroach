@@ -108,7 +108,7 @@ message StreamEndpointSpec {
   // Node ID of the target host, only used for outgoing REMOTE streams.
   optional int32 target_node_id = 4 [(gogoproto.nullable) = false,
                                      (gogoproto.customname) = "TargetNodeID",
-                                     (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+                                     (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
   reserved 3;
 }
 

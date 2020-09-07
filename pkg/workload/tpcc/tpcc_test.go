@@ -18,8 +18,8 @@ package tpcc_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/workload"
-	"github.com/cockroachdb/cockroach/pkg/workload/tpcc"
+	"github.com/weisslj/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload/tpcc"
 )
 
 func BenchmarkInitTPCC(b *testing.B) {

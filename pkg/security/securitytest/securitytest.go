@@ -22,7 +22,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/security"
 )
 
 //go:generate go-bindata -mode 0600 -modtime 1400000000 -pkg securitytest -o embedded.go -ignore README.md test_certs

@@ -37,12 +37,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/build"
-	"github.com/cockroachdb/cockroach/pkg/util/caller"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/sysutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/build"
+	"github.com/weisslj/cockroach/pkg/util/caller"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/sysutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/cockroachdb/ttycolor"
 	"github.com/petermattis/goid"
 )
@@ -65,7 +65,7 @@ improve CockroachDB based on your report.
 
 Please submit a crash report by following the instructions here:
 
-    https://github.com/cockroachdb/cockroach/issues/new/choose
+    https://github.com/weisslj/cockroach/issues/new/choose
 
 If you would rather not post publicly, please contact us directly at:
 
@@ -892,7 +892,7 @@ func (l *loggingT) outputLogEntry(s Severity, file string, line int, msg string)
 		// file system do not support deadlines but can block
 		// indefinitely).
 		//
-		// https://github.com/cockroachdb/cockroach/issues/23119
+		// https://github.com/weisslj/cockroach/issues/23119
 		fatalTrigger = make(chan struct{})
 		exitFunc := os.Exit
 		if l.exitOverride.f != nil {

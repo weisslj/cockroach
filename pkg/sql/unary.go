@@ -17,7 +17,7 @@ package sql
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // unaryNode is a planNode with no columns and a single row with empty results

@@ -17,7 +17,7 @@ package sqlbase
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 // ResultColumn contains the name and type of a SQL "cell".

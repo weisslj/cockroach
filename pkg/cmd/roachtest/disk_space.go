@@ -24,8 +24,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
@@ -331,7 +331,7 @@ func registerDiskUsage(r *registry) {
 					}
 					runDiskUsage(t, c, duration, testCase)
 				},
-				Skip: "https://github.com/cockroachdb/cockroach/issues/34703#issuecomment-463567238",
+				Skip: "https://github.com/weisslj/cockroach/issues/34703#issuecomment-463567238",
 			},
 		)
 	}

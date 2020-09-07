@@ -20,13 +20,13 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/sqlutils"
-	"github.com/cockroachdb/cockroach/pkg/testutils/testcluster"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils/sqlutils"
+	"github.com/weisslj/cockroach/pkg/testutils/testcluster"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 	"github.com/gogo/protobuf/proto"
 	"github.com/pkg/errors"
 )
@@ -34,7 +34,7 @@ import (
 func TestShowTraceReplica(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 
-	t.Skip("https://github.com/cockroachdb/cockroach/issues/34213")
+	t.Skip("https://github.com/weisslj/cockroach/issues/34213")
 
 	const numNodes = 4
 

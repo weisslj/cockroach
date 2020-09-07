@@ -18,9 +18,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/security/securitytest"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/security/securitytest"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 )
 
 //go:generate ../../../util/leaktest/add-leaktest.sh *_test.go

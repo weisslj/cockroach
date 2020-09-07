@@ -29,9 +29,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/install"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/ssh"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/install"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/ssh"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 var duration time.Duration

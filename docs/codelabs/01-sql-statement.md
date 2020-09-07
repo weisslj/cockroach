@@ -17,7 +17,7 @@ good coverage of how to add tests, which this codelab ignores.
 Also, remember that for real feature development, you'll want to first write up
 an RFC describing the new feature as well as the proposed syntax, and make sure
 to get the approval of someone from @cockroachdb/sql-language.  There are also
-some guidelines on adding new syntax that you can read about on [#17569](https://github.com/cockroachdb/cockroach/pull/17569).
+some guidelines on adding new syntax that you can read about on [#17569](https://github.com/weisslj/cockroach/pull/17569).
 
 ## Adding a SQL Statement
 
@@ -122,7 +122,7 @@ generators will provide assistance to users.  Let's give it a try.  First, we
 need to regenerate the file `sql.go`:
 
 ```text
-~/go/src/github.com/cockroachdb/cockroach$ make generate
+~/go/src/github.com/weisslj/cockroach$ make generate
 ...
 Type checking sql.y
 Compiling sql.go
@@ -132,9 +132,9 @@ Compiling sql.go
 And then compile the project:
 
 ```text
-~/go/src/github.com/cockroachdb/cockroach$ make build
+~/go/src/github.com/weisslj/cockroach$ make build
 ...
-github.com/cockroachdb/cockroach
+github.com/weisslj/cockroach
 ```
 
 Now, let’s run a single-node Cockroach instance:
@@ -312,7 +312,7 @@ import (
     "context"
     "fmt"
 
-    "github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+    "github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 func (p *planner) Frobnicate(ctx context.Context, stmt *tree.Frobnicate) (planNode, error) {
@@ -418,7 +418,7 @@ Finally, for the `database` setting we need to pick an actual database at random
 ```go
 import (
     // ...
-    "github.com/cockroachdb/cockroach/pkg/internal/client"
+    "github.com/weisslj/cockroach/pkg/internal/client"
     // ...
 )
 
@@ -580,7 +580,7 @@ it a try, and look below if you need a hint.
 That's it!  You've seen how to add new syntax and semantics to the CockroachDB
 SQL parser and execution engine.
 
-[CONTRIBUTING.md]: https://github.com/cockroachdb/cockroach/blob/master/CONTRIBUTING.md
-[sql-function]: https://github.com/cockroachdb/cockroach/blob/master/docs/codelabs/00-sql-function.md
+[CONTRIBUTING.md]: https://github.com/weisslj/cockroach/blob/master/CONTRIBUTING.md
+[sql-function]: https://github.com/weisslj/cockroach/blob/master/docs/codelabs/00-sql-function.md
 [statements]: https://www.cockroachlabs.com/docs/stable/sql-statements.html
 [jargon-file]: http://www.catb.org/jargon/html/F/frobnicate.html

@@ -4,11 +4,11 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package cliflagsccl
 
-import "github.com/cockroachdb/cockroach/pkg/cli/cliflags"
+import "github.com/weisslj/cockroach/pkg/cli/cliflags"
 
 // Attrs and others store the static information for CLI flags.
 var (

@@ -125,7 +125,7 @@ func registerSysbench(r *registry) {
 		}
 
 		r.Add(testSpec{
-			Skip:    "https://github.com/cockroachdb/cockroach/issues/32738",
+			Skip:    "https://github.com/weisslj/cockroach/issues/32738",
 			Name:    fmt.Sprintf("sysbench/%s/nodes=%d", w, n),
 			Cluster: makeClusterSpec(n+1, cpu(cpus)),
 			Run: func(ctx context.Context, t *test, c *cluster) {

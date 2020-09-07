@@ -17,7 +17,7 @@ package tree
 import (
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
 )
 
 // GetRenderColName computes a name for a result column.

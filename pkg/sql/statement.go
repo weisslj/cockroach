@@ -15,8 +15,8 @@
 package sql
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // Statement contains a statement with optional expected result columns and metadata.

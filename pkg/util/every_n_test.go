@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 func TestEveryN(t *testing.T) {

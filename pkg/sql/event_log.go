@@ -19,8 +19,8 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"github.com/pkg/errors"
 )
 

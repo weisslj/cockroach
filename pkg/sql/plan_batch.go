@@ -17,7 +17,7 @@ package sql
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // batchedPlanNode is an interface that complements planNode to
@@ -60,7 +60,7 @@ type batchedPlanNode interface {
 	// interfaces that extend planNodeBase; namely serializeNode
 	// providing Next/Values and this new interface batchedPlanNode
 	// which provides BatchedNext/BatchedCount/BatchedValues.
-	// See issue https://github.com/cockroachdb/cockroach/issues/23522.
+	// See issue https://github.com/weisslj/cockroach/issues/23522.
 	planNode
 
 	// BatchedNext() performs one batch of work, returning false

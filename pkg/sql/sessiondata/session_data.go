@@ -20,7 +20,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/duration"
+	"github.com/weisslj/cockroach/pkg/util/duration"
 )
 
 // SessionData contains session parameters. They are all user-configurable.

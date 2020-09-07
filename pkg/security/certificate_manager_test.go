@@ -17,8 +17,8 @@ package security_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestManagerWithEmbedded(t *testing.T) {

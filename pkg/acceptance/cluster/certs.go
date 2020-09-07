@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/security"
 )
 
 const certsDir = ".localcluster.certs"

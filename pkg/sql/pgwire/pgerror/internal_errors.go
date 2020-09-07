@@ -17,7 +17,7 @@ package pgerror
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // This file provides facilities to track internal errors.
@@ -50,11 +50,11 @@ import (
 
 const assertionErrorHint = `You have encountered an unexpected error inside CockroachDB.
 
-Please check https://github.com/cockroachdb/cockroach/issues to check
+Please check https://github.com/weisslj/cockroach/issues to check
 whether this problem is already tracked. If you cannot find it there,
 please report the error with details at:
 
-    https://github.com/cockroachdb/cockroach/issues/new/choose
+    https://github.com/weisslj/cockroach/issues/new/choose
 
 If you would rather not post publicly, please contact us directly at:
 
@@ -103,5 +103,5 @@ func NewInternalTrackingError(issue int, detail string) *Error {
 	key := fmt.Sprintf("#%d.%s", issue, detail)
 	err := NewAssertionErrorWithDepthf(1, key)
 	err.TelemetryKey = key
-	return err.SetHintf("See: https://github.com/cockroachdb/cockroach/issues/%d", issue)
+	return err.SetHintf("See: https://github.com/weisslj/cockroach/issues/%d", issue)
 }

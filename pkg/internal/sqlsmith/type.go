@@ -19,7 +19,7 @@ import (
 	"math/rand"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 var typeNames = func() map[string]types.T {

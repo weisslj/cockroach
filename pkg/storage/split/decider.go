@@ -19,8 +19,8 @@ package split
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 const minSplitSuggestionInterval = time.Minute

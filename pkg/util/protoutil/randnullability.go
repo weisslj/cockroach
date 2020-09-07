@@ -20,9 +20,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"golang.org/x/sync/syncmap"
 )
 

@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 var binaryOpName = map[tree.BinaryOperator]string{

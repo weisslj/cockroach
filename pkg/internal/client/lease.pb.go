@@ -6,7 +6,7 @@ package client
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
 import io "io"
 

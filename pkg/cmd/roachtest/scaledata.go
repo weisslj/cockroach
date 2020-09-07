@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/binfetcher"
+	"github.com/weisslj/cockroach/pkg/util/binfetcher"
 )
 
 func registerScaleData(r *registry) {

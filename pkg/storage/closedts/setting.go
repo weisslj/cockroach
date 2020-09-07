@@ -18,7 +18,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/settings"
 )
 
 // TargetDuration is the follower reads closed timestamp update target duration.

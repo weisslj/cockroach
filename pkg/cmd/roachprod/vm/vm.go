@@ -21,7 +21,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
 	"golang.org/x/sync/errgroup"

@@ -18,7 +18,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestIntToEnglish(t *testing.T) {

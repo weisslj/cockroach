@@ -23,10 +23,10 @@ import (
 	"os/signal"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/cli/cliflags"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/sdnotify"
-	"github.com/cockroachdb/cockroach/pkg/util/sysutil"
+	"github.com/weisslj/cockroach/pkg/cli/cliflags"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/sdnotify"
+	"github.com/weisslj/cockroach/pkg/util/sysutil"
 	"golang.org/x/sys/unix"
 )
 

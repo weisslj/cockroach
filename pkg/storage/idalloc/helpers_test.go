@@ -14,7 +14,7 @@
 
 package idalloc
 
-import "github.com/cockroachdb/cockroach/pkg/roachpb"
+import "github.com/weisslj/cockroach/pkg/roachpb"
 
 // SetIDKey sets the key which the allocator increments.
 func (ia *Allocator) SetIDKey(idKey roachpb.Key) {

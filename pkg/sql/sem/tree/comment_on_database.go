@@ -14,7 +14,7 @@
 
 package tree
 
-import "github.com/cockroachdb/cockroach/pkg/sql/lex"
+import "github.com/weisslj/cockroach/pkg/sql/lex"
 
 // CommentOnDatabase represents an COMMENT ON DATABASE statement.
 type CommentOnDatabase struct {

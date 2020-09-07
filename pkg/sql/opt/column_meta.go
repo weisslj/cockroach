@@ -15,8 +15,8 @@
 package opt
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/util"
 )
 
 // ColumnID uniquely identifies the usage of a column within the scope of a

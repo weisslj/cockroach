@@ -17,7 +17,7 @@ package coltypes
 import (
 	"bytes"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
 )
 
 // TTuple represents tuple column types. Tuples aren't writable to disk, but

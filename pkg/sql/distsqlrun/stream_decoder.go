@@ -15,8 +15,8 @@
 package distsqlrun
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlpb"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 	"github.com/pkg/errors"
 )
 

@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 )
 
 // The functions in this file are used by fieldExtract.Extract().

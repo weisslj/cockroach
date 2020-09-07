@@ -17,7 +17,7 @@ package gossip
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 func TestGossipStatus(t *testing.T) {

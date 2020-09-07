@@ -17,9 +17,9 @@ package row
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // queueFkExistenceChecksForRow initiates FK existence checks for a
@@ -34,7 +34,7 @@ func queueFkExistenceChecksForRow(
 ) error {
 outer:
 	for i, fk := range fkInfo[mutatedIdx] {
-		// See https://github.com/cockroachdb/cockroach/issues/20305 or
+		// See https://github.com/weisslj/cockroach/issues/20305 or
 		// https://www.postgresql.org/docs/11/sql-createtable.html for details on the
 		// different composite foreign key matching methods.
 		//

@@ -26,13 +26,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/build"
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/caller"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/sysutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/build"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/caller"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/sysutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	raven "github.com/getsentry/raven-go"
 	"github.com/pkg/errors"
 )
@@ -275,7 +275,7 @@ func SetupCrashReporter(ctx context.Context, cmd string) {
 }
 
 var crdbPaths = []string{
-	"github.com/cockroachdb/cockroach",
+	"github.com/weisslj/cockroach",
 	"go.etcd.io/etcd/raft",
 }
 

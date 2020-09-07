@@ -19,9 +19,9 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/cockroachdb/cockroach/pkg/util/bufalloc"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
-	"github.com/cockroachdb/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/util/bufalloc"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/workload"
 	"golang.org/x/exp/rand"
 )
 

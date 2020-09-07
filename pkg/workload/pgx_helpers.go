@@ -21,7 +21,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/cockroachdb/cockroach-go/crdb"
+	"github.com/weisslj/cockroach-go/crdb"
 	"github.com/jackc/pgx"
 	"golang.org/x/sync/errgroup"
 )

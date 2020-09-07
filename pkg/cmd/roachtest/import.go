@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 	"github.com/pkg/errors"
 )
 

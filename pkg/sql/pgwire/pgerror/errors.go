@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/caller"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/caller"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
 )
@@ -139,7 +139,7 @@ func GetPGCause(err error) (*Error, bool) {
 func UnimplementedWithIssueErrorf(issue int, format string, args ...interface{}) *Error {
 	err := NewErrorWithDepthf(1, CodeFeatureNotSupportedError, "unimplemented: "+format, args...)
 	err.TelemetryKey = fmt.Sprintf("#%d", issue)
-	return err.SetHintf("See: https://github.com/cockroachdb/cockroach/issues/%d", issue)
+	return err.SetHintf("See: https://github.com/weisslj/cockroach/issues/%d", issue)
 }
 
 // UnimplementedWithIssueError constructs an error with the given message
@@ -147,7 +147,7 @@ func UnimplementedWithIssueErrorf(issue int, format string, args ...interface{})
 func UnimplementedWithIssueError(issue int, msg string) *Error {
 	err := NewErrorWithDepthf(1, CodeFeatureNotSupportedError, "unimplemented: %s", msg)
 	err.TelemetryKey = fmt.Sprintf("#%d", issue)
-	return err.SetHintf("See: https://github.com/cockroachdb/cockroach/issues/%d", issue)
+	return err.SetHintf("See: https://github.com/weisslj/cockroach/issues/%d", issue)
 }
 
 // UnimplementedWithIssueDetailError constructs an error with the given message
@@ -160,7 +160,7 @@ func UnimplementedWithIssueDetailError(issue int, detail, msg string) *Error {
 	} else {
 		err.TelemetryKey = fmt.Sprintf("#%d.%s", issue, detail)
 	}
-	return err.SetHintf("See: https://github.com/cockroachdb/cockroach/issues/%d", issue)
+	return err.SetHintf("See: https://github.com/weisslj/cockroach/issues/%d", issue)
 }
 
 // UnimplementedWithIssueDetailErrorf is like the above
@@ -174,7 +174,7 @@ func UnimplementedWithIssueDetailErrorf(
 	} else {
 		err.TelemetryKey = fmt.Sprintf("#%d.%s", issue, detail)
 	}
-	return err.SetHintf("See: https://github.com/cockroachdb/cockroach/issues/%d", issue)
+	return err.SetHintf("See: https://github.com/weisslj/cockroach/issues/%d", issue)
 }
 
 // UnimplementedWithIssueHintError constructs an error with the given
@@ -183,16 +183,16 @@ func UnimplementedWithIssueDetailErrorf(
 func UnimplementedWithIssueHintError(issue int, msg, hint string) *Error {
 	err := NewErrorWithDepthf(1, CodeFeatureNotSupportedError, "unimplemented: %s", msg)
 	err.TelemetryKey = fmt.Sprintf("#%d", issue)
-	return err.SetHintf("%s\nSee: https://github.com/cockroachdb/cockroach/issues/%d", hint, issue)
+	return err.SetHintf("%s\nSee: https://github.com/weisslj/cockroach/issues/%d", hint, issue)
 }
 
 const unimplementedErrorHint = `This feature is not yet implemented in CockroachDB.
 
-Please check https://github.com/cockroachdb/cockroach/issues to check
+Please check https://github.com/weisslj/cockroach/issues to check
 whether this feature is already tracked. If you cannot find it there,
 please report this error with reproduction steps at:
 
-    https://github.com/cockroachdb/cockroach/issues/new/choose
+    https://github.com/weisslj/cockroach/issues/new/choose
 
 If you would rather not post publicly, please contact us directly at:
 

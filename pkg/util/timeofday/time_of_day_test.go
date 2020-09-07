@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/duration"
+	"github.com/weisslj/cockroach/pkg/util/duration"
 )
 
 func TestString(t *testing.T) {

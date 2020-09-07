@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 	"github.com/lib/pq"
 )
 
@@ -30,7 +30,7 @@ type tpchBench int
 //go:generate stringer -type=tpchBench
 
 const (
-	// SQL20 queries: https://github.com/cockroachdb/cockroach/blob/master/pkg/workload/querybench/2.1-sql-20
+	// SQL20 queries: https://github.com/weisslj/cockroach/blob/master/pkg/workload/querybench/2.1-sql-20
 	sql20 tpchBench = iota
 )
 

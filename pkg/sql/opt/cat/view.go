@@ -17,8 +17,8 @@ package cat
 import (
 	"bytes"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/treeprinter"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/treeprinter"
 )
 
 // View is an interface to a database view, exposing only the information needed

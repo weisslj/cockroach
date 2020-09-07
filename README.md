@@ -4,7 +4,7 @@
 CockroachDB is a cloud-native SQL database for building global, scalable cloud services that survive disasters.
 
 [![TeamCity CI](https://teamcity.cockroachdb.com/guestAuth/app/rest/builds/buildType:(id:Cockroach_UnitTests)/statusIcon.svg)](https://teamcity.cockroachdb.com/viewLog.html?buildTypeId=Cockroach_UnitTests&buildId=lastFinished&guest=1)
-[![GoDoc](https://godoc.org/github.com/cockroachdb/cockroach?status.svg)](https://godoc.org/github.com/cockroachdb/cockroach)
+[![GoDoc](https://godoc.org/github.com/weisslj/cockroach?status.svg)](https://godoc.org/github.com/weisslj/cockroach)
 
 - [What is CockroachDB?](#what-is-cockroachdb)
 - [Docs](#docs)
@@ -37,7 +37,7 @@ Here’s a quick explainer video:
 ## Status
 
 CockroachDB is production-ready. See our
-[Roadmap](https://github.com/cockroachdb/cockroach/wiki/Roadmap) for a list of features planned or in development.
+[Roadmap](https://github.com/weisslj/cockroach/wiki/Roadmap) for a list of features planned or in development.
 
 ## Docs
 
@@ -85,7 +85,7 @@ CockroachDB supports the PostgreSQL wire protocol, so you can use any available 
   find answers, and help other users.
 
 - For filing bugs, suggesting improvements, or requesting new features, help us out by
-  [opening an issue](https://github.com/cockroachdb/cockroach/issues/new).
+  [opening an issue](https://github.com/weisslj/cockroach/issues/new).
 
 ## Contributing
 
@@ -99,7 +99,7 @@ Engineering discussion takes place on our public mailing list,
 
 For an in-depth discussion of the CockroachDB architecture, see our [Architecture Guide](https://www.cockroachlabs.com/docs/stable/architecture/overview.html).
 
-For the original design motivation, see our [design doc](https://github.com/cockroachdb/cockroach/blob/master/docs/design.md).
+For the original design motivation, see our [design doc](https://github.com/weisslj/cockroach/blob/master/docs/design.md).
 
 
 ## Comparison with Other Databases
@@ -117,4 +117,4 @@ visit the [CockroachDB in Comparison](https://www.cockroachlabs.com/docs/stable/
   - [Consensus, Made Thrive](https://www.cockroachlabs.com/blog/consensus-made-thrive/)
   - [Trust, But Verify: How CockroachDB Checks Replication](https://www.cockroachlabs.com/blog/trust-but-verify-cockroachdb-checks-replication/)
   - [Living Without Atomic Clocks](https://www.cockroachlabs.com/blog/living-without-atomic-clocks/)
-  - [The CockroachDB Architecture Document](https://github.com/cockroachdb/cockroach/blob/master/docs/design.md)
+  - [The CockroachDB Architecture Document](https://github.com/weisslj/cockroach/blob/master/docs/design.md)

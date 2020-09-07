@@ -150,7 +150,7 @@ export CFLAGS CXXFLAGS LDFLAGS CGO_CFLAGS CGO_CXXFLAGS CGO_LDFLAGS
 # We intentionally use LINKFLAGS instead of the more traditional LDFLAGS
 # because LDFLAGS has built-in semantics that don't make sense with the Go
 # toolchain.
-override LINKFLAGS = -X github.com/cockroachdb/cockroach/pkg/build.typ=$(BUILDTYPE) -extldflags "$(LDFLAGS)"
+override LINKFLAGS = -X github.com/weisslj/cockroach/pkg/build.typ=$(BUILDTYPE) -extldflags "$(LDFLAGS)"
 
 GO      ?= go
 GOFLAGS ?=
@@ -804,17 +804,17 @@ BUILDINFO_TAG :=
 $(go-targets): bin/.bootstrap $(BUILDINFO) $(CGO_FLAGS_FILES) $(PROTOBUF_TARGETS)
 $(go-targets): $(SQLPARSER_TARGETS) $(EXECGEN_TARGETS) $(OPTGEN_TARGETS)
 $(go-targets): override LINKFLAGS += \
-	-X "github.com/cockroachdb/cockroach/pkg/build.tag=$(if $(BUILDINFO_TAG),$(BUILDINFO_TAG),$(shell cat .buildinfo/tag))" \
-	-X "github.com/cockroachdb/cockroach/pkg/build.rev=$(shell cat .buildinfo/rev)" \
-	-X "github.com/cockroachdb/cockroach/pkg/build.cgoTargetTriple=$(TARGET_TRIPLE)" \
-	$(if $(BUILDCHANNEL),-X "github.com/cockroachdb/cockroach/pkg/build.channel=$(BUILDCHANNEL)") \
-	$(if $(BUILD_TAGGED_RELEASE),-X "github.com/cockroachdb/cockroach/pkg/util/log.crashReportEnv=$(if $(BUILDINFO_TAG),$(BUILDINFO_TAG),$(shell cat .buildinfo/tag))")
+	-X "github.com/weisslj/cockroach/pkg/build.tag=$(if $(BUILDINFO_TAG),$(BUILDINFO_TAG),$(shell cat .buildinfo/tag))" \
+	-X "github.com/weisslj/cockroach/pkg/build.rev=$(shell cat .buildinfo/rev)" \
+	-X "github.com/weisslj/cockroach/pkg/build.cgoTargetTriple=$(TARGET_TRIPLE)" \
+	$(if $(BUILDCHANNEL),-X "github.com/weisslj/cockroach/pkg/build.channel=$(BUILDCHANNEL)") \
+	$(if $(BUILD_TAGGED_RELEASE),-X "github.com/weisslj/cockroach/pkg/util/log.crashReportEnv=$(if $(BUILDINFO_TAG),$(BUILDINFO_TAG),$(shell cat .buildinfo/tag))")
 
 # The build.utcTime format must remain in sync with TimeFormat in
 # pkg/build/info.go. It is not installed in tests to avoid busting the cache on
 # every rebuild.
 $(COCKROACH) $(COCKROACHOSS) $(COCKROACHSHORT) go-install: override LINKFLAGS += \
-	-X "github.com/cockroachdb/cockroach/pkg/build.utcTime=$(shell date -u '+%Y/%m/%d %H:%M:%S')"
+	-X "github.com/weisslj/cockroach/pkg/build.utcTime=$(shell date -u '+%Y/%m/%d %H:%M:%S')"
 
 SETTINGS_DOC_PAGE := docs/generated/settings/settings.html
 
@@ -1017,7 +1017,7 @@ pre-push: generate lint test ui-lint ui-test
 # archive builds a source tarball out of this repository. Files in the special
 # directory build/archive/contents are inserted directly into $(ARCHIVE_BASE).
 # All other files in the repository are inserted into the archive with prefix
-# $(ARCHIVE_BASE)/src/github.com/cockroachdb/cockroach to allow the extracted
+# $(ARCHIVE_BASE)/src/github.com/weisslj/cockroach to allow the extracted
 # archive to serve directly as a GOPATH root.
 .PHONY: archive
 archive: ## Build a source tarball from this repository.
@@ -1042,7 +1042,7 @@ ARCHIVE_EXTRAS = \
 $(ARCHIVE).tmp: ARCHIVE_BASE = cockroach-$(if $(BUILDINFO_TAG),$(BUILDINFO_TAG),$(shell cat .buildinfo/tag))
 $(ARCHIVE).tmp: $(ARCHIVE_EXTRAS)
 	echo "$(if $(BUILDINFO_TAG),$(BUILDINFO_TAG),$(shell cat .buildinfo/tag))" > .buildinfo/tag
-	scripts/ls-files.sh | $(TAR) -cf $@ -T - $(TAR_XFORM_FLAG),^,$(ARCHIVE_BASE)/src/github.com/cockroachdb/cockroach/, $^
+	scripts/ls-files.sh | $(TAR) -cf $@ -T - $(TAR_XFORM_FLAG),^,$(ARCHIVE_BASE)/src/github.com/weisslj/cockroach/, $^
 	(cd build/archive/contents && $(TAR) -rf ../../../$@ $(TAR_XFORM_FLAG),^,$(ARCHIVE_BASE)/, *)
 
 .buildinfo:
@@ -1125,13 +1125,13 @@ $(GOGOPROTO_PROTO): bin/.submodules-initialized
 bin/.go_protobuf_sources: $(PROTOC) $(GO_PROTOS) $(GOGOPROTO_PROTO) bin/.bootstrap bin/protoc-gen-gogoroach
 	$(FIND_RELEVANT) -type f -name '*.pb.go' -exec rm {} +
 	set -e; for dir in $(sort $(dir $(GO_PROTOS))); do \
-	  build/werror.sh $(PROTOC) -Ipkg:./vendor/github.com:$(GOGO_PROTOBUF_PATH):$(PROTOBUF_PATH):$(COREOS_PATH):$(GRPC_GATEWAY_GOOGLEAPIS_PATH) --gogoroach_out=$(PROTO_MAPPINGS),plugins=grpc,import_prefix=github.com/cockroachdb/cockroach/pkg/:./pkg $$dir/*.proto; \
+	  build/werror.sh $(PROTOC) -Ipkg:./vendor/github.com:$(GOGO_PROTOBUF_PATH):$(PROTOBUF_PATH):$(COREOS_PATH):$(GRPC_GATEWAY_GOOGLEAPIS_PATH) --gogoroach_out=$(PROTO_MAPPINGS),plugins=grpc,import_prefix=github.com/weisslj/cockroach/pkg/:./pkg $$dir/*.proto; \
 	done
 	$(SED_INPLACE) -E \
 		-e '/import _ /d' \
-		-e 's!import (fmt|math) "github.com/cockroachdb/cockroach/pkg/(fmt|math)"! !g' \
+		-e 's!import (fmt|math) "github.com/weisslj/cockroach/pkg/(fmt|math)"! !g' \
 		-e 's!github\.com/cockroachdb/cockroach/pkg/(etcd)!go.etcd.io/\1!g' \
-		-e 's!github.com/cockroachdb/cockroach/pkg/(bytes|encoding/binary|errors|fmt|io|math|github\.com|(google\.)?golang\.org)!\1!g' \
+		-e 's!github.com/weisslj/cockroach/pkg/(bytes|encoding/binary|errors|fmt|io|math|github\.com|(google\.)?golang\.org)!\1!g' \
 		-e 's!golang.org/x/net/context!context!g' \
 		$(GO_SOURCES)
 	@# TODO(benesch): Remove the last sed command after https://github.com/grpc/grpc-go/issues/711.
@@ -1410,7 +1410,7 @@ pkg/sql/exec/tuples_differ.eg.go: pkg/sql/exec/tuples_differ_tmpl.go
 
 $(EXECGEN_TARGETS): bin/execgen
 	@# Remove generated files with the old suffix to avoid conflicts.
-	@# See https://github.com/cockroachdb/cockroach/pull/32265.
+	@# See https://github.com/weisslj/cockroach/pull/32265.
 	@rm -f pkg/sql/exec/*.og.go
 	execgen $@
 
@@ -1469,7 +1469,7 @@ clean-execgen-files:
 clean: ## Remove build artifacts.
 clean: clean-c-deps clean-execgen-files
 	rm -rf bin/.go_protobuf_sources bin/.gw_protobuf_sources bin/.cpp_protobuf_sources build/defs.mk*
-	$(GO) clean $(GOFLAGS) -tags '$(TAGS)' -ldflags '$(LINKFLAGS)' -i -cache github.com/cockroachdb/cockroach...
+	$(GO) clean $(GOFLAGS) -tags '$(TAGS)' -ldflags '$(LINKFLAGS)' -i -cache github.com/weisslj/cockroach...
 	$(FIND_RELEVANT) -type f \( -name 'zcgo_flags*.go' -o -name '*.test' \) -exec rm {} +
 	for f in cockroach*; do if [ -f "$$f" ]; then rm "$$f"; fi; done
 	rm -rf artifacts bin $(ARCHIVE) pkg/sql/parser/gen

@@ -22,7 +22,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/testutils"
 	"github.com/pkg/errors"
 )
 

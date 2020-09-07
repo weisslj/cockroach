@@ -17,7 +17,7 @@ package compactor
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/settings"
 	"github.com/pkg/errors"
 )
 

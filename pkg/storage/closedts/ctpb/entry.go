@@ -19,7 +19,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 // Epoch is an int64 with its own type to avoid mix-ups in positional arguments.

@@ -17,9 +17,9 @@ package bulk
 import (
 	"bytes"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
 )
 
 // RowCounter is a helper that counts how many distinct rows appear in the KVs

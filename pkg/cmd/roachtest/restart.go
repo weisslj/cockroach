@@ -15,7 +15,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 func runRestart(ctx context.Context, t *test, c *cluster, downDuration time.Duration) {

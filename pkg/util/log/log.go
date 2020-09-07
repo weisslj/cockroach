@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 	"github.com/opentracing/opentracing-go"
 	"github.com/petermattis/goid"
 )

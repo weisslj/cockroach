@@ -18,13 +18,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqltelemetry"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sqltelemetry"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // uniqueRowIDExpr is used as default expression when
@@ -75,7 +75,7 @@ func (p *planner) processSerialInColumnDef(
 		// no choice but to use the full-width integer type, no matter
 		// which serial size was requested, otherwise the values will not fit.
 		//
-		// TODO(bob): Follow up with https://github.com/cockroachdb/cockroach/issues/32534
+		// TODO(bob): Follow up with https://github.com/weisslj/cockroach/issues/32534
 		// when the default is inverted to determine if we should also
 		// switch this behavior around.
 		newSpec.Type = coltypes.Int8

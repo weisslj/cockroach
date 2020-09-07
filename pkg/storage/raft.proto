@@ -29,13 +29,13 @@ import "gogoproto/gogo.proto";
 message RaftHeartbeat {
   optional uint64 range_id = 1 [(gogoproto.nullable) = false,
       (gogoproto.customname) = "RangeID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"];
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID"];
   optional uint32 from_replica_id = 2 [(gogoproto.nullable) = false,
       (gogoproto.customname) = "FromReplicaID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.ReplicaID"];
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.ReplicaID"];
   optional uint32 to_replica_id = 3 [(gogoproto.nullable) = false,
       (gogoproto.customname) = "ToReplicaID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.ReplicaID"];
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.ReplicaID"];
   optional uint64 term = 4 [(gogoproto.nullable) = false];
   optional uint64 commit = 5 [(gogoproto.nullable) = false];
   optional bool quiesce = 6 [(gogoproto.nullable) = false];
@@ -49,10 +49,10 @@ message RaftHeartbeat {
 message RaftMessageRequest {
   optional uint64 range_id = 1 [(gogoproto.nullable) = false,
       (gogoproto.customname) = "RangeID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"];
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID"];
   // Optionally, the start key of the sending replica. This is only populated
   // as a "hint" under certain conditions.
-  optional bytes range_start_key = 8 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.RKey"];
+  optional bytes range_start_key = 8 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.RKey"];
 
   optional roachpb.ReplicaDescriptor from_replica = 2 [(gogoproto.nullable) = false];
   optional roachpb.ReplicaDescriptor to_replica = 3 [(gogoproto.nullable) = false];
@@ -94,7 +94,7 @@ message RaftMessageResponseUnion {
 message RaftMessageResponse {
   optional uint64 range_id = 1 [(gogoproto.nullable) = false,
       (gogoproto.customname) = "RangeID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"];
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID"];
 
   optional roachpb.ReplicaDescriptor from_replica = 2 [(gogoproto.nullable) = false];
   optional roachpb.ReplicaDescriptor to_replica = 3 [(gogoproto.nullable) = false];

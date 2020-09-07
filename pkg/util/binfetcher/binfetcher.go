@@ -27,7 +27,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log"
 	"github.com/pkg/errors"
 )
 

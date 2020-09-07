@@ -18,7 +18,7 @@ import (
 	"context"
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/cli/systembench/systembenchpb"
+	"github.com/weisslj/cockroach/pkg/cli/systembench/systembenchpb"
 )
 
 type pinger struct {

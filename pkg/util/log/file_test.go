@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // TestLogFilenameParsing ensures that logName and parseLogFilename work as

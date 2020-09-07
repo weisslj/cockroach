@@ -19,7 +19,7 @@ package kvbase
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 // RangeDescriptorCache is a simplified interface to the kv.RangeDescriptorCache

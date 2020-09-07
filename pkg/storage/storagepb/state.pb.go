@@ -6,11 +6,11 @@ package storagepb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import enginepb "github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import enginepb "github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import io "io"
 
@@ -173,7 +173,7 @@ func (m *RangeInfo) XXX_DiscardUnknown() {
 var xxx_messageInfo_RangeInfo proto.InternalMessageInfo
 
 type RangeInfo_CTEntry struct {
-	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
 	ClosedTimestamp      hlc.Timestamp                                       `protobuf:"bytes,2,opt,name=closed_timestamp,json=closedTimestamp,proto3" json:"closed_timestamp"`
 	MLAI                 int64                                               `protobuf:"varint,3,opt,name=mlai,proto3" json:"mlai,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`

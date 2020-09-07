@@ -18,7 +18,7 @@ import (
 	"context"
 	"unsafe"
 
-	"github.com/cockroachdb/cockroach/pkg/util/mon"
+	"github.com/weisslj/cockroach/pkg/util/mon"
 )
 
 // Arena provides arena allocation of a string from a []byte, reducing

@@ -17,7 +17,7 @@ package kv
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 // txnSeqNumAllocator is a txnInterceptor in charge of allocating sequence

@@ -17,7 +17,7 @@ package coltypes
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 func TestCanConvertBetweenDatumTypeAndColumnType(t *testing.T) {

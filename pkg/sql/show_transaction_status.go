@@ -17,7 +17,7 @@ package sql
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // ShowTransactionStatus implements the plan for SHOW TRANSACTION STATUS.

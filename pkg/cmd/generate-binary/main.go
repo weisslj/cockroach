@@ -38,8 +38,8 @@ import (
 	"sort"
 	"text/template"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/cmp-protocol/pgconnect"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgwirebase"
+	"github.com/weisslj/cockroach/pkg/cmd/cmp-protocol/pgconnect"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgwirebase"
 )
 
 var (

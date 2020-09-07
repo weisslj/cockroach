@@ -17,17 +17,17 @@ package storage
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/batcheval"
-	"github.com/cockroachdb/cockroach/pkg/storage/spanset"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/storage/batcheval"
+	"github.com/weisslj/cockroach/pkg/storage/spanset"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // todoSpanSet is a placeholder value for callsites that need to pass a properly
 // populated SpanSet (with according protection by the spanlatch manager) but fail
 // to do so at the time of writing.
 //
-// See https://github.com/cockroachdb/cockroach/issues/19851.
+// See https://github.com/weisslj/cockroach/issues/19851.
 //
 // Do not introduce new uses of this.
 var todoSpanSet = &spanset.SpanSet{}

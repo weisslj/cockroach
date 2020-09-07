@@ -17,8 +17,8 @@ package distsqlrun
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlpb"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // noopProcessor is a processor that simply passes rows through from the

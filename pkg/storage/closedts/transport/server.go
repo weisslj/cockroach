@@ -19,11 +19,11 @@ import (
 	"errors"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/storage/closedts"
+	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // Server handles incoming closed timestamp update stream requests.

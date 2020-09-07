@@ -17,9 +17,9 @@ package props_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/props"
-	"github.com/cockroachdb/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt/props"
+	"github.com/weisslj/cockroach/pkg/util"
 )
 
 // Other tests also exercise the ColsAreKey methods.

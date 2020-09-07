@@ -14,7 +14,7 @@
 
 package engine
 
-import "github.com/cockroachdb/cockroach/pkg/roachpb"
+import "github.com/weisslj/cockroach/pkg/roachpb"
 
 // InMem wraps RocksDB and configures it for in-memory only storage.
 type InMem struct {
@@ -33,7 +33,7 @@ func NewInMem(attrs roachpb.Attributes, cacheSize int64) InMem {
 	defer cache.Release()
 
 	// TODO(bdarnell): The hard-coded 512 MiB is wrong; see
-	// https://github.com/cockroachdb/cockroach/issues/16750
+	// https://github.com/weisslj/cockroach/issues/16750
 	rdb, err := newMemRocksDB(attrs, cache, 512<<20 /* MaxSizeBytes: 512 MiB */)
 	if err != nil {
 		panic(err)

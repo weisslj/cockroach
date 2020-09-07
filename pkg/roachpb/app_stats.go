@@ -14,7 +14,7 @@
 
 package roachpb
 
-import "github.com/cockroachdb/cockroach/pkg/util/log"
+import "github.com/weisslj/cockroach/pkg/util/log"
 
 // GetVariance retrieves the variance of the values.
 func (l *NumericStat) GetVariance(count int64) float64 {

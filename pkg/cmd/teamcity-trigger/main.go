@@ -27,7 +27,7 @@ import (
 	"os"
 
 	"github.com/abourget/teamcity"
-	"github.com/cockroachdb/cockroach/pkg/cmd/cmdutil"
+	"github.com/weisslj/cockroach/pkg/cmd/cmdutil"
 	"github.com/kisielk/gotool"
 )
 
@@ -55,7 +55,7 @@ func main() {
 }
 
 func runTC(queueBuild func(string, map[string]string)) {
-	importPaths := gotool.ImportPaths([]string{"github.com/cockroachdb/cockroach/pkg/..."})
+	importPaths := gotool.ImportPaths([]string{"github.com/weisslj/cockroach/pkg/..."})
 
 	// Queue stress builds. One per configuration per package.
 	for _, opts := range []map[string]string{

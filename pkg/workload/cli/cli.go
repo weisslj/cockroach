@@ -18,7 +18,7 @@ package cli
 import (
 	"os"
 
-	"github.com/cockroachdb/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/workload"
 	"github.com/spf13/cobra"
 )
 

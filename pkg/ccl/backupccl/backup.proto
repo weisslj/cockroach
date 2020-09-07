@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 syntax = "proto3";
 package cockroach.ccl.backupccl;
@@ -47,7 +47,7 @@ message BackupDescriptor {
 
   message DescriptorRevision {
     util.hlc.Timestamp time = 1 [(gogoproto.nullable) = false];
-    uint32 ID = 2 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"];
+    uint32 ID = 2 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"];
     sql.sqlbase.Descriptor desc = 3;
   }
 
@@ -78,7 +78,7 @@ message BackupDescriptor {
   repeated sql.sqlbase.Descriptor descriptors = 5 [(gogoproto.nullable) = false];
   // databases in descriptors that have all tables also in descriptors.
   repeated uint32 complete_dbs = 14 [
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"];
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"];
   reserved 6;
   roachpb.BulkOpSummary entry_counts = 12 [(gogoproto.nullable) = false];
 
@@ -87,10 +87,10 @@ message BackupDescriptor {
   uint32 format_version = 8;
 
   bytes cluster_id = 9 [(gogoproto.nullable) = false, (gogoproto.customname) = "ClusterID",
-    (gogoproto.customtype) = "github.com/cockroachdb/cockroach/pkg/util/uuid.UUID"];
+    (gogoproto.customtype) = "github.com/weisslj/cockroach/pkg/util/uuid.UUID"];
 
   // node_id and build_info of the gateway node (which writes the descriptor).
   int32 node_id = 10 [(gogoproto.customname) = "NodeID",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
   build.Info build_info = 11 [(gogoproto.nullable) = false];
 }

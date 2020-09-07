@@ -17,8 +17,8 @@ package distsqlplan
 import (
 	"sync"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/sql/distsqlpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/sql/distsqlpb"
 )
 
 var flowSpecPool = sync.Pool{

@@ -24,7 +24,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/ssh"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/ssh"
 )
 
 // Cassandra TODO(peter): document

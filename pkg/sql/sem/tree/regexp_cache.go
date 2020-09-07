@@ -17,8 +17,8 @@ package tree
 import (
 	"regexp"
 
-	"github.com/cockroachdb/cockroach/pkg/util/cache"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/cache"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 // RegexpCacheKey allows cache keys to take the form of different types,

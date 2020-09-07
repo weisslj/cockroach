@@ -18,8 +18,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // Various keywords that appear in timestamps.

@@ -15,8 +15,8 @@
 package storage
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
 )
 
 // SplitByLoadEnabled wraps "kv.range_split.by_load_enabled".

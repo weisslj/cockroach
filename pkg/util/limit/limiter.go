@@ -17,7 +17,7 @@ package limit
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 	"github.com/marusama/semaphore"
 )
 

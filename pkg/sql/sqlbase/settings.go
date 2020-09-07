@@ -14,7 +14,7 @@
 
 package sqlbase
 
-import "github.com/cockroachdb/cockroach/pkg/settings"
+import "github.com/weisslj/cockroach/pkg/settings"
 
 // ParallelScans controls parallelizing multi-range scans when the maximum size
 // of the result set is known.

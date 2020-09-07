@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	. "github.com/cockroachdb/cockroach/pkg/util/fsm"
+	. "github.com/weisslj/cockroach/pkg/util/fsm"
 )
 
 /// States.

@@ -14,7 +14,7 @@
 
 package exec
 
-import "github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
+import "github.com/weisslj/cockroach/pkg/sql/exec/coldata"
 
 // offsetOp is an operator that implements offset, returning everything
 // after the first n tuples in its input.

@@ -20,8 +20,8 @@ import (
 	"reflect"
 	"regexp"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/gogo/protobuf/proto"
 	prometheusgo "github.com/prometheus/client_model/go"
 )

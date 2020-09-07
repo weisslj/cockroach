@@ -17,7 +17,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/optgen/lang"
+	"github.com/weisslj/cockroach/pkg/sql/opt/optgen/lang"
 )
 
 type validator struct {

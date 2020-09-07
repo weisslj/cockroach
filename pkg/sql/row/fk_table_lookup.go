@@ -17,8 +17,8 @@ package row
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
 )
 
 // The facilities in this file serve as interface between the FK

@@ -22,7 +22,7 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/apd"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 )
 
 func TestDecimalMandE(t *testing.T) {

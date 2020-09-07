@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/bench"
+	"github.com/weisslj/cockroach/pkg/bench"
 )
 
 // maxTransfer is the maximum amount to transfer in one transaction.

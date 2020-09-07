@@ -27,8 +27,8 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/cockroachdb/cockroach/pkg/internal/rsg/yacc"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/internal/rsg/yacc"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 const (

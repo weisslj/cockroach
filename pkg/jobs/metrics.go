@@ -17,7 +17,7 @@ package jobs
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/metric"
 )
 
 // Metrics are for production monitoring of each job type.

@@ -20,10 +20,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/ts/testmodel"
-	"github.com/cockroachdb/cockroach/pkg/ts/tspb"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/ts/testmodel"
+	"github.com/weisslj/cockroach/pkg/ts/tspb"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 	"github.com/gogo/protobuf/proto"
 	"github.com/kr/pretty"
 )

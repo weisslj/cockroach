@@ -6,14 +6,14 @@ package backupccl
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import build "github.com/cockroachdb/cockroach/pkg/build"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import build "github.com/weisslj/cockroach/pkg/build"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_sql_sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_sql_sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import io "io"
 
@@ -80,13 +80,13 @@ type BackupDescriptor struct {
 	Files             []BackupDescriptor_File               `protobuf:"bytes,4,rep,name=files,proto3" json:"files"`
 	Descriptors       []sqlbase.Descriptor                  `protobuf:"bytes,5,rep,name=descriptors,proto3" json:"descriptors"`
 	// databases in descriptors that have all tables also in descriptors.
-	CompleteDbs   []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,14,rep,packed,name=complete_dbs,json=completeDbs,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"complete_dbs,omitempty"`
+	CompleteDbs   []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,14,rep,packed,name=complete_dbs,json=completeDbs,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"complete_dbs,omitempty"`
 	EntryCounts   roachpb.BulkOpSummary                                 `protobuf:"bytes,12,opt,name=entry_counts,json=entryCounts,proto3" json:"entry_counts"`
 	Dir           roachpb.ExportStorage                                 `protobuf:"bytes,7,opt,name=dir,proto3" json:"dir"`
 	FormatVersion uint32                                                `protobuf:"varint,8,opt,name=format_version,json=formatVersion,proto3" json:"format_version,omitempty"`
-	ClusterID     github_com_cockroachdb_cockroach_pkg_util_uuid.UUID   `protobuf:"bytes,9,opt,name=cluster_id,json=clusterId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"cluster_id"`
+	ClusterID     github_com_cockroachdb_cockroach_pkg_util_uuid.UUID   `protobuf:"bytes,9,opt,name=cluster_id,json=clusterId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"cluster_id"`
 	// node_id and build_info of the gateway node (which writes the descriptor).
-	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,10,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,10,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
 	BuildInfo            build.Info                                          `protobuf:"bytes,11,opt,name=build_info,json=buildInfo,proto3" json:"build_info"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
@@ -167,7 +167,7 @@ var xxx_messageInfo_BackupDescriptor_File proto.InternalMessageInfo
 
 type BackupDescriptor_DescriptorRevision struct {
 	Time                 hlc.Timestamp                                       `protobuf:"bytes,1,opt,name=time,proto3" json:"time"`
-	ID                   github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,2,opt,name=ID,proto3,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"ID,omitempty"`
+	ID                   github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID `protobuf:"varint,2,opt,name=ID,proto3,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"ID,omitempty"`
 	Desc                 *sqlbase.Descriptor                                 `protobuf:"bytes,3,opt,name=desc,proto3" json:"desc,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`

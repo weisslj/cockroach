@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/encoding/csv"
+	"github.com/weisslj/cockroach/pkg/util/encoding/csv"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
 )

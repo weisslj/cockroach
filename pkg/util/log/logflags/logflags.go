@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/cockroachdb/cockroach/pkg/util/humanizeutil"
+	"github.com/weisslj/cockroach/pkg/util/humanizeutil"
 )
 
 type atomicBool struct {

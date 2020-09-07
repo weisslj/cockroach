@@ -18,9 +18,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util/encoding"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util/encoding"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/pkg/errors"
 )
 
@@ -224,7 +224,7 @@ func DecodeAbortSpanKey(key roachpb.Key, dest []byte) (uuid.UUID, error) {
 // This key was accidentally made replicated though it is not, requiring awkward
 // workarounds. This method and all users can be removed in any binary version > 2.1.
 //
-// See https://github.com/cockroachdb/cockroach/issues/12154.
+// See https://github.com/weisslj/cockroach/issues/12154.
 func RaftTombstoneIncorrectLegacyKey(rangeID roachpb.RangeID) roachpb.Key {
 	return MakeRangeIDPrefixBuf(rangeID).RaftTombstoneIncorrectLegacyKey()
 }

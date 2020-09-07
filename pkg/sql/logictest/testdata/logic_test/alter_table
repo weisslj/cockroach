@@ -765,7 +765,7 @@ decomputed_column  CREATE TABLE decomputed_column (
                    FAMILY "primary" (a, b)
 )
 
-# Test for https://github.com/cockroachdb/cockroach/issues/26483
+# Test for https://github.com/weisslj/cockroach/issues/26483
 # We try to create a unique column on an un-indexable type.
 statement ok
 CREATE TABLE b26483()

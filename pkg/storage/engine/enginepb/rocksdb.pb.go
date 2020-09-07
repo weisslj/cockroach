@@ -6,7 +6,7 @@ package enginepb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
 import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
 import encoding_binary "encoding/binary"

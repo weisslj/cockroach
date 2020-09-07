@@ -135,14 +135,14 @@ fi
 if [ "${BUILDER_HIDE_GOPATH_SRC:-}" != "1" ]; then
   vols="${vols} --volume=${gopath0}/src:/go/src${cached_volume_mode}"
 fi
-vols="${vols} --volume=${cockroach_toplevel}:/go/src/github.com/cockroachdb/cockroach${cached_volume_mode}"
+vols="${vols} --volume=${cockroach_toplevel}:/go/src/github.com/weisslj/cockroach${cached_volume_mode}"
 
 # If ${cockroach_toplevel}/bin doesn't exist on the host, Docker creates it as
 # root unless it already exists. Create it first as the invoking user.
 # (This is a bug in the Docker daemon that only occurs when bind-mounted volumes
 # are nested, as they are here.)
 mkdir -p "${cockroach_toplevel}"/bin{.docker_amd64,}
-vols="${vols} --volume=${cockroach_toplevel}/bin.docker_amd64:/go/src/github.com/cockroachdb/cockroach/bin${delegated_volume_mode}"
+vols="${vols} --volume=${cockroach_toplevel}/bin.docker_amd64:/go/src/github.com/weisslj/cockroach/bin${delegated_volume_mode}"
 
 mkdir -p "${gocache}"/docker/bin
 vols="${vols} --volume=${gocache}/docker/bin:/go/bin${delegated_volume_mode}"
@@ -171,8 +171,8 @@ gid=$(id -g)
 docker run --init --privileged -i ${tty-} --rm \
   -u "$uid:$gid" \
   ${vols} \
-  --workdir="/go/src/github.com/cockroachdb/cockroach" \
-  --env="TMPDIR=/go/src/github.com/cockroachdb/cockroach/artifacts" \
+  --workdir="/go/src/github.com/weisslj/cockroach" \
+  --env="TMPDIR=/go/src/github.com/weisslj/cockroach/artifacts" \
   --env="PAGER=cat" \
   --env="GOTRACEBACK=${GOTRACEBACK-all}" \
   --env="TZ=America/New_York" \

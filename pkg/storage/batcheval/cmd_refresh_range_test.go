@@ -19,18 +19,18 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/engine"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/stretchr/testify/require"
 )
 
 // TestRefreshRangeTimeBoundIterator is a regression test for
-// https://github.com/cockroachdb/cockroach/issues/31823. RefreshRange
+// https://github.com/weisslj/cockroach/issues/31823. RefreshRange
 // uses a time-bound iterator, which has a bug that can cause old
 // resolved intents to incorrectly appear to be pending. This test
 // constructs the necessary arrangement of sstables to reproduce the
@@ -130,7 +130,7 @@ func TestRefreshRangeTimeBoundIterator(t *testing.T) {
 	// and must refresh. It overlaps with our committed intent on k@ts1,
 	// which is fine because our timestamp is higher (but if that intent
 	// were still pending, the new txn would be blocked). Prior to
-	// https://github.com/cockroachdb/cockroach/pull/32211, a bug in the
+	// https://github.com/weisslj/cockroach/pull/32211, a bug in the
 	// time-bound iterator meant that we would see the first sstable but
 	// not the second and incorrectly report the intent as pending,
 	// resulting in an error from RefreshRange.

@@ -23,10 +23,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/server"
-	"github.com/cockroachdb/cockroach/pkg/ts/tspb"
-	"github.com/cockroachdb/cockroach/pkg/util/httputil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/server"
+	"github.com/weisslj/cockroach/pkg/ts/tspb"
+	"github.com/weisslj/cockroach/pkg/util/httputil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 func registerKV(r *registry) {

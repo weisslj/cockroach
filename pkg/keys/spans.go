@@ -14,7 +14,7 @@
 
 package keys
 
-import "github.com/cockroachdb/cockroach/pkg/roachpb"
+import "github.com/weisslj/cockroach/pkg/roachpb"
 
 //go:generate go run gen_cpp_keys.go
 

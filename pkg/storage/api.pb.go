@@ -6,11 +6,11 @@ package storage
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import enginepb "github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import enginepb "github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import (
 	context "context"
@@ -32,8 +32,8 @@ const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 
 // StoreRequestHeader locates a Store on a Node.
 type StoreRequestHeader struct {
-	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID  `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
-	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,2,opt,name=store_id,json=storeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.StoreID" json:"store_id,omitempty"`
+	NodeID               github_com_cockroachdb_cockroach_pkg_roachpb.NodeID  `protobuf:"varint,1,opt,name=node_id,json=nodeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"node_id,omitempty"`
+	StoreID              github_com_cockroachdb_cockroach_pkg_roachpb.StoreID `protobuf:"varint,2,opt,name=store_id,json=storeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.StoreID" json:"store_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                             `json:"-"`
 	XXX_sizecache        int32                                                `json:"-"`
 }
@@ -71,9 +71,9 @@ var xxx_messageInfo_StoreRequestHeader proto.InternalMessageInfo
 // roachpb.ComputeChecksumRequest.
 type CollectChecksumRequest struct {
 	StoreRequestHeader `protobuf:"bytes,1,opt,name=header,proto3,embedded=header" json:"header"`
-	RangeID            github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
+	RangeID            github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
 	// checksum_id identifies the corresponding roachpb.ComputeChecksumRequest.
-	ChecksumID           github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,3,opt,name=checksum_id,json=checksumId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"checksum_id"`
+	ChecksumID           github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,3,opt,name=checksum_id,json=checksumId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"checksum_id"`
 	Checksum             []byte                                              `protobuf:"bytes,4,opt,name=checksum,proto3" json:"checksum,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
@@ -116,7 +116,7 @@ type CollectChecksumResponse struct {
 	// and the response checksum is different from the request checksum.
 	//
 	// TODO(tschottdorf): with larger ranges, this is no longer tenable.
-	// See https://github.com/cockroachdb/cockroach/issues/21128.
+	// See https://github.com/weisslj/cockroach/issues/21128.
 	Snapshot *roachpb.RaftSnapshotData `protobuf:"bytes,2,opt,name=snapshot,proto3" json:"snapshot,omitempty"`
 	// delta carries the stats of the range minus the recomputed stats.
 	Delta enginepb.MVCCStatsDelta `protobuf:"bytes,3,opt,name=delta,proto3" json:"delta"`
@@ -159,7 +159,7 @@ var xxx_messageInfo_CollectChecksumResponse proto.InternalMessageInfo
 // command with the specified lease index.
 type WaitForApplicationRequest struct {
 	StoreRequestHeader   `protobuf:"bytes,1,opt,name=header,proto3,embedded=header" json:"header"`
-	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
+	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
 	LeaseIndex           uint64                                               `protobuf:"varint,3,opt,name=lease_index,json=leaseIndex,proto3" json:"lease_index,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                             `json:"-"`
 	XXX_sizecache        int32                                                `json:"-"`
@@ -230,7 +230,7 @@ var xxx_messageInfo_WaitForApplicationResponse proto.InternalMessageInfo
 
 type WaitForReplicaInitRequest struct {
 	StoreRequestHeader   `protobuf:"bytes,1,opt,name=header,proto3,embedded=header" json:"header"`
-	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
+	RangeID              github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,2,opt,name=range_id,json=rangeId,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"range_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                             `json:"-"`
 	XXX_sizecache        int32                                                `json:"-"`
 }

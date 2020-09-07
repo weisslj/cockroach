@@ -17,7 +17,7 @@ package engine
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
 )
 
 // Regression test for #25289: calling gobytes() on an invalid pointer is fine

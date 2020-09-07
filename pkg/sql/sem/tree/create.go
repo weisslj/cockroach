@@ -26,9 +26,9 @@ package tree
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/coltypes"
-	"github.com/cockroachdb/cockroach/pkg/sql/lex"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/coltypes"
+	"github.com/weisslj/cockroach/pkg/sql/lex"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 	"github.com/pkg/errors"
 	"golang.org/x/text/language"
 )
@@ -643,7 +643,7 @@ func (node *ReferenceActions) Format(ctx *FmtCtx) {
 }
 
 // CompositeKeyMatchMethod is the algorithm use when matching composite keys.
-// See https://github.com/cockroachdb/cockroach/issues/20305 or
+// See https://github.com/weisslj/cockroach/issues/20305 or
 // https://www.postgresql.org/docs/11/sql-createtable.html for details on the
 // different composite foreign key matching methods.
 type CompositeKeyMatchMethod int

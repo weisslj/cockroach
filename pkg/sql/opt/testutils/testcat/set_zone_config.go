@@ -17,8 +17,8 @@ package testcat
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 	"gopkg.in/yaml.v2"
 )
 

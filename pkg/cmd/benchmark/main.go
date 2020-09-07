@@ -30,7 +30,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/pkg/errors"
 	"golang.org/x/oauth2/google"
 	"golang.org/x/perf/storage"
@@ -46,7 +46,7 @@ const storageURL = "https://perfdata.golang.org"
 
 const numIterations = 5
 
-const crdb = "github.com/cockroachdb/cockroach"
+const crdb = "github.com/weisslj/cockroach"
 
 const serviceAccountJSONEnv = "SERVICE_ACCOUNT_JSON"
 

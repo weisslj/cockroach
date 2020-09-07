@@ -23,17 +23,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/build"
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqltelemetry"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/build"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/sqltelemetry"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 )
 
 const (
@@ -224,7 +224,7 @@ var varGen = map[string]sessionVar{
 		GlobalDefault: func(_ *settings.Values) string { return "ISO, MDY" },
 	},
 	// Controls the subsequent parsing of a "naked" INT type.
-	// TODO(bob): Remove or no-op this in v2.4: https://github.com/cockroachdb/cockroach/issues/32844
+	// TODO(bob): Remove or no-op this in v2.4: https://github.com/weisslj/cockroach/issues/32844
 	`default_int_size`: {
 		Get: func(evalCtx *extendedEvalContext) string {
 			return strconv.FormatInt(int64(evalCtx.SessionData.DefaultIntSize), 10)
@@ -245,7 +245,7 @@ var varGen = map[string]sessionVar{
 			// variables, we'd have to distinguish cases in which a session
 			// was opened in int8 mode and switched to int4 mode, versus ones
 			// set to int4 by a connection string.
-			// TODO(bob): Change to 8 in v2.3: https://github.com/cockroachdb/cockroach/issues/32534
+			// TODO(bob): Change to 8 in v2.3: https://github.com/weisslj/cockroach/issues/32534
 			if i == 4 {
 				telemetry.Inc(sqltelemetry.DefaultIntSize4Counter)
 			}
@@ -449,7 +449,7 @@ var varGen = map[string]sessionVar{
 		GlobalDefault: func(sv *settings.Values) string { return "0" },
 	},
 	// CockroachDB extension. See docs on SessionData.ForceSavepointRestart.
-	// https://github.com/cockroachdb/cockroach/issues/30588
+	// https://github.com/weisslj/cockroach/issues/30588
 	`force_savepoint_restart`: {
 		Get: func(evalCtx *extendedEvalContext) string {
 			return formatBoolAsPostgresSetting(evalCtx.SessionData.ForceSavepointRestart)

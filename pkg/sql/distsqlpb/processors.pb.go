@@ -12,14 +12,14 @@ package distsqlpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import jobspb "github.com/cockroachdb/cockroach/pkg/jobs/jobspb"
-import roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import jobspb "github.com/weisslj/cockroach/pkg/jobs/jobspb"
+import roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
 import time "time"
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
-import github_com_cockroachdb_cockroach_pkg_sql_sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_sql_sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
 
 import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
 import encoding_binary "encoding/binary"
@@ -1563,7 +1563,7 @@ var xxx_messageInfo_BackfillerSpec proto.InternalMessageInfo
 type FlowSpec struct {
 	FlowID FlowID `protobuf:"bytes,1,opt,name=flow_id,json=flowId,customtype=FlowID" json:"flow_id"`
 	// The NodeID of the gateway that planned this Flow. Used for debugging.
-	Gateway              github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,3,opt,name=gateway,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.NodeID" json:"gateway"`
+	Gateway              github_com_cockroachdb_cockroach_pkg_roachpb.NodeID `protobuf:"varint,3,opt,name=gateway,casttype=github.com/weisslj/cockroach/pkg/roachpb.NodeID" json:"gateway"`
 	Processors           []ProcessorSpec                                     `protobuf:"bytes,2,rep,name=processors" json:"processors"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
@@ -1974,8 +1974,8 @@ type SampleAggregatorSpec struct {
 	SampleSize uint32 `protobuf:"varint,2,opt,name=sample_size,json=sampleSize" json:"sample_size"`
 	// The i-th value indicates the ColumnID of the i-th sampled row column.
 	// These are necessary for writing out the statistic data.
-	SampledColumnIDs []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ColumnID `protobuf:"varint,3,rep,name=sampled_column_ids,json=sampledColumnIds,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ColumnID" json:"sampled_column_ids,omitempty"`
-	TableID          github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID         `protobuf:"varint,4,opt,name=table_id,json=tableId,casttype=github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID" json:"table_id"`
+	SampledColumnIDs []github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ColumnID `protobuf:"varint,3,rep,name=sampled_column_ids,json=sampledColumnIds,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ColumnID" json:"sampled_column_ids,omitempty"`
+	TableID          github_com_cockroachdb_cockroach_pkg_sql_sqlbase.ID         `protobuf:"varint,4,opt,name=table_id,json=tableId,casttype=github.com/weisslj/cockroach/pkg/sql/sqlbase.ID" json:"table_id"`
 	// JobID is the id of the CREATE STATISTICS job.
 	JobID int64 `protobuf:"varint,6,opt,name=job_id,json=jobId" json:"job_id"`
 	// The total number of rows expected in the table based on previous runs of
@@ -2022,7 +2022,7 @@ var xxx_messageInfo_SampleAggregatorSpec proto.InternalMessageInfo
 //
 // Limitations: the InterleavedReaderJoiner currently supports only equality INNER joins
 // on the full interleave prefix.
-// See https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20171025_interleaved_table_joins.md.
+// See https://github.com/weisslj/cockroach/blob/master/docs/RFCS/20171025_interleaved_table_joins.md.
 //
 // The "internal columns" of an InterleavedReaderJoiner are the
 // concatenation of left input columns and right input columns. If the left

@@ -17,7 +17,7 @@ package testutils
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 func TestIsSQLRetryableError(t *testing.T) {

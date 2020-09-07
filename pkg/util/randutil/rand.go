@@ -21,7 +21,7 @@ import (
 	"log" // Don't bring cockroach/util/log into this low-level package.
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
 )
 
 // NewPseudoSeed generates a seed from crypto/rand.

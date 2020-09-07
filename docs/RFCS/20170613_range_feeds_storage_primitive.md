@@ -673,7 +673,7 @@ However, there's a lot in between, and the primitive presented here is shared
 between all of them.
 
 
-[followerreads]: https://github.com/cockroachdb/cockroach/pull/26362
-[revertrfc]: https://github.com/cockroachdb/cockroach/pull/16294
-[streamsql]: https://github.com/cockroachdb/cockroach/pull/16626
-[cdc]: https://github.com/cockroachdb/cockroach/pull/25229
+[followerreads]: https://github.com/weisslj/cockroach/pull/26362
+[revertrfc]: https://github.com/weisslj/cockroach/pull/16294
+[streamsql]: https://github.com/weisslj/cockroach/pull/16626
+[cdc]: https://github.com/weisslj/cockroach/pull/25229

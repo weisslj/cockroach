@@ -19,7 +19,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/fileutil"
+	"github.com/weisslj/cockroach/pkg/util/fileutil"
 )
 
 // TempDir creates a directory and a function to clean it up at the end of the

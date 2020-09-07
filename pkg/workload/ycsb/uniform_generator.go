@@ -18,7 +18,7 @@ package ycsb
 import (
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 // UniformGenerator is a random number generator that generates draws from a

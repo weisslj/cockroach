@@ -17,7 +17,7 @@ package tree
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 func TestAllTypesCastableToString(t *testing.T) {

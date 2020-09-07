@@ -38,7 +38,7 @@ message DiagnosticReport {
   }
 
 message NodeInfo {
-  int32 node_id = 1 [(gogoproto.customname) = "NodeID", (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+  int32 node_id = 1 [(gogoproto.customname) = "NodeID", (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
   int64 bytes = 2;
   int64 key_count = 3;
   int64 range_count = 4;
@@ -52,8 +52,8 @@ message NodeInfo {
 }
 
 message StoreInfo {
-  int32 node_id = 1 [(gogoproto.customname) = "NodeID", (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
-  int32 store_id = 2 [(gogoproto.customname) = "StoreID", (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.StoreID"];
+  int32 node_id = 1 [(gogoproto.customname) = "NodeID", (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
+  int32 store_id = 2 [(gogoproto.customname) = "StoreID", (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.StoreID"];
   int64 bytes = 3;
   int64 key_count = 4;
   int64 range_count = 5;

@@ -6,11 +6,11 @@ package roachpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import enginepb "github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
-import tracing "github.com/cockroachdb/cockroach/pkg/util/tracing"
+import enginepb "github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
+import tracing "github.com/weisslj/cockroach/pkg/util/tracing"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import bytes "bytes"
 
@@ -2570,7 +2570,7 @@ type QueryTxnRequest struct {
 	// transaction status or priority -OR- to the set of dependent transactions.
 	WaitForUpdate bool `protobuf:"varint,3,opt,name=wait_for_update,json=waitForUpdate,proto3" json:"wait_for_update,omitempty"`
 	// Set of known dependent transactions.
-	KnownWaitingTxns     []github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,4,rep,name=known_waiting_txns,json=knownWaitingTxns,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"known_waiting_txns,omitempty"`
+	KnownWaitingTxns     []github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,4,rep,name=known_waiting_txns,json=knownWaitingTxns,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"known_waiting_txns,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                              `json:"-"`
 	XXX_sizecache        int32                                                 `json:"-"`
 }
@@ -2611,7 +2611,7 @@ type QueryTxnResponse struct {
 	// transaction record does not exist, this will be empty.
 	QueriedTxn Transaction `protobuf:"bytes,2,opt,name=queried_txn,json=queriedTxn,proto3" json:"queried_txn"`
 	// Specifies a list of transaction IDs which are waiting on the txn.
-	WaitingTxns          []github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,3,rep,name=waiting_txns,json=waitingTxns,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"waiting_txns,omitempty"`
+	WaitingTxns          []github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,3,rep,name=waiting_txns,json=waitingTxns,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"waiting_txns,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                              `json:"-"`
 	XXX_sizecache        int32                                                 `json:"-"`
 }
@@ -3342,7 +3342,7 @@ type ComputeChecksumResponse struct {
 	ResponseHeader `protobuf:"bytes,1,opt,name=header,proto3,embedded=header" json:"header"`
 	// ChecksumID is the unique identifier that can be used to get the computed
 	// checksum in a future storage.CollectChecksumRequest.
-	ChecksumID           github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,2,opt,name=checksum_id,json=checksumId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"checksum_id"`
+	ChecksumID           github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,2,opt,name=checksum_id,json=checksumId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"checksum_id"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
 }

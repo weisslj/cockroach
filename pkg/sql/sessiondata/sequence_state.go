@@ -15,8 +15,8 @@
 package sessiondata
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 // SequenceState stores session-scoped state used by sequence builtins.

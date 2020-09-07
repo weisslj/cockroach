@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package cliccl_test
 
@@ -14,12 +14,12 @@ import (
 	"net"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	_ "github.com/cockroachdb/cockroach/pkg/ccl"
-	"github.com/cockroachdb/cockroach/pkg/cli"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/server"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/base"
+	_ "github.com/weisslj/cockroach/pkg/ccl"
+	"github.com/weisslj/cockroach/pkg/cli"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/server"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
 )
 
 // cliTest is a stripped-down version of package cli's cliTest. It's currently

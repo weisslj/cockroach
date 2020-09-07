@@ -103,7 +103,7 @@ def create_issue(build_id, topname, category, failed_tests):
         'body': '''\
 The following tests appear to have failed on {0} ({5}): {4}
 
-You may want to check [for open issues](https://github.com/cockroachdb/cockroach/issues?q=is%3Aissue+is%3Aopen+{3}).
+You may want to check [for open issues](https://github.com/weisslj/cockroach/issues?q=is%3Aissue+is%3Aopen+{3}).
 
 [#{1}](https://teamcity.cockroachdb.com/viewLog.html?buildId={1}):
 

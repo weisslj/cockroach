@@ -17,8 +17,8 @@ package storagepb
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // IsLive returns whether the node is considered live at the given time with the

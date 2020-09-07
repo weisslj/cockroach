@@ -27,12 +27,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
-	"github.com/cockroachdb/cockroach/pkg/util/search"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/version"
-	"github.com/cockroachdb/cockroach/pkg/workload/histogram"
-	"github.com/cockroachdb/cockroach/pkg/workload/tpcc"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/util/search"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/workload/histogram"
+	"github.com/weisslj/cockroach/pkg/workload/tpcc"
 	"github.com/cockroachdb/ttycolor"
 	"github.com/lib/pq"
 	"github.com/pkg/errors"
@@ -799,7 +799,7 @@ func registerTPCCBench(r *registry) {
 			EstimatedMax:   40000,
 		},
 
-		// See https://github.com/cockroachdb/cockroach/issues/31409 for the next three specs.
+		// See https://github.com/weisslj/cockroach/issues/31409 for the next three specs.
 		{
 			Nodes: 6,
 			CPUs:  16,

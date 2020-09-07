@@ -32,10 +32,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/internal/issues"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/cmd/internal/issues"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/version"
 	"github.com/petermattis/goid"
 )
 
@@ -1236,7 +1236,7 @@ func teamCityNameEscape(name string) string {
 // getAuthorEmail retrieves the author of a line of code. Returns the empty
 // string if the author cannot be determined.
 func getAuthorEmail(file string, line int) string {
-	const repo = "github.com/cockroachdb/cockroach/"
+	const repo = "github.com/weisslj/cockroach/"
 	i := strings.Index(file, repo)
 	if i == -1 {
 		return ""

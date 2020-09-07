@@ -26,10 +26,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/ssh"
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/ssh"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/version"
 	"github.com/pkg/errors"
 )
 
@@ -68,7 +68,7 @@ func cockroachNodeBinary(c *SyncedCluster, i int) string {
 		if gopath == "" {
 			return config.Binary
 		}
-		path = gopath + "/src/github.com/cockroachdb/cockroach/" + config.Binary
+		path = gopath + "/src/github.com/weisslj/cockroach/" + config.Binary
 		var err2 error
 		path, err2 = exec.LookPath(path)
 		if err2 != nil {

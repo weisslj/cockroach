@@ -17,11 +17,11 @@ package tree_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	_ "github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	_ "github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/testutils"
 )
 
 func TestResolveFunction(t *testing.T) {

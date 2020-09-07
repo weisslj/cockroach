@@ -31,8 +31,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/util/envutil"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/envutil"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // ErrInvertedRange is returned if an interval is used where the start value is greater

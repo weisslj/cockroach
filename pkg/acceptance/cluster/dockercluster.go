@@ -34,16 +34,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/config"
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/log/logflags"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/config"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log/logflags"
+	"github.com/weisslj/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/api/types/events"
@@ -74,7 +74,7 @@ var maxRangeBytes = *config.DefaultZoneConfig().RangeMaxBytes
 
 // CockroachBinary is the path to the host-side binary to use.
 var CockroachBinary = flag.String("b", func() string {
-	rootPkg, err := build.Import("github.com/cockroachdb/cockroach", "", build.FindOnly)
+	rootPkg, err := build.Import("github.com/weisslj/cockroach", "", build.FindOnly)
 	if err != nil {
 		panic(err)
 	}
@@ -329,7 +329,7 @@ func (l *DockerCluster) initCluster(ctx context.Context) {
 	// problematic.
 	binds := []string{
 		filepath.Join(pwd, certsDir) + ":/certs",
-		filepath.Join(pwd, "..") + ":/go/src/github.com/cockroachdb/cockroach",
+		filepath.Join(pwd, "..") + ":/go/src/github.com/weisslj/cockroach",
 		filepath.Join(l.volumesDir, "logs") + ":/logs",
 	}
 
@@ -534,7 +534,7 @@ func (l *DockerCluster) RunInitCommand(ctx context.Context, nodeIdx int) {
 	// opened its ports yet. Wait for the health endpoint to become available,
 	// because we only get one shot at running the init command. (Retrying the
 	// init command is dangerous [0].)
-	// [0]: https://github.com/cockroachdb/cockroach/pull/19753#issuecomment-341561452
+	// [0]: https://github.com/weisslj/cockroach/pull/19753#issuecomment-341561452
 	maybePanic(retry.ForDuration(time.Minute, func() error {
 		url := l.URL(ctx, nodeIdx) + "/health"
 		resp, httpErr := HTTPClient.Get(url)

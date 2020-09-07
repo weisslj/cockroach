@@ -34,12 +34,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/ssh"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/ui"
-	clog "github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/ssh"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/ui"
+	clog "github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
 )

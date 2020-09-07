@@ -65,9 +65,9 @@ index 00000000000..5abab028897
 +	"context"
 +	"fmt"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/hlc"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/hlc"
 +)
 +
 +// A Storage holds the closed timestamps and associated MLAIs for each node. It
@@ -203,16 +203,16 @@ index 00000000000..28f3e818ea3
 +	"context"
 +	"time"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/rpc/nodedialer"
-+	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/minprop"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/provider"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/storage"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/transport"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/rpc/nodedialer"
++	"github.com/weisslj/cockroach/pkg/settings/cluster"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/minprop"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/provider"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/storage"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/transport"
++	"github.com/weisslj/cockroach/pkg/util/stop"
 +
 +	"google.golang.org/grpc"
 +)
@@ -358,17 +358,17 @@ index 00000000000..714cb7245c1
 +	"github.com/pkg/errors"
 +	"github.com/stretchr/testify/require"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/container"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	transporttestutils "github.com/cockroachdb/cockroach/pkg/storage/closedts/transport/testutils"
-+	"github.com/cockroachdb/cockroach/pkg/testutils"
-+	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-+	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/settings/cluster"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/container"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	transporttestutils "github.com/weisslj/cockroach/pkg/storage/closedts/transport/testutils"
++	"github.com/weisslj/cockroach/pkg/testutils"
++	"github.com/weisslj/cockroach/pkg/util/hlc"
++	"github.com/weisslj/cockroach/pkg/util/leaktest"
++	"github.com/weisslj/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
 +)
 +
 +type Tick struct {
@@ -770,7 +770,7 @@ index 00000000000..5d1a284a6cf
 +	"sort"
 +	"strings"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/roachpb"
 +)
 +
 +// Epoch is an int64 with its own type to avoid mix-ups in positional arguments.
@@ -832,9 +832,9 @@ index 00000000000..7bbec1fe515
 +import proto "github.com/gogo/protobuf/proto"
 +import fmt "fmt"
 +import math "math"
-+import cockroach_util_hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
++import cockroach_util_hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 +
-+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
++import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 +
 +import context "context"
 +import grpc "google.golang.org/grpc"
@@ -867,7 +867,7 @@ index 00000000000..7bbec1fe515
 +type Entry struct {
 +	Epoch           Epoch                                                        `protobuf:"varint,1,opt,name=epoch,proto3,casttype=Epoch" json:"epoch,omitempty"`
 +	ClosedTimestamp cockroach_util_hlc.Timestamp                                 `protobuf:"bytes,2,opt,name=closed_timestamp,json=closedTimestamp" json:"closed_timestamp"`
-+	MLAI            map[github_com_cockroachdb_cockroach_pkg_roachpb.RangeID]LAI `protobuf:"bytes,3,rep,name=mlai,castkey=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID,castvalue=LAI" json:"mlai,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
++	MLAI            map[github_com_cockroachdb_cockroach_pkg_roachpb.RangeID]LAI `protobuf:"bytes,3,rep,name=mlai,castkey=github.com/weisslj/cockroach/pkg/roachpb.RangeID,castvalue=LAI" json:"mlai,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 +	// Full is true if the emitter promises that any future write to any range
 +	// mentioned in this Entry will be reflected in a subsequent Entry before any
 +	// stale follower reads are possible. For example, if range 1 is assigned an
@@ -891,7 +891,7 @@ index 00000000000..7bbec1fe515
 +// fail. The Reaction mechanism serves to explicitly request the missing information
 +// when that happens.
 +type Reaction struct {
-+	Requested []github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,rep,packed,name=Requested,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"Requested,omitempty"`
++	Requested []github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,rep,packed,name=Requested,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"Requested,omitempty"`
 +}
 +
 +func (m *Reaction) Reset()                    { *m = Reaction{} }
@@ -1671,7 +1671,7 @@ index 00000000000..9bd3ad45f3b
 +
 +  int64 epoch = 1 [(gogoproto.casttype) = "Epoch"];
 +  util.hlc.Timestamp closed_timestamp = 2 [(gogoproto.nullable) = false];
-+  map<int32, int64> mlai = 3 [(gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID",
++  map<int32, int64> mlai = 3 [(gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID",
 +    (gogoproto.castvalue) = "LAI",
 +    (gogoproto.customname) = "MLAI"];
 +  // Full is true if the emitter promises that any future write to any range
@@ -1695,7 +1695,7 @@ index 00000000000..9bd3ad45f3b
 +message Reaction {
 +  option (gogoproto.goproto_stringer) = false;
 +
-+  repeated int32 Requested = 1 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"];
++  repeated int32 Requested = 1 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID"];
 +}
 +
 +service ClosedTimestamp {
@@ -1805,9 +1805,9 @@ index 6968328a88d..f2d0b6c9f6b 100644
 @@ -21,6 +21,7 @@ import (
  	"strings"
  
- 	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
- 	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+ 	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
+ 	"github.com/weisslj/cockroach/pkg/util/hlc"
  )
  
 @@ -196,7 +197,7 @@ func Example() {
@@ -1829,12 +1829,12 @@ index 78d0b4b3005..6d17eb15c9f 100644
 @@ -20,6 +20,8 @@ import (
  	"sort"
  
- 	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
- 	"github.com/cockroachdb/cockroach/pkg/util/hlc"
- 	"github.com/cockroachdb/cockroach/pkg/util/log"
- 	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+ 	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
+ 	"github.com/weisslj/cockroach/pkg/util/hlc"
+ 	"github.com/weisslj/cockroach/pkg/util/log"
+ 	"github.com/weisslj/cockroach/pkg/util/syncutil"
 @@ -72,18 +74,20 @@ type Tracker struct {
  		// `rightRef`.
  
@@ -1931,11 +1931,11 @@ index 087cefe8cf4..296200fb85c 100644
 @@ -22,6 +22,7 @@ import (
  	"testing"
  
- 	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
- 	"github.com/cockroachdb/cockroach/pkg/util/hlc"
- 	"github.com/cockroachdb/cockroach/pkg/util/log"
- 	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+ 	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
+ 	"github.com/weisslj/cockroach/pkg/util/hlc"
+ 	"github.com/weisslj/cockroach/pkg/util/log"
+ 	"github.com/weisslj/cockroach/pkg/util/syncutil"
 @@ -100,9 +101,9 @@ type modelClient struct {
  	lai map[roachpb.RangeID]*int64 // read-only map, values accessed atomically
  	mu  struct {
@@ -2026,15 +2026,15 @@ index 00000000000..9cfe2614f13
 +	"sync"
 +	"time"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-+	"github.com/cockroachdb/cockroach/pkg/util/log"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
-+	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/settings/cluster"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/hlc"
++	"github.com/weisslj/cockroach/pkg/util/log"
++	"github.com/weisslj/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/util/timeutil"
 +)
 +
 +// Config holds the information necessary to create a Provider.
@@ -2314,7 +2314,7 @@ index 00000000000..f4d20b0cfd4
 +	"errors"
 +	"time"
 +
-+	"github.com/cockroachdb/cockroach/pkg/settings"
++	"github.com/weisslj/cockroach/pkg/settings"
 +)
 +
 +// TargetDuration is the follower reads closed timestamp update target duration.
@@ -2366,10 +2366,10 @@ index 00000000000..f7f5fc3a73d
 +	"bytes"
 +	"sort"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
 +)
 +
 +// SingleStorage stores and manages closed timestamp updates originating from a
@@ -2521,9 +2521,9 @@ index 00000000000..ea8aa5be009
 +	"strings"
 +	"time"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
 +	"github.com/olekukonko/tablewriter"
 +)
 +
@@ -2728,11 +2728,11 @@ index 00000000000..7999ac698a1
 +
 +	"golang.org/x/sync/errgroup"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-+	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-+	"github.com/cockroachdb/cockroach/pkg/util/randutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/hlc"
++	"github.com/weisslj/cockroach/pkg/util/leaktest"
++	"github.com/weisslj/cockroach/pkg/util/randutil"
 +)
 +
 +func ExampleSingleStorage() {
@@ -3156,13 +3156,13 @@ index 00000000000..23e2118a463
 +	"context"
 +	"unsafe"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/log"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/settings/cluster"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/log"
++	"github.com/weisslj/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
 +)
 +
 +// Config holds the information necessary to create a client registry.
@@ -3320,10 +3320,10 @@ index 00000000000..a72fca8358e
 +	"errors"
 +	"time"
 +
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
-+	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
++	"github.com/weisslj/cockroach/pkg/storage/closedts"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/util/timeutil"
 +)
 +
 +// Server handles incoming closed timestamp update stream requests.
@@ -3422,10 +3422,10 @@ index 00000000000..97fac236b60
 +	"context"
 +	"io"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
 +)
 +
 +// ChanDialer is an implementation of closedts.Dialer that connects clients
@@ -3581,15 +3581,15 @@ index 00000000000..1b62d3ac5f2
 +	"github.com/kr/pretty"
 +	"github.com/pkg/errors"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/transport"
-+	transporttestutils "github.com/cockroachdb/cockroach/pkg/storage/closedts/transport/testutils"
-+	"github.com/cockroachdb/cockroach/pkg/testutils"
-+	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-+	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/settings/cluster"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/transport"
++	transporttestutils "github.com/weisslj/cockroach/pkg/storage/closedts/transport/testutils"
++	"github.com/weisslj/cockroach/pkg/testutils"
++	"github.com/weisslj/cockroach/pkg/util/hlc"
++	"github.com/weisslj/cockroach/pkg/util/leaktest"
++	"github.com/weisslj/cockroach/pkg/util/stop"
 +)
 +
 +// NewTestContainer sets up an environment suitable for black box testing the
@@ -3780,13 +3780,13 @@ index 00000000000..d077d0f947e
 +import (
 +	"context"
 +
-+	"github.com/cockroachdb/cockroach/pkg/roachpb"
-+	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/ctpb"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/transport"
-+	"github.com/cockroachdb/cockroach/pkg/storage/closedts/transport/testutils"
-+	"github.com/cockroachdb/cockroach/pkg/util/stop"
-+	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
++	"github.com/weisslj/cockroach/pkg/roachpb"
++	"github.com/weisslj/cockroach/pkg/settings/cluster"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/ctpb"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/transport"
++	"github.com/weisslj/cockroach/pkg/storage/closedts/transport/testutils"
++	"github.com/weisslj/cockroach/pkg/util/stop"
++	"github.com/weisslj/cockroach/pkg/util/syncutil"
 +)
 +
 +type TestContainer struct {
@@ -3884,9 +3884,9 @@ index 9deb29441d8..f0f5c3e7c3e 100644
  
 +	"github.com/pkg/errors"
 +
-+	"github.com/cockroachdb/cockroach/pkg/util/log"
- 	"github.com/cockroachdb/cockroach/pkg/util/retry"
-+	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
++	"github.com/weisslj/cockroach/pkg/util/log"
+ 	"github.com/weisslj/cockroach/pkg/util/retry"
++	"github.com/weisslj/cockroach/pkg/util/timeutil"
  )
  
  // DefaultSucceedsSoonDuration is the maximum amount of time unittests

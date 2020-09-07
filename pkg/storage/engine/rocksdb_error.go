@@ -18,7 +18,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // A RocksDBError wraps an error returned from a RocksDB operation.

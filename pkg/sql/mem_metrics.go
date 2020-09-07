@@ -17,7 +17,7 @@ package sql
 import (
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/metric"
+	"github.com/weisslj/cockroach/pkg/util/metric"
 )
 
 // MemoryMetrics contains pointers to the metrics object

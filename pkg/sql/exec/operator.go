@@ -14,7 +14,7 @@
 
 package exec
 
-import "github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
+import "github.com/weisslj/cockroach/pkg/sql/exec/coldata"
 
 // Operator is a column vector operator that produces a Batch as output.
 type Operator interface {

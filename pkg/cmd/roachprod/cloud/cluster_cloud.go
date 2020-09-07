@@ -22,8 +22,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/vm"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/vm"
 	"github.com/pkg/errors"
 )
 

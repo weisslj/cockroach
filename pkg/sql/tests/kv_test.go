@@ -25,9 +25,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/internal/client"
-	"github.com/cockroachdb/cockroach/pkg/testutils/serverutils"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/internal/client"
+	"github.com/weisslj/cockroach/pkg/testutils/serverutils"
 	"github.com/pkg/errors"
 )
 
@@ -269,14 +269,14 @@ func BenchmarkKV(b *testing.B) {
 		kvInterface.Scan,
 	} {
 		opName := runtime.FuncForPC(reflect.ValueOf(opFn).Pointer()).Name()
-		opName = strings.TrimPrefix(opName, "github.com/cockroachdb/cockroach/pkg/sql_test.kvInterface.")
+		opName = strings.TrimPrefix(opName, "github.com/weisslj/cockroach/pkg/sql_test.kvInterface.")
 		b.Run(opName, func(b *testing.B) {
 			for _, kvFn := range []func(*testing.B) kvInterface{
 				newKVNative,
 				newKVSQL,
 			} {
 				kvTyp := runtime.FuncForPC(reflect.ValueOf(kvFn).Pointer()).Name()
-				kvTyp = strings.TrimPrefix(kvTyp, "github.com/cockroachdb/cockroach/pkg/sql_test.newKV")
+				kvTyp = strings.TrimPrefix(kvTyp, "github.com/weisslj/cockroach/pkg/sql_test.newKV")
 				b.Run(kvTyp, func(b *testing.B) {
 					for _, rows := range []int{1, 10, 100, 1000, 10000} {
 						b.Run(fmt.Sprintf("rows=%d", rows), func(b *testing.B) {

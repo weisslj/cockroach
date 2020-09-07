@@ -36,7 +36,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/cockroachdb/cockroach/pkg/util/version"
+	"github.com/weisslj/cockroach/pkg/util/version"
 	"github.com/kr/pretty"
 )
 
@@ -124,7 +124,7 @@ func main() {
 	if !ok {
 		log.Fatalf("VCS branch environment variable %s is not set", teamcityBuildBranchKey)
 	}
-	pkg, err := build.Import("github.com/cockroachdb/cockroach", "", build.FindOnly)
+	pkg, err := build.Import("github.com/weisslj/cockroach", "", build.FindOnly)
 	if err != nil {
 		log.Fatalf("unable to locate CRDB directory: %s", err)
 	}

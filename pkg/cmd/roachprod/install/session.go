@@ -23,7 +23,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
 )
 
 type session interface {

@@ -21,8 +21,8 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/pkg/errors"
 	"go.etcd.io/etcd/raft/raftpb"
 )

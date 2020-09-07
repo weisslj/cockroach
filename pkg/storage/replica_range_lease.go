@@ -21,15 +21,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/storagepb"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/log/logtags"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
-	"github.com/cockroachdb/cockroach/pkg/util/tracing"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/storagepb"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/log/logtags"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/tracing"
 	"github.com/opentracing/opentracing-go"
 	"github.com/pkg/errors"
 )
@@ -331,7 +331,7 @@ func (p *pendingLeaseRequest) requestLeaseAsync(
 						// ErrEpochAlreadyIncremented is not an unusual situation,
 						// so we don't log it as an error.
 						//
-						// https://github.com/cockroachdb/cockroach/issues/35986
+						// https://github.com/weisslj/cockroach/issues/35986
 						if err != ErrEpochAlreadyIncremented {
 							log.Error(ctx, err)
 						}

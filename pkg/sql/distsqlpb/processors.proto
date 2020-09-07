@@ -641,7 +641,7 @@ message FlowSpec {
                               (gogoproto.customtype) = "FlowID"];
   // The NodeID of the gateway that planned this Flow. Used for debugging.
   optional int32 gateway = 3 [(gogoproto.nullable) = false,
-                              (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+                              (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
 
   repeated ProcessorSpec processors = 2 [(gogoproto.nullable) = false];
 }
@@ -835,13 +835,13 @@ message SampleAggregatorSpec {
   // These are necessary for writing out the statistic data.
   repeated uint32 sampled_column_ids = 3 [
     (gogoproto.customname) = "SampledColumnIDs",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ColumnID"
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ColumnID"
   ];
 
   optional uint32 table_id = 4 [
     (gogoproto.nullable) = false,
     (gogoproto.customname) = "TableID",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
   ];
 
   reserved 5;
@@ -865,7 +865,7 @@ message SampleAggregatorSpec {
 //
 // Limitations: the InterleavedReaderJoiner currently supports only equality INNER joins
 // on the full interleave prefix.
-// See https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20171025_interleaved_table_joins.md.
+// See https://github.com/weisslj/cockroach/blob/master/docs/RFCS/20171025_interleaved_table_joins.md.
 //
 // The "internal columns" of an InterleavedReaderJoiner are the
 // concatenation of left input columns and right input columns. If the left

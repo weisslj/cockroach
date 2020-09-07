@@ -14,7 +14,7 @@
 
 package tree
 
-import "github.com/cockroachdb/cockroach/pkg/sql/sqltelemetry"
+import "github.com/weisslj/cockroach/pkg/sql/sqltelemetry"
 
 // FunctionDefinition implements a reference to the (possibly several)
 // overloads for a built-in function.

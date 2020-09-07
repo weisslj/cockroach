@@ -20,8 +20,8 @@ import (
 	"net"
 	"reflect"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgwirebase"
-	"github.com/cockroachdb/cockroach/pkg/util/ctxgroup"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgwirebase"
+	"github.com/weisslj/cockroach/pkg/util/ctxgroup"
 	"github.com/jackc/pgx/pgproto3"
 	"github.com/pkg/errors"
 )

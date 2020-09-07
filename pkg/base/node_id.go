@@ -19,9 +19,9 @@ import (
 	"strconv"
 	"sync/atomic"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/util"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/util"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 // NodeIDContainer is used to share a single roachpb.NodeID instance between

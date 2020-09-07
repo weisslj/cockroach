@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/binfetcher"
+	"github.com/weisslj/cockroach/pkg/util/binfetcher"
 	_ "github.com/lib/pq"
 )
 

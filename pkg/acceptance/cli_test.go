@@ -21,13 +21,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/acceptance/cluster"
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/acceptance/cluster"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/util/log"
 )
 
 const testGlob = "../cli/interactive_tests/test*.tcl"
-const containerPath = "/go/src/github.com/cockroachdb/cockroach/cli/interactive_tests"
+const containerPath = "/go/src/github.com/weisslj/cockroach/cli/interactive_tests"
 
 var cmdBase = []string{
 	"/usr/bin/env",

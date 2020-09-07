@@ -17,7 +17,7 @@ package memo_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/memo"
+	"github.com/weisslj/cockroach/pkg/sql/opt/memo"
 )
 
 func TestCostLess(t *testing.T) {

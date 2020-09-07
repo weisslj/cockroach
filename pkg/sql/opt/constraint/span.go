@@ -17,7 +17,7 @@ package constraint
 import (
 	"bytes"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror"
+	"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror"
 )
 
 // SpanBoundary specifies whether a span endpoint is inclusive or exclusive of

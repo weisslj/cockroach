@@ -21,7 +21,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/dustin/go-humanize"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"

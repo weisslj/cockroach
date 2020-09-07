@@ -15,8 +15,8 @@
 package kv
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 	"github.com/pkg/errors"
 )
 

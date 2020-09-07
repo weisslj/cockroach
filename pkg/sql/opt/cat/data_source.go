@@ -14,7 +14,7 @@
 
 package cat
 
-import "github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+import "github.com/weisslj/cockroach/pkg/sql/sem/tree"
 
 // DataSourceName is an alias for tree.TableName, and is used for views and
 // sequences as well as tables.

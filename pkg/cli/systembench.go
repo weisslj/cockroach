@@ -17,7 +17,7 @@ package cli
 import (
 	"strconv"
 
-	"github.com/cockroachdb/cockroach/pkg/cli/systembench"
+	"github.com/weisslj/cockroach/pkg/cli/systembench"
 	"github.com/spf13/cobra"
 )
 

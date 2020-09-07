@@ -14,7 +14,7 @@
 
 package ts
 
-import "github.com/cockroachdb/cockroach/pkg/util/metric"
+import "github.com/weisslj/cockroach/pkg/util/metric"
 
 var (
 	// Storage metrics.

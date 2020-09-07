@@ -15,8 +15,8 @@
 package engine
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 // NewTempEngine creates a new engine for DistSQL processors to use when the

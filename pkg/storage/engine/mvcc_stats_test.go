@@ -21,15 +21,15 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/keys"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/storage/engine/enginepb"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
-	"github.com/cockroachdb/cockroach/pkg/util/leaktest"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
-	"github.com/cockroachdb/cockroach/pkg/util/uuid"
+	"github.com/weisslj/cockroach/pkg/keys"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/storage/engine/enginepb"
+	"github.com/weisslj/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/util/leaktest"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/uuid"
 	"github.com/kr/pretty"
 	"github.com/stretchr/testify/require"
 )
@@ -1057,7 +1057,7 @@ func TestMVCCStatsPutWaitDeleteGC(t *testing.T) {
 // write at a negative timestamp. We shouldn't do that in practice and perhaps
 // we should have it error outright.
 //
-// See https://github.com/cockroachdb/cockroach/issues/21112.
+// See https://github.com/weisslj/cockroach/issues/21112.
 func TestMVCCStatsDocumentNegativeWrites(t *testing.T) {
 	defer leaktest.AfterTest(t)()
 	engine := createTestEngine()

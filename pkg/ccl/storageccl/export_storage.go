@@ -4,7 +4,7 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package storageccl
 
@@ -32,14 +32,14 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
-	"github.com/cockroachdb/cockroach/pkg/settings"
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/util/contextutil"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
-	"github.com/cockroachdb/cockroach/pkg/workload"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/settings"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/util/contextutil"
+	"github.com/weisslj/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/workload"
 	"github.com/pkg/errors"
 	"golang.org/x/oauth2/google"
 	"google.golang.org/api/option"
@@ -441,7 +441,7 @@ func (h *httpStorage) Conf() roachpb.ExportStorage {
 }
 
 func (h *httpStorage) ReadFile(ctx context.Context, basename string) (io.ReadCloser, error) {
-	// https://github.com/cockroachdb/cockroach/issues/23859
+	// https://github.com/weisslj/cockroach/issues/23859
 	resp, err := h.req(ctx, "GET", basename, nil)
 	if err != nil {
 		return nil, err
@@ -644,7 +644,7 @@ func (s *s3Storage) WriteFile(ctx context.Context, basename string, content io.R
 }
 
 func (s *s3Storage) ReadFile(ctx context.Context, basename string) (io.ReadCloser, error) {
-	// https://github.com/cockroachdb/cockroach/issues/23859
+	// https://github.com/weisslj/cockroach/issues/23859
 	out, err := s.s3.GetObjectWithContext(ctx, &s3.GetObjectInput{
 		Bucket: s.bucket,
 		Key:    aws.String(path.Join(s.prefix, basename)),
@@ -798,7 +798,7 @@ func (g *gcsStorage) WriteFile(ctx context.Context, basename string, content io.
 }
 
 func (g *gcsStorage) ReadFile(ctx context.Context, basename string) (io.ReadCloser, error) {
-	// https://github.com/cockroachdb/cockroach/issues/23859
+	// https://github.com/weisslj/cockroach/issues/23859
 
 	var rc io.ReadCloser
 	err := delayedRetry(ctx, func() error {
@@ -895,7 +895,7 @@ func (s *azureStorage) WriteFile(
 }
 
 func (s *azureStorage) ReadFile(ctx context.Context, basename string) (io.ReadCloser, error) {
-	// https://github.com/cockroachdb/cockroach/issues/23859
+	// https://github.com/weisslj/cockroach/issues/23859
 	blob := s.getBlob(basename)
 	get, err := blob.Download(ctx, 0, 0, azblob.BlobAccessConditions{}, false)
 	if err != nil {

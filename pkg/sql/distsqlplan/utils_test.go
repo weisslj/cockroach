@@ -14,7 +14,7 @@
 
 package distsqlplan
 
-import "github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+import "github.com/weisslj/cockroach/pkg/sql/sem/tree"
 
 // fakeExprContext is a fake implementation of ExprContext that always behaves
 // as if it were part of a non-local query.

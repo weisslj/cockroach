@@ -6,7 +6,7 @@ package stats
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import sqlbase "github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
+import sqlbase "github.com/weisslj/cockroach/pkg/sql/sqlbase"
 
 import io "io"
 

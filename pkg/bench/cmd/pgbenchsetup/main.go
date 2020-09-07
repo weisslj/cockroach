@@ -21,7 +21,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/cockroachdb/cockroach/pkg/bench"
+	"github.com/weisslj/cockroach/pkg/bench"
 	_ "github.com/lib/pq"
 )
 

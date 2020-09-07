@@ -19,8 +19,8 @@ package cat
 import (
 	"context"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // StableID permanently and uniquely identifies a catalog object (table, view,

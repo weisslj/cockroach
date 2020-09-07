@@ -1,6 +1,6 @@
 # LogicTest: local local-opt local-parallel-stmts fakedist fakedist-opt fakedist-metadata
 
-# This test reproduces https://github.com/cockroachdb/cockroach/issues/23979
+# This test reproduces https://github.com/weisslj/cockroach/issues/23979
 
 # Schema changes that experienced retriable errors in RELEASE
 # SAVEPOINT would previously deadlock.

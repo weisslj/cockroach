@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/util/uint128"
+	"github.com/weisslj/cockroach/pkg/util/uint128"
 	"github.com/pkg/errors"
 )
 

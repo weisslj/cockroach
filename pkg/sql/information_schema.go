@@ -20,13 +20,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/base"
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sessiondata"
-	"github.com/cockroachdb/cockroach/pkg/sql/sqlbase"
-	"github.com/cockroachdb/cockroach/pkg/sql/vtable"
+	"github.com/weisslj/cockroach/pkg/base"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sessiondata"
+	"github.com/weisslj/cockroach/pkg/sql/sqlbase"
+	"github.com/weisslj/cockroach/pkg/sql/vtable"
 	"github.com/lib/pq/oid"
 	"github.com/pkg/errors"
 )
@@ -862,7 +862,7 @@ CREATE TABLE information_schema.schema_privileges (
 				dbNameStr := tree.NewDString(db.Name)
 				scNameStr := tree.NewDString(scName)
 				// TODO(knz): This should filter for the current user, see
-				// https://github.com/cockroachdb/cockroach/issues/35572
+				// https://github.com/weisslj/cockroach/issues/35572
 				for _, u := range privs {
 					userNameStr := tree.NewDString(u.User)
 					for _, priv := range u.Privileges {
@@ -1159,7 +1159,7 @@ func populateTablePrivileges(
 			scNameStr := tree.NewDString(scName)
 			tbNameStr := tree.NewDString(table.Name)
 			// TODO(knz): This should filter for the current user, see
-			// https://github.com/cockroachdb/cockroach/issues/35572
+			// https://github.com/weisslj/cockroach/issues/35572
 			for _, u := range table.Privileges.Show() {
 				for _, priv := range u.Privileges {
 					if err := addRow(

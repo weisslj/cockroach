@@ -18,7 +18,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt"
+	"github.com/weisslj/cockroach/pkg/sql/opt"
 )
 
 // Required properties are interesting characteristics of an expression that

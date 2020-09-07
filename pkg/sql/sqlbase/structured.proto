@@ -648,7 +648,7 @@ message TableDescriptor {
   message SchemaChangeLease {
     optional uint32 node_id = 1 [(gogoproto.nullable) = false,
         (gogoproto.customname) = "NodeID",
-        (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+        (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
     // Nanoseconds since the Unix epoch.
     optional int64 expiration_time = 2 [(gogoproto.nullable) = false];
   }

@@ -327,7 +327,7 @@
 [[projects]]
   branch = "master"
   digest = "1:5a75ff130630f57609ffca00d6a76dc31bb50ad6a03809848e0f9e13add31987"
-  name = "github.com/cockroachdb/cockroach-go"
+  name = "github.com/weisslj/cockroach-go"
   packages = ["crdb"]
   pruneopts = "UT"
   revision = "e0a95dfd547cc9c3ebaaba1a12c2afe4bf621ac5"
@@ -1738,7 +1738,7 @@
     "github.com/cockroachdb/apd",
     "github.com/cockroachdb/circuitbreaker",
     "github.com/cockroachdb/cmux",
-    "github.com/cockroachdb/cockroach-go/crdb",
+    "github.com/weisslj/cockroach-go/crdb",
     "github.com/cockroachdb/crlfmt",
     "github.com/cockroachdb/gostdlib/cmd/gofmt",
     "github.com/cockroachdb/gostdlib/x/tools/cmd/goimports",

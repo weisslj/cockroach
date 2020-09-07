@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/testutils/sqlutils"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/testutils/sqlutils"
 )
 
 var _ sqlutils.ColumnItemResolverTester = &scope{}

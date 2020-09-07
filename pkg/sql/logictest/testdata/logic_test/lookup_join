@@ -95,7 +95,7 @@ SELECT a, b, e FROM abc JOIN def ON f = b WHERE a >= e
 2  1  1
 2  1  2
 
-# Test lookup join on NULL column. (https://github.com/cockroachdb/cockroach/issues/27032)
+# Test lookup join on NULL column. (https://github.com/weisslj/cockroach/issues/27032)
 query I
 SELECT h FROM abc JOIN gh ON b = g
 ----
@@ -424,7 +424,7 @@ SELECT * FROM source JOIN child ON source.a = child.a
 
 ###########################################################
 #  LOOKUP JOINS ON IMPLICIT INDEX KEY COLUMNS             #
-#  https://github.com/cockroachdb/cockroach/issues/31777  #
+#  https://github.com/weisslj/cockroach/issues/31777  #
 ###########################################################
 statement ok
 CREATE TABLE t (a INT, b INT, c INT, d INT, e INT)

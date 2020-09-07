@@ -14,7 +14,7 @@
 
 package base
 
-import "github.com/cockroachdb/cockroach/pkg/build"
+import "github.com/weisslj/cockroach/pkg/build"
 
 // DocsURLBase is the root URL for the version of the docs associated with this
 // binary.

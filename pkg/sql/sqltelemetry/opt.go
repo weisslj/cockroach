@@ -17,7 +17,7 @@ package sqltelemetry
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/server/telemetry"
+	"github.com/weisslj/cockroach/pkg/server/telemetry"
 )
 
 // OptNodeCounter should be incremented every time a node of the given

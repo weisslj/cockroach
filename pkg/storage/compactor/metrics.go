@@ -14,7 +14,7 @@
 
 package compactor
 
-import "github.com/cockroachdb/cockroach/pkg/util/metric"
+import "github.com/weisslj/cockroach/pkg/util/metric"
 
 // Metrics holds all metrics relating to a Compactor.
 type Metrics struct {

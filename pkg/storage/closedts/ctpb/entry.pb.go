@@ -6,9 +6,9 @@ package ctpb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/cockroachdb/cockroach/pkg/roachpb"
+import github_com_cockroachdb_cockroach_pkg_roachpb "github.com/weisslj/cockroach/pkg/roachpb"
 
 import (
 	context "context"
@@ -43,7 +43,7 @@ const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 type Entry struct {
 	Epoch           Epoch                                                        `protobuf:"varint,1,opt,name=epoch,proto3,casttype=Epoch" json:"epoch,omitempty"`
 	ClosedTimestamp hlc.Timestamp                                                `protobuf:"bytes,2,opt,name=closed_timestamp,json=closedTimestamp,proto3" json:"closed_timestamp"`
-	MLAI            map[github_com_cockroachdb_cockroach_pkg_roachpb.RangeID]LAI `protobuf:"bytes,3,rep,name=mlai,proto3,castkey=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID,castvalue=LAI" json:"mlai,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
+	MLAI            map[github_com_cockroachdb_cockroach_pkg_roachpb.RangeID]LAI `protobuf:"bytes,3,rep,name=mlai,proto3,castkey=github.com/weisslj/cockroach/pkg/roachpb.RangeID,castvalue=LAI" json:"mlai,omitempty" protobuf_key:"varint,1,opt,name=key,proto3" protobuf_val:"varint,2,opt,name=value,proto3"`
 	// Full is true if the emitter promises that any future write to any range
 	// mentioned in this Entry will be reflected in a subsequent Entry before any
 	// stale follower reads are possible. For example, if range 1 is assigned an
@@ -93,7 +93,7 @@ var xxx_messageInfo_Entry proto.InternalMessageInfo
 // fail. The Reaction mechanism serves to explicitly request the missing information
 // when that happens.
 type Reaction struct {
-	Requested            []github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,rep,packed,name=Requested,proto3,casttype=github.com/cockroachdb/cockroach/pkg/roachpb.RangeID" json:"Requested,omitempty"`
+	Requested            []github_com_cockroachdb_cockroach_pkg_roachpb.RangeID `protobuf:"varint,1,rep,packed,name=Requested,proto3,casttype=github.com/weisslj/cockroach/pkg/roachpb.RangeID" json:"Requested,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                               `json:"-"`
 	XXX_sizecache        int32                                                  `json:"-"`
 }

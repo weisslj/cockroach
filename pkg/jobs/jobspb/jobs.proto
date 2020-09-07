@@ -28,7 +28,7 @@ message Lease {
   // The ID of the node that holds the lease.
   uint32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   // The epoch of the lease holder's node liveness entry.
   int64 epoch = 2;
@@ -49,17 +49,17 @@ message RestoreDetails {
   message TableRewrite {
     uint32 table_id = 1 [
       (gogoproto.customname) = "TableID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
     ];
     uint32 parent_id = 2 [
       (gogoproto.customname) = "ParentID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
     ];
   }
   reserved 1;
   util.hlc.Timestamp end_time = 4 [(gogoproto.nullable) = false];
   map<uint32, TableRewrite> table_rewrites = 2 [
-    (gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+    (gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
   ];
   repeated string uris = 3 [(gogoproto.customname) = "URIs"];
   repeated sqlbase.TableDescriptor table_descs = 5;
@@ -87,7 +87,7 @@ message ImportDetails {
   int64 walltime = 5;
   uint32 parent_id = 6 [
     (gogoproto.customname) = "ParentID",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
   ];
   string backup_path = 7;
 
@@ -127,7 +127,7 @@ enum Status {
 
 message DroppedTableDetails {
   string name = 1;
-  uint32 ID = 2 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"];
+  uint32 ID = 2 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"];
   Status status = 3;
 }
 
@@ -144,7 +144,7 @@ message SchemaChangeDetails {
   // The descriptor ID of the dropped database which created this job.
   uint32 dropped_database_id = 4 [
     (gogoproto.customname) = "DroppedDatabaseID",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
   ];
 }
 
@@ -177,7 +177,7 @@ message ChangefeedDetails {
   // if the descriptor id no longer exists when the jobs is unpaused (which can
   // happen if it was dropped or truncated).
   map<uint32, ChangefeedTarget> targets = 6 [
-    (gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID",
+    (gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID",
     (gogoproto.casttype) = "ChangefeedTargets",
     (gogoproto.nullable) = false
   ];
@@ -206,7 +206,7 @@ message CreateStatsDetails {
   message ColList {
     repeated uint32 ids = 1 [
       (gogoproto.customname) = "IDs",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ColumnID"
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ColumnID"
     ];
   }
   string name = 1;
@@ -237,7 +237,7 @@ message Payload {
   reserved 5;
   repeated uint32 descriptor_ids = 6 [
     (gogoproto.customname) = "DescriptorIDs",
-    (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/sql/sqlbase.ID"
+    (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/sql/sqlbase.ID"
   ];
   reserved 7;
   string error = 8;

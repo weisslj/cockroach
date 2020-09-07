@@ -19,8 +19,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cockroachdb/cockroach/pkg/security"
-	"github.com/cockroachdb/cockroach/pkg/sql/privilege"
+	"github.com/weisslj/cockroach/pkg/security"
+	"github.com/weisslj/cockroach/pkg/sql/privilege"
 )
 
 func isPrivilegeSet(bits uint32, priv privilege.Kind) bool {

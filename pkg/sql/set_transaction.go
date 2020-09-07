@@ -15,8 +15,8 @@
 package sql
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/util/hlc"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/util/hlc"
 )
 
 // SetTransaction sets a transaction's isolation level, priority, ro/rw state,

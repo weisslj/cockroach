@@ -102,7 +102,7 @@ message DetailsResponse {
   int32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   util.UnresolvedAddr address = 2 [ (gogoproto.nullable) = false ];
   build.Info build_info = 3 [ (gogoproto.nullable) = false ];
@@ -184,12 +184,12 @@ message RangeInfo {
   int32 source_node_id = 5 [
     (gogoproto.customname) = "SourceNodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   int32 source_store_id = 6 [
     (gogoproto.customname) = "SourceStoreID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.StoreID"
+        "github.com/weisslj/cockroach/pkg/roachpb.StoreID"
   ];
   string error_message = 7;
   repeated roachpb.Lease lease_history = 8 [ (gogoproto.nullable) = false ];
@@ -209,7 +209,7 @@ message RangesRequest {
   repeated int64 range_ids = 2 [
     (gogoproto.customname) = "RangeIDs",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
 }
 
@@ -227,7 +227,7 @@ message EngineStatsInfo {
   int32 store_id = 1 [
     (gogoproto.customname) = "StoreID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.StoreID"
+        "github.com/weisslj/cockroach/pkg/roachpb.StoreID"
   ];
   cockroach.storage.engine.enginepb.TickersAndHistograms tickers_and_histograms = 2;
 }
@@ -252,7 +252,7 @@ message AllocatorDryRun {
   int64 range_id = 1 [
     (gogoproto.customname) = "RangeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
   repeated TraceEvent events = 2;
 }
@@ -267,7 +267,7 @@ message AllocatorRangeResponse {
   int64 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   AllocatorDryRun dry_run = 2;
 }
@@ -277,7 +277,7 @@ message AllocatorRequest {
   repeated int64 range_ids = 2 [
     (gogoproto.customname) = "RangeIDs",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
 }
 
@@ -377,7 +377,7 @@ message RaftRangeNode {
   int32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   RangeInfo range = 2 [ (gogoproto.nullable) = false ];
 }
@@ -388,7 +388,7 @@ message RaftRangeStatus {
   int64 range_id = 1 [
     (gogoproto.customname) = "RangeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
   repeated RaftRangeError errors = 2 [ (gogoproto.nullable) = false ];
   repeated RaftRangeNode nodes = 3 [ (gogoproto.nullable) = false ];
@@ -398,7 +398,7 @@ message RaftDebugRequest {
   repeated int64 range_ids = 1 [
     (gogoproto.customname) = "RangeIDs",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
 }
 
@@ -406,7 +406,7 @@ message RaftDebugResponse {
   map<int64, RaftRangeStatus> ranges = 1 [
     (gogoproto.nullable) = false,
     (gogoproto.castkey) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
   repeated RaftRangeError errors = 2 [ (gogoproto.nullable) = false ];
 }
@@ -444,7 +444,7 @@ message Session {
   int32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   // Username of the user for this session.
   string username = 2;
@@ -462,7 +462,7 @@ message Session {
   bytes kv_txn_id = 7 [
     (gogoproto.customname) = "KvTxnID",
     (gogoproto.customtype) =
-        "github.com/cockroachdb/cockroach/pkg/util/uuid.UUID"
+        "github.com/weisslj/cockroach/pkg/util/uuid.UUID"
   ];
   // SQL string of the last query executed on this session.
   string last_active_query = 8;
@@ -480,7 +480,7 @@ message ListSessionsError {
   int32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   // Error message.
   string message = 2;
@@ -538,9 +538,9 @@ message SpanStatsRequest {
   string node_id = 1 [ (gogoproto.customname) = "NodeID" ];
   bytes start_key = 2
       [ (gogoproto.casttype) =
-            "github.com/cockroachdb/cockroach/pkg/roachpb.RKey" ];
+            "github.com/weisslj/cockroach/pkg/roachpb.RKey" ];
   bytes end_key = 3 [ (gogoproto.casttype) =
-                          "github.com/cockroachdb/cockroach/pkg/roachpb.RKey" ];
+                          "github.com/weisslj/cockroach/pkg/roachpb.RKey" ];
 }
 
 message SpanStatsResponse {
@@ -561,42 +561,42 @@ message ProblemRangesResponse {
     repeated int64 unavailable_range_ids = 2 [
       (gogoproto.customname) = "UnavailableRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 raft_leader_not_lease_holder_range_ids = 3 [
       (gogoproto.customname) = "RaftLeaderNotLeaseHolderRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 no_raft_leader_range_ids = 4 [
       (gogoproto.customname) = "NoRaftLeaderRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 no_lease_range_ids = 5 [
       (gogoproto.customname) = "NoLeaseRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 underreplicated_range_ids = 6 [
       (gogoproto.customname) = "UnderreplicatedRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 overreplicated_range_ids = 9 [
       (gogoproto.customname) = "OverreplicatedRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 quiescent_equals_ticking_range_ids = 7 [
       (gogoproto.customname) = "QuiescentEqualsTickingRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
     repeated int64 raft_log_too_large_range_ids = 8 [
       (gogoproto.customname) = "RaftLogTooLargeRangeIDs",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+          "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
     ];
   }
   reserved 1 to 7;
@@ -604,10 +604,10 @@ message ProblemRangesResponse {
   int32 node_id = 8 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   map<int32, NodeProblems> problems_by_node_id = 9 [
-    (gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID",
+    (gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID",
     (gogoproto.customname) = "ProblemsByNodeID",
     (gogoproto.nullable) = false
   ];
@@ -627,7 +627,7 @@ message HotRangesResponse {
     int32 store_id = 1 [
       (gogoproto.customname) = "StoreID",
       (gogoproto.casttype) =
-          "github.com/cockroachdb/cockroach/pkg/roachpb.StoreID"
+          "github.com/weisslj/cockroach/pkg/roachpb.StoreID"
     ];
     repeated HotRange hot_ranges = 2 [(gogoproto.nullable) = false];
   }
@@ -639,10 +639,10 @@ message HotRangesResponse {
   int32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   map<int32, NodeResponse> hot_ranges_by_node_id = 2 [
-    (gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID",
+    (gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID",
     (gogoproto.customname) = "HotRangesByNodeID",
     (gogoproto.nullable) = false
   ];
@@ -662,15 +662,15 @@ message RangeResponse {
   int32 node_id = 1 [
     (gogoproto.customname) = "NodeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.NodeID"
   ];
   int64 range_id = 2 [
     (gogoproto.customname) = "RangeID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"
+        "github.com/weisslj/cockroach/pkg/roachpb.RangeID"
   ];
   map<int32, NodeResponse> responses_by_node_id = 3 [
-    (gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID",
+    (gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID",
     (gogoproto.customname) = "ResponsesByNodeID",
     (gogoproto.nullable) = false
   ];
@@ -694,7 +694,7 @@ message StoreDetails {
   int32 store_id = 1 [
     (gogoproto.customname) = "StoreID",
     (gogoproto.casttype) =
-        "github.com/cockroachdb/cockroach/pkg/roachpb.StoreID"
+        "github.com/weisslj/cockroach/pkg/roachpb.StoreID"
   ];
 
   // TODO(mberhault): add a lot more information about stores. eg:
@@ -727,7 +727,7 @@ message StatementsResponse {
   message ExtendedStatementStatisticsKey {
     cockroach.sql.StatementStatisticsKey key_data = 1 [(gogoproto.nullable) = false];
     int32 node_id = 2 [(gogoproto.customname) = "NodeID",
-                        (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+                        (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
   }
 
   message CollectedStatementStatistics {

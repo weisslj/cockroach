@@ -18,11 +18,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/settings/cluster"
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	_ "github.com/cockroachdb/cockroach/pkg/sql/sem/builtins"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/settings/cluster"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	_ "github.com/weisslj/cockroach/pkg/sql/sem/builtins"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
 )
 
 func TestContainsVars(t *testing.T) {
@@ -71,7 +71,7 @@ func TestNormalizeExpr(t *testing.T) {
 		// This loss of type information occurs because we wind up trying
 		// to reconstitute a data from from a datum. Ideally, this would
 		// be addressed by future work on
-		// https://github.com/cockroachdb/cockroach/issues/32639
+		// https://github.com/weisslj/cockroach/issues/32639
 		{`CAST(NULL AS INT2)`, `CAST(NULL AS INT8)`},
 		{`CAST(NULL AS INT4)`, `CAST(NULL AS INT8)`},
 		{`CAST(NULL AS INT8)`, `CAST(NULL AS INT8)`},

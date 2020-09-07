@@ -20,7 +20,7 @@ import (
 	gosql "database/sql"
 	"fmt"
 
-	"github.com/cockroachdb/cockroach-go/crdb"
+	"github.com/weisslj/cockroach-go/crdb"
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"
 )

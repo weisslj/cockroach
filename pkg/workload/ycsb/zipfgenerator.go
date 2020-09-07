@@ -24,7 +24,7 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 	"github.com/pkg/errors"
 )
 

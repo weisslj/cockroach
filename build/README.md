@@ -36,9 +36,9 @@ resulting image `cockroachdb/cockroach` can be run via `docker run` in the
 usual fashion. To be more specific, the steps to do this are:
 
 ```
-go/src/github.com/cockroachdb/cockroach $ ./build/builder.sh make build TYPE=release-linux-gnu
-go/src/github.com/cockroachdb/cockroach $ cp ./cockroach-linux-2.6.32-gnu-amd64 build/deploy/cockroach
-go/src/github.com/cockroachdb/cockroach $ cd build/deploy && docker build -t cockroachdb/cockroach .
+go/src/github.com/weisslj/cockroach $ ./build/builder.sh make build TYPE=release-linux-gnu
+go/src/github.com/weisslj/cockroach $ cp ./cockroach-linux-2.6.32-gnu-amd64 build/deploy/cockroach
+go/src/github.com/weisslj/cockroach $ cd build/deploy && docker build -t cockroachdb/cockroach .
 ```
 
 # Upgrading / extending the Docker image

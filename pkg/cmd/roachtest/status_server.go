@@ -21,10 +21,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
-	"github.com/cockroachdb/cockroach/pkg/server/serverpb"
-	"github.com/cockroachdb/cockroach/pkg/util/httputil"
-	"github.com/cockroachdb/cockroach/pkg/util/retry"
+	"github.com/weisslj/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/server/serverpb"
+	"github.com/weisslj/cockroach/pkg/util/httputil"
+	"github.com/weisslj/cockroach/pkg/util/retry"
 )
 
 func runStatusServer(ctx context.Context, t *test, c *cluster) {

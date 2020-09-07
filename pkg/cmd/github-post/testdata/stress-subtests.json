@@ -1,6 +1,6 @@
 {"Action":"output","Output":"Running make with -j8\n"}
 {"Action":"output","Output":"GOPATH set to /Users/benesch/go\n"}
-{"Action":"output","Output":"go test  -exec 'stress ' -tags ' make x86_64_apple_darwin16.7.0' -ldflags '-X github.com/cockroachdb/cockroach/pkg/build.typ=development -extldflags \"-L/usr/local/opt/readline/lib\" -X \"github.com/cockroachdb/cockroach/pkg/build.tag=v2.1.0-alpha.20180702-730-g49b1bbafc-dirty\" -X \"github.com/cockroachdb/cockroach/pkg/build.rev=49b1bbafc12d50cc2d5d1ab0e07de81246b4ef73\" -X \"github.com/cockroachdb/cockroach/pkg/build.cgoTargetTriple=x86_64-apple-darwin16.7.0\"  ' -run \"TestPretty\" -timeout 0 ./pkg/util/json  -v -args -test.timeout 8m\n"}
+{"Action":"output","Output":"go test  -exec 'stress ' -tags ' make x86_64_apple_darwin16.7.0' -ldflags '-X github.com/weisslj/cockroach/pkg/build.typ=development -extldflags \"-L/usr/local/opt/readline/lib\" -X \"github.com/weisslj/cockroach/pkg/build.tag=v2.1.0-alpha.20180702-730-g49b1bbafc-dirty\" -X \"github.com/weisslj/cockroach/pkg/build.rev=49b1bbafc12d50cc2d5d1ab0e07de81246b4ef73\" -X \"github.com/weisslj/cockroach/pkg/build.cgoTargetTriple=x86_64-apple-darwin16.7.0\"  ' -run \"TestPretty\" -timeout 0 ./pkg/util/json  -v -args -test.timeout 8m\n"}
 {"Action":"output","Output":"\n"}
 {"Action":"run","Test":"TestPretty"}
 {"Action":"output","Test":"TestPretty","Output":"=== RUN   TestPretty\n"}
@@ -104,6 +104,6 @@
 {"Action":"output","Output":"1 runs completed, 1 failures, over 0s\n"}
 {"Action":"output","Output":"context canceled\n"}
 {"Action":"output","Output":"FAIL\n"}
-{"Action":"output","Output":"FAIL\tgithub.com/cockroachdb/cockroach/pkg/util/json\t0.050s\n"}
+{"Action":"output","Output":"FAIL\tgithub.com/weisslj/cockroach/pkg/util/json\t0.050s\n"}
 {"Action":"output","Output":"make: *** [stress] Error 1\n"}
 {"Action":"fail"}

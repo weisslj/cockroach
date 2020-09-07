@@ -28,9 +28,9 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/config"
-	"github.com/cockroachdb/cockroach/pkg/cmd/roachprod/vm"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/config"
+	"github.com/weisslj/cockroach/pkg/cmd/roachprod/vm"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"github.com/nlopes/slack"
 )
 

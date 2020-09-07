@@ -22,7 +22,7 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/cockroachdb/cockroach/pkg/roachpb"
+	"github.com/weisslj/cockroach/pkg/roachpb"
 )
 
 const (

@@ -17,9 +17,9 @@ package exprgen_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/testutils/opttester"
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/testutils/testcat"
-	"github.com/cockroachdb/cockroach/pkg/testutils/datadriven"
+	"github.com/weisslj/cockroach/pkg/sql/opt/testutils/opttester"
+	"github.com/weisslj/cockroach/pkg/sql/opt/testutils/testcat"
+	"github.com/weisslj/cockroach/pkg/testutils/datadriven"
 )
 
 func TestExprGen(t *testing.T) {

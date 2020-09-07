@@ -14,7 +14,7 @@
 
 package cat
 
-import "github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+import "github.com/weisslj/cockroach/pkg/sql/sem/tree"
 
 // PrimaryIndex selects the primary index of a table when calling the
 // Table.Index method. Every table is guaranteed to have a unique primary

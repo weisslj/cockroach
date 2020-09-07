@@ -88,4 +88,4 @@
       the upgrade.
 - Version: 22 (MinAcceptedVersion: 21)
     - Change date math to better align with PostgreSQL:
-      https://github.com/cockroachdb/cockroach/pull/31146
+      https://github.com/weisslj/cockroach/pull/31146

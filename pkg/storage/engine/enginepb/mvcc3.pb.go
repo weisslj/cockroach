@@ -6,9 +6,9 @@ package enginepb
 import proto "github.com/gogo/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import hlc "github.com/cockroachdb/cockroach/pkg/util/hlc"
+import hlc "github.com/weisslj/cockroach/pkg/util/hlc"
 
-import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/cockroachdb/cockroach/pkg/util/uuid"
+import github_com_cockroachdb_cockroach_pkg_util_uuid "github.com/weisslj/cockroach/pkg/util/uuid"
 
 import bytes "bytes"
 
@@ -31,7 +31,7 @@ const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 type TxnMeta struct {
 	// id is a unique UUID value which identifies the transaction.
 	// This field is always filled in.
-	ID github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=id,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"id"`
+	ID github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=id,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"id"`
 	// key is the key which anchors the transaction. This is typically
 	// the first key read or written during the transaction and
 	// determines which range in the cluster will hold the transaction
@@ -330,7 +330,7 @@ var xxx_messageInfo_MVCCWriteValueOp proto.InternalMessageInfo
 // MVCCUpdateIntentOp corresponds to an intent being written for a given
 // transaction.
 type MVCCWriteIntentOp struct {
-	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
+	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
 	TxnKey               []byte                                              `protobuf:"bytes,2,opt,name=txn_key,json=txnKey,proto3" json:"txn_key,omitempty"`
 	Timestamp            hlc.Timestamp                                       `protobuf:"bytes,3,opt,name=timestamp,proto3" json:"timestamp"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
@@ -369,7 +369,7 @@ var xxx_messageInfo_MVCCWriteIntentOp proto.InternalMessageInfo
 // MVCCUpdateIntentOp corresponds to an intent being updates at a larger
 // timestamp for a given transaction.
 type MVCCUpdateIntentOp struct {
-	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
+	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
 	Timestamp            hlc.Timestamp                                       `protobuf:"bytes,2,opt,name=timestamp,proto3" json:"timestamp"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
@@ -407,7 +407,7 @@ var xxx_messageInfo_MVCCUpdateIntentOp proto.InternalMessageInfo
 // MVCCCommitIntentOp corresponds to an intent being committed for a given
 // transaction.
 type MVCCCommitIntentOp struct {
-	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
+	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
 	Key                  []byte                                              `protobuf:"bytes,2,opt,name=key,proto3" json:"key,omitempty"`
 	Timestamp            hlc.Timestamp                                       `protobuf:"bytes,3,opt,name=timestamp,proto3" json:"timestamp"`
 	Value                []byte                                              `protobuf:"bytes,4,opt,name=value,proto3" json:"value,omitempty"`
@@ -452,7 +452,7 @@ var xxx_messageInfo_MVCCCommitIntentOp proto.InternalMessageInfo
 // instance, a committed transaction will abort any intents it decided not to
 // write in its final epoch.
 type MVCCAbortIntentOp struct {
-	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
+	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
 }
@@ -490,7 +490,7 @@ var xxx_messageInfo_MVCCAbortIntentOp proto.InternalMessageInfo
 // operation indicates that none of the transaction's intents will ever be
 // committed.
 type MVCCAbortTxnOp struct {
-	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/cockroachdb/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
+	TxnID                github_com_cockroachdb_cockroach_pkg_util_uuid.UUID `protobuf:"bytes,1,opt,name=txn_id,json=txnId,proto3,customtype=github.com/weisslj/cockroach/pkg/util/uuid.UUID" json:"txn_id"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
 }

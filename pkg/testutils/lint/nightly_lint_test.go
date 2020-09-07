@@ -22,8 +22,8 @@ import (
 	"os/exec"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/cmd/urlcheck/lib/urlcheck"
-	sqlparser "github.com/cockroachdb/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/cmd/urlcheck/lib/urlcheck"
+	sqlparser "github.com/weisslj/cockroach/pkg/sql/parser"
 )
 
 func TestNightlyLint(t *testing.T) {

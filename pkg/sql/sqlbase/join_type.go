@@ -17,7 +17,7 @@ package sqlbase
 import (
 	"fmt"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/tree"
+	"github.com/weisslj/cockroach/pkg/sql/sem/tree"
 )
 
 // Prettier aliases for JoinType values. See the original types for

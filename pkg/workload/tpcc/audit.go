@@ -20,7 +20,7 @@ import (
 	"math"
 	"sync/atomic"
 
-	"github.com/cockroachdb/cockroach/pkg/util/syncutil"
+	"github.com/weisslj/cockroach/pkg/util/syncutil"
 )
 
 const (

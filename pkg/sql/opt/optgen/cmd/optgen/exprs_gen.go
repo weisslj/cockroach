@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/optgen/lang"
+	"github.com/weisslj/cockroach/pkg/sql/opt/optgen/lang"
 )
 
 // exprsGen generates the memo expression structs used by the optimizer, as well
@@ -39,14 +39,14 @@ func (g *exprsGen) generate(compiled *lang.CompiledExpr, w io.Writer) {
 	fmt.Fprintf(g.w, "import (\n")
 	fmt.Fprintf(g.w, "  \"unsafe\"\n")
 	fmt.Fprintf(g.w, "\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/coltypes\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/opt/constraint\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/opt\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/opt/props\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/sem/tree\"\n")
-	fmt.Fprintf(g.w, "  \"github.com/cockroachdb/cockroach/pkg/sql/sem/types\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/coltypes\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/opt/constraint\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/opt\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/opt/props\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/opt/props/physical\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/sem/tree\"\n")
+	fmt.Fprintf(g.w, "  \"github.com/weisslj/cockroach/pkg/sql/sem/types\"\n")
 	fmt.Fprintf(g.w, ")\n\n")
 
 	for _, define := range g.compiled.Defines {

@@ -17,7 +17,7 @@ package main
 import (
 	"io"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/opt/optgen/lang"
+	"github.com/weisslj/cockroach/pkg/sql/opt/optgen/lang"
 )
 
 // factoryGen generates implementation code for the factory that supports
@@ -39,14 +39,14 @@ func (g *factoryGen) generate(compiled *lang.CompiledExpr, w io.Writer) {
 
 	g.w.nestIndent("import (\n")
 	g.w.writeIndent("\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/coltypes\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/opt\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/opt/memo\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/opt/props/physical\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/pgwire/pgerror\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/sem/tree\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/sql/sem/types\"\n")
-	g.w.writeIndent("\"github.com/cockroachdb/cockroach/pkg/util/log\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/coltypes\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/opt\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/opt/memo\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/opt/props/physical\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/pgwire/pgerror\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/sem/tree\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/sql/sem/types\"\n")
+	g.w.writeIndent("\"github.com/weisslj/cockroach/pkg/util/log\"\n")
 	g.w.unnest(")\n\n")
 
 	g.genConstructFuncs()

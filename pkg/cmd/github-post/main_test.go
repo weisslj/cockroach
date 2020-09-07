@@ -37,9 +37,9 @@ func TestListFailures(t *testing.T) {
 		expIssues []issue
 	}{
 		{
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/storage",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/storage",
 			fileName: "stress-failure.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/storage",
+			expPkg:   "github.com/weisslj/cockroach/pkg/storage",
 			expIssues: []issue{{
 				testName: "TestReplicateQueueRebalance",
 				title:    "storage: TestReplicateQueueRebalance failed under stress",
@@ -48,9 +48,9 @@ func TestListFailures(t *testing.T) {
 			}},
 		},
 		{
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/storage",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/storage",
 			fileName: "stress-fatal.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/storage",
+			expPkg:   "github.com/weisslj/cockroach/pkg/storage",
 			expIssues: []issue{{
 				testName: "TestGossipHandlesReplacedNode",
 				title:    "storage: TestGossipHandlesReplacedNode failed under stress",
@@ -59,9 +59,9 @@ func TestListFailures(t *testing.T) {
 			}},
 		},
 		{
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/storage",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/storage",
 			fileName: "stress-unknown.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/storage",
+			expPkg:   "github.com/weisslj/cockroach/pkg/storage",
 			expIssues: []issue{{
 				testName: "(unknown)",
 				title:    "storage: package failed under stress",
@@ -70,9 +70,9 @@ func TestListFailures(t *testing.T) {
 			}},
 		},
 		{
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/util/json",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/util/json",
 			fileName: "stress-subtests.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/util/json",
+			expPkg:   "github.com/weisslj/cockroach/pkg/util/json",
 			expIssues: []issue{{
 				testName: "TestPretty",
 				title:    "util/json: TestPretty failed under stress",
@@ -86,9 +86,9 @@ func TestListFailures(t *testing.T) {
 			// A test run where there's a timeout, and the timed out test was the
 			// longest running test, so the issue assumes it's the culprit.
 			// To spice things up, the test run has another test failure too.
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/kv",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/kv",
 			fileName: "timeout-culprit-found.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/kv",
+			expPkg:   "github.com/weisslj/cockroach/pkg/kv",
 			expIssues: []issue{
 				{
 					testName: "TestTxnCoordSenderPipelining",
@@ -114,9 +114,9 @@ TestAnchorKey - 1.01s
 			// A test run where there's a timeout, but the test that happened to be
 			// running when the timeout hit has not been running for very long, and so
 			// the issue just names the package.
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/kv",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/kv",
 			fileName: "timeout-culprit-not-found.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/kv",
+			expPkg:   "github.com/weisslj/cockroach/pkg/kv",
 			expIssues: []issue{
 				{
 					testName: "(unknown)",
@@ -134,9 +134,9 @@ TestXXA - 1.00s
 		{
 			// Like the above, except this time the output comes from a stress run,
 			// not from the test binary directly.
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/kv",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/kv",
 			fileName: "stress-timeout-culprit-not-found.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/kv",
+			expPkg:   "github.com/weisslj/cockroach/pkg/kv",
 			expIssues: []issue{
 				{
 					testName: "(unknown)",
@@ -155,9 +155,9 @@ TestXXA - 1.00s
 		{
 			// A stress timeout where the test running when the timeout is hit is the
 			// longest.
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/kv",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/kv",
 			fileName: "stress-timeout-culprit-found.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/kv",
+			expPkg:   "github.com/weisslj/cockroach/pkg/kv",
 			expIssues: []issue{
 				{
 					testName: "TestXXX/sub2",
@@ -175,9 +175,9 @@ TestXXA - 1.00s
 		},
 		{
 			// A panic in a test.
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/kv",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/kv",
 			fileName: "stress-panic.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/kv",
+			expPkg:   "github.com/weisslj/cockroach/pkg/kv",
 			expIssues: []issue{
 				{
 					testName: "TestXXX",
@@ -189,9 +189,9 @@ TestXXA - 1.00s
 		},
 		{
 			// A panic outside of a test (in this case, in a package init function).
-			pkgEnv:   "github.com/cockroachdb/cockroach/pkg/kv",
+			pkgEnv:   "github.com/weisslj/cockroach/pkg/kv",
 			fileName: "stress-init-panic.json",
-			expPkg:   "github.com/cockroachdb/cockroach/pkg/kv",
+			expPkg:   "github.com/weisslj/cockroach/pkg/kv",
 			expIssues: []issue{
 				{
 					testName: "(unknown)",

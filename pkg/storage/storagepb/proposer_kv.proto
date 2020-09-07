@@ -73,7 +73,7 @@ message ComputeChecksum {
   bytes checksum_id = 1 [
     (gogoproto.nullable) = false,
     (gogoproto.customname) = "ChecksumID",
-    (gogoproto.customtype) = "github.com/cockroachdb/cockroach/pkg/util/uuid.UUID"
+    (gogoproto.customtype) = "github.com/weisslj/cockroach/pkg/util/uuid.UUID"
   ];
 
   // The version used to pick the checksum method. Only when the version matches
@@ -105,8 +105,8 @@ message Compaction {
 message SuggestedCompaction {
   option (gogoproto.equal) = true;
 
-  bytes start_key = 1 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.Key"];
-  bytes end_key = 2 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.Key"];
+  bytes start_key = 1 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.Key"];
+  bytes end_key = 2 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.Key"];
 
   Compaction compaction = 3 [(gogoproto.nullable) = false, (gogoproto.embed) = true];
 }
@@ -219,7 +219,7 @@ message RaftCommand {
   // - the command applies on replica 1
   // - replica 2 serves anomalous reads which don't see the write
   // - the command applies on replica 2
-  int64 proposer_lease_sequence = 6 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.LeaseSequence"];
+  int64 proposer_lease_sequence = 6 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.LeaseSequence"];
 
   // deprecated_proposer_lease served the same purpose as proposer_lease_seq.
   // As of VersionLeaseSequence, it is no longer in use.

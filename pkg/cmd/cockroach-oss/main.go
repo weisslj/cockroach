@@ -17,8 +17,8 @@
 package main
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/cli"
-	_ "github.com/cockroachdb/cockroach/pkg/ui/distoss" // web UI init hooks
+	"github.com/weisslj/cockroach/pkg/cli"
+	_ "github.com/weisslj/cockroach/pkg/ui/distoss" // web UI init hooks
 )
 
 func main() {

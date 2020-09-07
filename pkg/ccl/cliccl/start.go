@@ -4,14 +4,14 @@
 // License (the "License"); you may not use this file except in compliance with
 // the License. You may obtain a copy of the License at
 //
-//     https://github.com/cockroachdb/cockroach/blob/master/licenses/CCL.txt
+//     https://github.com/weisslj/cockroach/blob/master/licenses/CCL.txt
 
 package cliccl
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/ccl/baseccl"
-	"github.com/cockroachdb/cockroach/pkg/ccl/cliccl/cliflagsccl"
-	"github.com/cockroachdb/cockroach/pkg/cli"
+	"github.com/weisslj/cockroach/pkg/ccl/baseccl"
+	"github.com/weisslj/cockroach/pkg/ccl/cliccl/cliflagsccl"
+	"github.com/weisslj/cockroach/pkg/cli"
 	"github.com/spf13/cobra"
 )
 

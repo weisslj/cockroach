@@ -17,8 +17,8 @@ package tree_test
 import (
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/parser"
-	"github.com/cockroachdb/cockroach/pkg/testutils"
+	"github.com/weisslj/cockroach/pkg/sql/parser"
+	"github.com/weisslj/cockroach/pkg/testutils"
 )
 
 func TestUnresolvedObjectName(t *testing.T) {

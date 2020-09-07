@@ -24,9 +24,9 @@ import (
 	"time"
 
 	"github.com/backtrace-labs/go-bcd"
-	"github.com/cockroachdb/cockroach/pkg/build"
-	"github.com/cockroachdb/cockroach/pkg/util/log"
-	"github.com/cockroachdb/cockroach/pkg/util/stop"
+	"github.com/weisslj/cockroach/pkg/build"
+	"github.com/weisslj/cockroach/pkg/util/log"
+	"github.com/weisslj/cockroach/pkg/util/stop"
 	"golang.org/x/sys/unix"
 )
 

@@ -131,7 +131,7 @@ that's evolving as quickly as Cockroach, but it's something we're hoping to
 improve over time, especially as internal packages stabilize.
 
 The internal documentation that we *do* have lives in
-[cockroachdb/cockroach/docs](https://github.com/cockroachdb/cockroach/tree/master/docs).
+[cockroachdb/cockroach/docs](https://github.com/weisslj/cockroach/tree/master/docs).
 At the time of writing, most of this documentation covers the high-level
 architecture of the system. Only a few documents hone in on specifics, and even
 those only cover the features that were found to cause significant developer
@@ -140,7 +140,7 @@ usage instructions.
 
 > **Protip:** If you prefer Go-generated HTML documentation to reading the
 source directly, take a look at
-<https://godoc.org/github.com/cockroachdb/cockroach>.
+<https://godoc.org/github.com/weisslj/cockroach>.
 
 For our internal docs, I recommend the following reading order.
 
@@ -612,14 +612,14 @@ Here's a checklist of action items to keep you sane:
 
 ["Building on Linux"]: #building-on-linux
 ["Internal documentation"]: #internal-documentation
-["TeamCity Continuous Integration" wiki page]: https://github.com/cockroachdb/cockroach/wiki/TeamCity-Continuous-Integration
+["TeamCity Continuous Integration" wiki page]: https://github.com/weisslj/cockroach/wiki/TeamCity-Continuous-Integration
 ["When to submit"]: #when-to-submit
 [@bdarnell]: https://github.com/bdarnell
 [@petermattis]: https://github.com/petermattis
 [block_writer]: https://github.com/cockroachdb/examples-go/tree/master/block_writer
 [build/README.md]: /build/README.md
 [cockroachdb]: https://github.com/cockroachdb
-[cockroachdb/cockroach]: https://github.com/cockroachdb/cockroach
+[cockroachdb/cockroach]: https://github.com/weisslj/cockroach
 [cockroachdb/docs]: https://github.com/cockroachdb/docs
 [cockroachdb/examples-go]: https://github.com/cockroachdb/examples-go
 [cockroachdb/examples-orms]: https://github.com/cockroachdb/examples-orms
@@ -633,7 +633,7 @@ Here's a checklist of action items to keep you sane:
 [Reviewable]: https://reviewable.io
 [RocksDB]: http://rocksdb.org
 [docs/style.md]: /docs/style.md
-[this repository's wiki]: https://github.com/cockroachdb/cockroach/wiki/Jargon
+[this repository's wiki]: https://github.com/weisslj/cockroach/wiki/Jargon
 [by humans for humans]: https://mtlynch.io/human-code-reviews-1/
 [minimally nice maintainer]: https://brson.github.io/2017/04/05/minimally-nice-maintainer
-[Bors merge bot]: https://github.com/cockroachdb/cockroach/wiki/Bors-merge-bot
+[Bors merge bot]: https://github.com/weisslj/cockroach/wiki/Bors-merge-bot

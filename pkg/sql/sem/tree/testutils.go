@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/sql/sem/types"
-	"github.com/cockroachdb/cockroach/pkg/util/timeofday"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/sql/sem/types"
+	"github.com/weisslj/cockroach/pkg/util/timeofday"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 )
 
 // presetTypesForTesting is a mapping of qualified names to types that can be mocked out

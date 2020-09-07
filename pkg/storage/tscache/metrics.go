@@ -14,7 +14,7 @@
 
 package tscache
 
-import "github.com/cockroachdb/cockroach/pkg/util/metric"
+import "github.com/weisslj/cockroach/pkg/util/metric"
 
 // Metrics holds all metrics relating to a Cache.
 type Metrics struct {

@@ -36,7 +36,7 @@ message Entry {
 
   int64 epoch = 1 [(gogoproto.casttype) = "Epoch"];
   util.hlc.Timestamp closed_timestamp = 2 [(gogoproto.nullable) = false];
-  map<int32, int64> mlai = 3 [(gogoproto.castkey) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID",
+  map<int32, int64> mlai = 3 [(gogoproto.castkey) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID",
     (gogoproto.castvalue) = "LAI",
     (gogoproto.customname) = "MLAI"];
   // Full is true if the emitter promises that any future write to any range
@@ -60,7 +60,7 @@ message Entry {
 message Reaction {
   option (gogoproto.goproto_stringer) = false;
 
-  repeated int32 Requested = 1 [(gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.RangeID"];
+  repeated int32 Requested = 1 [(gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.RangeID"];
 }
 
 service ClosedTimestamp {

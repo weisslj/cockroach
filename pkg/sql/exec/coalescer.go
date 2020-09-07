@@ -15,8 +15,8 @@
 package exec
 
 import (
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/coldata"
-	"github.com/cockroachdb/cockroach/pkg/sql/exec/types"
+	"github.com/weisslj/cockroach/pkg/sql/exec/coldata"
+	"github.com/weisslj/cockroach/pkg/sql/exec/types"
 )
 
 // coalescerOp consumes the input operator and coalesces the resulting batches

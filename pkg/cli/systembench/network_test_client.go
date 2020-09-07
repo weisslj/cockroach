@@ -21,8 +21,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/cockroachdb/cockroach/pkg/cli/systembench/systembenchpb"
-	"github.com/cockroachdb/cockroach/pkg/util/timeutil"
+	"github.com/weisslj/cockroach/pkg/cli/systembench/systembenchpb"
+	"github.com/weisslj/cockroach/pkg/util/timeutil"
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc"
 )

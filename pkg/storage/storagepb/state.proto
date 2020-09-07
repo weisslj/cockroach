@@ -105,7 +105,7 @@ message RangeInfo {
   message CTEntry {
     option (gogoproto.equal) = true;
     int32 node_id = 1 [(gogoproto.customname) = "NodeID",
-      (gogoproto.casttype) = "github.com/cockroachdb/cockroach/pkg/roachpb.NodeID"];
+      (gogoproto.casttype) = "github.com/weisslj/cockroach/pkg/roachpb.NodeID"];
     util.hlc.Timestamp closed_timestamp = 2 [(gogoproto.nullable) = false];
     int64 mlai = 3 [(gogoproto.customname) = "MLAI"];
   }

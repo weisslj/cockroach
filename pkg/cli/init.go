@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cockroachdb/cockroach/pkg/server/serverpb"
+	"github.com/weisslj/cockroach/pkg/server/serverpb"
 	"github.com/spf13/cobra"
 )
 

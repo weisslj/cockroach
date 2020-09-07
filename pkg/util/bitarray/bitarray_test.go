@@ -22,7 +22,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cockroachdb/cockroach/pkg/util/randutil"
+	"github.com/weisslj/cockroach/pkg/util/randutil"
 )
 
 func TestParseFormat(t *testing.T) {

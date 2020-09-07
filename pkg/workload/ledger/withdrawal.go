@@ -20,7 +20,7 @@ import (
 	gosql "database/sql"
 	"math/rand"
 
-	"github.com/cockroachdb/cockroach-go/crdb"
+	"github.com/weisslj/cockroach-go/crdb"
 )
 
 type withdrawal struct{}
